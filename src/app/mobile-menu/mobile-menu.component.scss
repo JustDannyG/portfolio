@@ -1,0 +1,184 @@
+:host {
+  display: block;
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 250;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  font-family: 'Josefin Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.mobile-menu-overlay--open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-menu-overlay-backdrop {
+  position: absolute;
+  inset: 0;
+}
+
+.mobile-menu-overlay-content {
+  position: relative;
+  top: -8%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.mobile-menu-overlay-bubble {
+  width: min(102vw, 590px);
+  height: min(120vw, 470px);
+  background-image: url('/assets/img/langingpage-img/selfie-background-1.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 48px 40px;
+  text-align: center;
+}
+
+.mobile-menu-overlay-links {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  a {
+    font-size: 22px;
+    color: inherit;
+    text-decoration: none;
+    padding: 10px 34px;
+    border-radius: 999px;
+    transition: color 0.2s ease, background-image 0.2s ease;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 72px;
+
+    &:hover {
+      color: #ffffff;
+    }
+
+    &.active {
+      color: #ffffff;
+      background-image: url('/assets/img/langingpage-img/Ellipse 24.svg');
+    }
+  }
+}
+
+.mobile-menu-overlay-lang {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lang {
+  border: none;
+  background: transparent;
+  color: #1f2b32;
+  font-size: 18px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color 0.2s ease, background-image 0.2s ease;
+
+  &:hover {
+    color: #ffffff;
+  }
+
+  &.active {
+    color: #ffffff;
+    background-image: url('/assets/img/langingpage-img/Ellipse 24.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.divider {
+  width: 1px;
+  height: 18px;
+  background: rgba(31, 43, 50, 0.5);
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-overlay {
+    align-items: stretch;
+  }
+
+  .mobile-menu-overlay-content {
+    top: 16%;
+    width: 450px;
+    height: 500px;
+  }
+
+  .mobile-menu-overlay-bubble {
+    background-size: cover;
+    background-position: center top;
+    margin-top: 0;
+    width: 460px;
+    height: 480px;
+  }
+}
+
+@media (max-width: 730px) {
+  .mobile-menu-overlay-content {
+    top: 14%;
+  }
+}
+
+@media (max-width: 675px) {
+  .mobile-menu-overlay-content {
+    top: 12.5%;
+  }
+}
+
+@media (max-width: 631px) {
+  .mobile-menu-overlay-content {
+    top: 10.7%;
+  }
+}
+
+@media (max-width: 580px) {
+  .mobile-menu-overlay-content {
+    top: 9%;
+  }
+}
+
+@media (max-width: 530px) {
+  .mobile-menu-overlay-content {
+    top: 7%;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-menu-overlay-bubble {
+    height: 384px;
+    width: 361px;
+    margin-top: 26px;
+  }
+
+  .mobile-menu-overlay-content {
+    top: 6%;
+  }
+}
+
+@media (max-width: 375px) {
+  .mobile-menu-overlay-bubble {
+    height: 334px;
+    width: 313px;
+    margin-top: -38px;
+  }
+}

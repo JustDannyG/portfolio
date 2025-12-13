@@ -1,0 +1,107 @@
+<section class="myprojects-section" id="projects">
+  <div class="myprojects-container">
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="projects-tabs">
+      @for (project of projects; track project.id) {
+      <button type="button" class="tab-item" [class.active]="activeProject === project.id"
+        (click)="selectProject(project.id)">
+        {{ project.tabLabel }}
+      </button>
+      }
+    </div>
+
+    <div class="projects-tabs-mobile">
+      @for (project of projects; track project.id) {
+      <button type="button" class="tab-item" [class.active]="activeProject === project.id"
+        (click)="selectProject(project.id)">
+        Project {{ $index + 1 }}
+      </button>
+      }
+    </div>
+
+
+    @if (selectedProject; as project) {
+
+    <div class="project-panel">
+
+      <div class="project-summary">
+        <h3 class="project-summary-title">{{ project.name }}</h3>
+
+        @if (project.technologies.length) {
+        <p class="project-summary-text">
+          Technologies:
+          {{ formatTechnologies(project) }}
+        </p>
+        }
+
+        @if (project.duration && project.duration !== 'Coming soon...') {
+        <p class="project-summary-text">
+          Duration:
+          {{ project.duration }}
+        </p>
+        }
+      </div>
+
+      @if (project.image) {
+      <div class="media-card-mobile">
+        <img [src]="project.image" [alt]="project.name" />
+      </div>
+      }
+
+      <div class="project-info">
+        @for (info of project.infoItems; track $index) {
+        <article class="info-item">
+
+          <div class="info-text">
+            <img class="info-bullet" src="assets/img/my-projects/Ellipse 8.svg" alt="">
+            <div class="info-heading">
+              <h3>{{ info.title }}</h3>
+              @if ($index === 0 && project.duration) {
+              <span class="info-duration">{{ project.duration }}</span>
+              }
+            </div>
+
+          </div>
+          <p>{{ info.description }}</p>
+        </article>
+        }
+      </div>
+
+      <div class="project-media">
+
+        @if (project.technologies.length) {
+        <div class="tech-stack">
+          <p class="tech-label">Technologies</p>
+          <div class="tech-icons">
+            @for (tech of project.technologies; track tech.name) {
+            <div class="tech-icon">
+              <img [src]="tech.icon" [alt]="tech.name" />
+            </div>
+            }
+          </div>
+        </div>
+        }
+
+        @if (project.image) {
+        <div class="media-card">
+          <img [src]="project.image" [alt]="project.name" />
+        </div>
+        }
+
+        @if (project.buttons.length) {
+        <div class="project-actions">
+          @for (btn of project.buttons; track btn.label) {
+          <a class="project-btn"
+            [ngClass]="btn.variant === 'secondary' ? 'project-btn--outline' : 'project-btn--primary'" [href]="btn.href"
+            [target]="btn.target ?? '_self'">
+            {{ btn.label }}
+          </a>
+          }
+        </div>
+        }
+      </div>
+    </div>
+    }
+  </div>
+</section>

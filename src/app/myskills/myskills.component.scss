@@ -1,0 +1,353 @@
+$accent: #89bcd9;
+
+.myskills-section {
+    background-color: #262E34;
+    padding: 40px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-title {
+    font-family: 'Josefin Sans', sans-serif;
+    color: $accent;
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight: 400;
+    font-size: 60px;
+    margin-block-start: 18.08px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    max-width: 1400px;
+    width: 100%;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    height: 408px;
+    width: 404px;
+    gap: 20px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: transform 0.3s ease;
+    width: 72px;
+    height: 80px;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    img {
+        width: 85px;
+        height: 100px;
+        object-fit: contain;
+        filter: brightness(0) saturate(100%) invert(70%) sepia(30%) saturate(500%) hue-rotate(160deg) brightness(95%) contrast(90%);
+    }
+
+    span {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 16px;
+        color: #6db3c7;
+        text-align: center;
+    }
+}
+
+.learning-icons {
+    height: 54px;
+}
+
+.learning-bubble {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/assets/skill-sets/background-image/Property 1=Default.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 360px;
+    height: 368px;
+
+    &:hover {
+        background-image: url('/assets/skill-sets/background-image/Property 1=hover.svg');
+    }
+
+    h3 {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 18px;
+        color: #fff;
+        margin-bottom: 20px;
+        font-weight: 400;
+    }
+
+    .learning-text {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 15.2px;
+        color: #b0c4ce;
+        text-align: center;
+        max-width: 240px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .skill-item {
+        width: 72px;
+        height: 80px;
+
+        img {
+            width: 72px;
+            height: 80px;
+        }
+    }
+
+    .learning-icons-mobile {
+        display: none;
+    }
+
+    .learning-h3-mobile {
+        display: none;
+    }
+
+    .heading-container {
+        display: flex;
+        text-align: center;
+
+        h3 {
+            margin: 0;
+        }
+    }
+
+    .learning-bubble {
+        width: 360px;
+        height: 368px;
+    }
+
+    .skills-grid {
+        height: 348px;
+        width: 354px;
+        gap: 20px;
+    }
+
+    .section-title {
+        font-size: 44px;
+        margin-bottom: 40px;
+        margin-block-start: 58px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 52px;
+    }
+
+    .skills-grid {
+        column-gap: 32px;
+        row-gap: 32px;
+    }
+
+    .skill-item {
+        flex: 0 1 120px;
+
+        img {
+            width: 70px;
+            height: 70px;
+        }
+    }
+
+    .learning-h3-mobile {
+        display: block;
+    }
+
+    .learning-bubble {
+        height: 320px;
+        padding: 30px;
+
+        h3 {
+            font-size: 16px;
+        }
+
+        .learning-icons {
+
+            .skill-item img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        .learning-text {
+            font-size: 13.6px;
+        }
+    }
+
+    .myskills-section {
+        padding: 60px 4%;
+        gap: 28px;
+    }
+
+    .section-title {
+        margin-block-end: 0;
+        margin-block-start: 0;
+        font-size: 36px;
+    }
+
+    .skills-grid {
+        column-gap: 24px;
+        row-gap: 26px;
+        justify-content: center;
+    }
+
+    .skill-item {
+        flex: 0 1 calc(25% - 18px);
+        max-width: 90px;
+
+        img {
+            width: 60px;
+            height: 60px;
+        }
+
+        span {
+            font-size: 14.4px;
+        }
+    }
+
+    .learning-bubble {
+        height: 280px;
+        padding: 0px;
+        background-image: none !important;
+
+        &:hover {
+            background-image: none;
+        }
+
+        h3 {
+            color: #6db3c7;
+        }
+
+        .learning-text {
+            font-size: 18px;
+            text-align: left;
+            color: white;
+        }
+    }
+
+    .learning-text-and-epileps {
+        display: flex;
+        align-items: center;
+    }
+
+    .learning-icons-mobile {
+        display: block;
+        width: 112px;
+        height: 96px;
+    }
+
+    .learning-icons {
+        display: none;
+        gap: 0;
+    }
+
+    .skills-container {
+        gap: 28px;
+    }
+
+    .heading-container {
+        display: flex;
+        gap: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .myskills-section {
+        padding: 60px 4%;
+        gap: 28px;
+    }
+
+    .section-title {
+        margin-block-end: 0;
+        margin-block-start: 0;
+        font-size: 36px;
+    }
+
+    .skills-grid {
+        column-gap: 24px;
+        row-gap: 26px;
+        justify-content: center;
+    }
+
+    .skill-item {
+        flex: 0 1 calc(25% - 18px);
+        max-width: 90px;
+
+        img {
+            width: 60px;
+            height: 60px;
+        }
+
+        span {
+            font-size: 14.4px;
+        }
+    }
+
+    .learning-bubble {
+        height: 280px;
+        padding: 0px;
+        background-image: none !important;
+
+        &:hover {
+            background-image: none;
+        }
+
+        h3 {
+            color: #6db3c7;
+        }
+
+        .learning-text {
+            font-size: 18px;
+            text-align: left;
+            color: white;
+        }
+    }
+
+    .learning-text-and-epileps {
+        display: flex;
+        align-items: center;
+    }
+
+    .learning-icons-mobile {
+        width: 112px;
+        height: 96px;
+    }
+
+    .learning-icons {
+        display: none;
+        gap: 0;
+    }
+
+    .skills-container {
+        gap: 28px;
+    }
+
+    .heading-container {
+        display: flex;
+        gap: 4px;
+    }
+}
+
+@media (max-width: 375px) {
+    .learning-bubble {
+        .learning-text {
+            font-size: 16px;
+        }
+    }
+}

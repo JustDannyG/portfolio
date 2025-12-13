@@ -1,0 +1,112 @@
+<section class="contact-section" id="contact">
+  <button class="contact-section-scroll-top" type="button" aria-label="Back to top" (click)="scrollToTop()">
+    <img src="assets/img/contactform/Property 1=Default.svg" alt="Scroll to top" />
+  </button>
+
+  <div class="contact-section-inner">
+    <h2 class="contact-section-title">Contact me</h2>
+    <div class="contact-section-content">
+
+      <div class="contact-section-intro">
+        <p>
+          Tell me about the ideas you want to bring to life. Whether you need a frontend specialist, a design partner,
+          or simply want to explore what’s possible, I’m ready to collaborate and add value to your projects.
+        </p>
+      </div>
+
+      <div class="contact-section-details">
+        <div class="detail-item detail-item--email" (mouseenter)="setEmailActive(true)"
+          (mouseleave)="setEmailActive(false)"
+          [class.detail-item--interactive-active]="isEmailActive && !isEmailSelected"
+          [class.detail-item--email-active]="isEmailSelected">
+          <img [src]="isEmailSelected
+              ? 'assets/img/contactform/🦆 icon _email_active.svg'
+              : isEmailActive
+                ? 'assets/img/contactform/🦆 icon _email_hover.svg'
+                : 'assets/img/contactform/🦆 icon _email_.svg'" alt="" aria-hidden="true"
+            class="detail-icon detail-icon--email" />
+          <div class="detail-item-text">
+            <p class="detail-label" [class.detail-label--active]="isEmailActive || isEmailSelected">E-mail:</p>
+            <a href="mailto:danny.grmn&#64;icloud.com" (focus)="setEmailActive(true)" (blur)="setEmailActive(false)"
+              (click)="setEmailSelected()"
+              [class.detail-link--active]="isEmailActive || isEmailSelected">danny.grmn&#64;icloud.com</a>
+          </div>
+        </div>
+        <div class="detail-item detail-item--phone" (mouseenter)="isPhoneHover = true"
+          (mouseleave)="isPhoneHover = false" [class.detail-item--phone-hover]="isPhoneHover">
+          <img [src]="isPhoneHover
+              ? 'assets/img/contactform/🦆 icon _phone_hover.svg'
+              : 'assets/img/contactform/🦆 icon _phone_.svg'" alt="" aria-hidden="true"
+            class="detail-icon detail-icon--phone" />
+          <div class="detail-item-text">
+            <p class="detail-label">Tel:</p>
+            <a href="tel:+491738482211">+49 173 8482211</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <form class="contact-form" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+      <div class="form-grid">
+        <div class="field">
+          <label class="d-none" for="first-name">Your name</label>
+          <input #firstName="ngModel" [(ngModel)]="contactData.name" id="first-name" name="firstName" type="text"
+            placeholder="Your name" ngModel required minlength="2"
+            [class.field--invalid]="firstName.invalid && (firstName.touched || contactForm.submitted) && !firstName.disabled" />
+          @if (firstName.invalid && (firstName.touched || contactForm.submitted) && !firstName.disabled) {
+          <span class="errorMsg">Please enter your name.</span>
+          }
+        </div>
+
+        <div class="field">
+          <label class="d-none" for="last-name">Your email</label>
+          <input #email="ngModel" [(ngModel)]="contactData.email" id="last-name" name="lastName" type="text"
+            placeholder="Your email" ngModel required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+            [class.field--invalid]="email.invalid && (email.touched || contactForm.submitted) && !email.disabled" />
+          @if (email.invalid && (email.touched || contactForm.submitted) && !email.disabled) {
+          <span class="errorMsg">Please enter a valid email address.</span>
+          }
+        </div>
+      </div>
+
+      <div class="field field--textarea">
+        <label class="d-none" for="subject">Your message</label>
+        <textarea #message="ngModel" [(ngModel)]="contactData.message" id="subject" name="subject" rows="6"
+          placeholder="Write something..." ngModel required minlength="8"
+          [class.field--invalid]="!message.valid && (message.touched || contactForm.submitted) && !message.disabled"></textarea>
+        @if (!message.valid && (message.touched || contactForm.submitted) && !message.disabled) {
+        <span class="errorMsg">Please enter a message.</span>
+        }
+      </div>
+
+      <div class="consent-row">
+        <label class="consent-checkbox" [class.consent-checkbox--checked]="privacyAccepted">
+          <input type="checkbox" [(ngModel)]="privacyAccepted" name="privacyConsent" />
+          <img [src]="!privacyAccepted && contactForm.submitted
+              ? 'assets/img/contactform/Property 1=error.svg'
+              : privacyAccepted
+                ? 'assets/img/contactform/Check box (1).svg'
+                : isHoveringConsent
+                  ? 'assets/img/contactform/Property 1=hover.svg'
+                  : 'assets/img/contactform/Check box.svg'" alt="Privacy consent" (mouseenter)="onConsentHover(true)"
+            (mouseleave)="onConsentHover(false)" />
+        </label>
+        <p>
+          I’ve read the <a href="#" target="_blank" rel="noreferrer">privacy policy</a> and agree to the processing of
+          my
+          data as outlined.
+        </p>
+      </div>
+      <div class="send-btn-container">
+        <button class="send-btn" type="submit" [class.send-btn--active]="contactForm.valid && privacyAccepted">
+          Send
+        </button>
+      </div>
+      <div class="arrow-top-container">
+        <button class="arrow-top" type="button" aria-label="Back to top" (click)="scrollToTop()">
+          <img src="assets/img/langingpage-img/arrow-down.svg" alt="" aria-hidden="true" />
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
