@@ -7,17 +7,19 @@
 
 .contact-section {
   position: relative;
+  display: flex;
+  justify-content: center;
   background-color: #262e34;
   color: #f5f7fb;
   font-family: 'Josefin Sans', sans-serif;
-  padding: 120px 216px;
+  padding: 106px 248px 60px 248px;
   overflow: hidden;
 }
 
-.contact-section-scroll-top {
+.contact-section__scroll-top {
   position: absolute;
   top: 112px;
-  right: 24px;
+  right: 5%;
   width: 38px;
   height: 89px;
   border: none;
@@ -41,21 +43,20 @@
   }
 }
 
-.contact-section-inner {
-  max-width: 1200px;
+.contact-section__inner {
+  max-width: 911px;
   display: flex;
   flex-direction: column;
   gap: 60px;
 }
 
-.contact-section-content {
+.contact-section__content {
   display: flex;
   gap: 60px;
-  justify-content: space-between;
   text-align: center;
 }
 
-.contact-section-title {
+.contact-section__title {
   width: 100%;
   margin: 0;
   font-size: 48px;
@@ -64,8 +65,7 @@
   font-weight: 400;
 }
 
-.contact-section-intro {
-  flex: 1.1;
+.contact-section__intro {
   text-align: left;
 
   h2 {
@@ -77,13 +77,12 @@
 
   p {
     margin: 0;
-    line-height: 1.6;
-    max-width: 540px;
+    max-width: 430px;
+    font-size: 18px;
   }
 }
 
-.contact-section-details {
-  flex: 0.9;
+.contact-section__details {
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -192,9 +191,8 @@
   justify-content: flex-end;
 }
 
-.form-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+.name-email-form {
+  display: flex;
   gap: 24px;
 }
 
@@ -202,15 +200,15 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: -webkit-fill-available;
 
   label {
-    font-size: 14.4px;
+    font-size: 16px;
     color: #8fbdd7;
   }
 
   input,
   textarea {
-    width: 100%;
     border: 2px solid rgba(137, 188, 217, 0.8);
     background: transparent;
     color: #f5f7fb;
@@ -232,7 +230,7 @@
   }
 
   textarea {
-    min-height: 180px;
+    min-height: 164px;
     border-radius: 40px;
     resize: vertical;
   }
@@ -244,6 +242,7 @@
 }
 
 .field--textarea {
+  width: 100%;
   grid-column: 1 / -1;
 }
 
@@ -340,40 +339,47 @@
   }
 }
 
+.detail-item__text {
+  display: flex;
+  font-size: 18px;
+  width: max-content;
+}
+
+@media (max-width: 1240px) {
+  .contact-section {
+    padding: 106px 128px 60px 128px;
+  }
+}
+
 @media (max-width: 1024px) {
   .contact-section {
     padding: 100px 24px;
   }
 
-  .detail-item-text {
-    font-size: 18px;
-    width: max-content;
-  }
-
-  .contact-section-title {
+  .contact-section__title {
     font-size: 44px;
   }
 }
 
 
 @media (max-width: 768px) {
-  .contact-section-scroll-top {
+  .contact-section__scroll-top {
     display: none;
   }
 
-  .contact-section-title {
-    font-size: 32px;
+  .contact-section__title {
+    font-size: 44px;
   }
 
-  .contact-section-intro {
+  .contact-section__intro {
     font-size: 16px;
   }
 
-  .contact-section-content {
+  .contact-section__content {
     flex-direction: column-reverse;
   }
 
-  .contact-section-details {
+  .contact-section__details {
     flex-direction: column-reverse;
     align-items: start;
   }
@@ -393,6 +399,10 @@
     font-size: 16px;
   }
 
+  .contact-section {
+    padding: 48px 24px;
+  }
+
   .send-btn {
     width: 92px;
     height: 43px;
@@ -406,26 +416,30 @@
     width: 100%;
     margin-top: 8px;
   }
+
+  .name-email-form {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 480px) {
-  .contact-section-scroll-top {
+  .contact-section__scroll-top {
     display: none;
   }
 
-  .contact-section-title {
-    font-size: 32px;
+  .contact-section__title {
+    font-size: 36px;
   }
 
-  .contact-section-intro {
+  .contact-section__intro {
     font-size: 16px;
   }
 
-  .contact-section-content {
+  .contact-section__content {
     flex-direction: column-reverse;
   }
 
-  .contact-section-details {
+  .contact-section__details {
     flex-direction: column-reverse;
     align-items: start;
   }
@@ -437,7 +451,7 @@
     }
   }
 
-  .detail-item-text {
+  .detail-item__text {
     font-size: 18px;
     width: max-content;
   }
@@ -462,11 +476,16 @@
 }
 
 @media (max-width: 375px) {
-  .contact-section-details {
+
+  .contact-section__title {
+    font-size: 32px;
+  }
+
+  .contact-section__details {
     align-items: unset;
   }
 
-  .detail-item-text {
+  .detail-item__text {
     width: max-content;
   }
 

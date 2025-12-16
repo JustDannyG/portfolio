@@ -1,20 +1,20 @@
 <section class="contact-section" id="contact">
-  <button class="contact-section-scroll-top" type="button" aria-label="Back to top" (click)="scrollToTop()">
+  <button class="contact-section__scroll-top" type="button" aria-label="Back to top" (click)="scrollToTop()">
     <img src="assets/img/contactform/Property 1=Default.svg" alt="Scroll to top" />
   </button>
 
-  <div class="contact-section-inner">
-    <h2 class="contact-section-title">Contact me</h2>
-    <div class="contact-section-content">
+  <div class="contact-section__inner">
+    <h2 class="contact-section__title">Contact me</h2>
+    <div class="contact-section__content">
 
-      <div class="contact-section-intro">
+      <div class="contact-section__intro">
         <p>
           Tell me about the ideas you want to bring to life. Whether you need a frontend specialist, a design partner,
           or simply want to explore what’s possible, I’m ready to collaborate and add value to your projects.
         </p>
       </div>
 
-      <div class="contact-section-details">
+      <div class="contact-section__details">
         <div class="detail-item detail-item--email" (mouseenter)="setEmailActive(true)"
           (mouseleave)="setEmailActive(false)"
           [class.detail-item--interactive-active]="isEmailActive && !isEmailSelected"
@@ -25,7 +25,7 @@
                 ? 'assets/img/contactform/🦆 icon _email_hover.svg'
                 : 'assets/img/contactform/🦆 icon _email_.svg'" alt="" aria-hidden="true"
             class="detail-icon detail-icon--email" />
-          <div class="detail-item-text">
+          <div class="detail-item__text">
             <p class="detail-label" [class.detail-label--active]="isEmailActive || isEmailSelected">E-mail:</p>
             <a href="mailto:danny.grmn&#64;icloud.com" (focus)="setEmailActive(true)" (blur)="setEmailActive(false)"
               (click)="setEmailSelected()"
@@ -38,7 +38,7 @@
               ? 'assets/img/contactform/🦆 icon _phone_hover.svg'
               : 'assets/img/contactform/🦆 icon _phone_.svg'" alt="" aria-hidden="true"
             class="detail-icon detail-icon--phone" />
-          <div class="detail-item-text">
+          <div class="detail-item__text">
             <p class="detail-label">Tel:</p>
             <a href="tel:+491738482211">+49 173 8482211</a>
           </div>
@@ -47,7 +47,7 @@
     </div>
 
     <form class="contact-form" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
-      <div class="form-grid">
+      <div class="name-email-form">
         <div class="field">
           <label class="d-none" for="first-name">Your name</label>
           <input #firstName="ngModel" [(ngModel)]="contactData.name" id="first-name" name="firstName" type="text"

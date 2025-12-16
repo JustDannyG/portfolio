@@ -1,38 +1,26 @@
-<ng-container *ngIf="isOpen$ | async as isOpen">
-  <div
-    class="mobile-menu-overlay"
-    [class.mobile-menu-overlay--open]="isOpen"
-    [attr.aria-hidden]="isOpen ? 'false' : 'true'"
-    role="dialog"
-    aria-modal="true"
-    aria-label="Mobile navigation"
-    id="mobile-menu-panel"
-  >
-    <div class="mobile-menu-overlay-backdrop" (click)="closeMenu()" aria-hidden="true"></div>
+<ng-container *ngIf="isOpen$ | async">
+  <div class="mobile-menu-panel" role="dialog" aria-modal="true" aria-label="Mobile navigation" id="mobile-menu-panel">
+    <div class="mobile-menu-panel__bubble">
+      <nav class="mobile-menu-panel__links" aria-label="Primary">
+        <a
+          *ngFor="let link of navLinks"
+          [routerLink]="['/']"
+          [fragment]="link.fragment"
+          [class.active]="activeNavLink === link.id"
+          (click)="handleNavClick(link.id)"
+        >
+          {{ link.label }}
+        </a>
+      </nav>
 
-    <div class="mobile-menu-overlay-content">
-      <div class="mobile-menu-overlay-bubble">
-        <nav class="mobile-menu-overlay-links" aria-label="Primary">
-          <a
-            *ngFor="let link of navLinks"
-            [routerLink]="['/']"
-            [fragment]="link.fragment"
-            [class.active]="activeNavLink === link.id"
-            (click)="handleNavClick(link.id)"
-          >
-            {{ link.label }}
-          </a>
-        </nav>
-
-        <div class="mobile-menu-overlay-lang lang-toggle" aria-label="Language selection">
-          <button type="button" class="lang" [class.active]="activeLanguage === 'DE'" (click)="setLanguage('DE')">
-            DE
-          </button>
-          <span class="divider"></span>
-          <button type="button" class="lang" [class.active]="activeLanguage === 'EN'" (click)="setLanguage('EN')">
-            EN
-          </button>
-        </div>
+      <div class="mobile-menu-panel__lang lang-toggle" aria-label="Language selection">
+        <button type="button" class="lang" [class.active]="activeLanguage === 'DE'" (click)="setLanguage('DE')">
+          DE
+        </button>
+        <span class="divider"></span>
+        <button type="button" class="lang" [class.active]="activeLanguage === 'EN'" (click)="setLanguage('EN')">
+          EN
+        </button>
       </div>
     </div>
   </div>

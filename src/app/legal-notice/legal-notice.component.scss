@@ -53,14 +53,14 @@ $text-dark: #2b3d4a;
   justify-content: center;
 }
 
-.legal-page-hero {
+.legal-page__hero {
   display: flex;
   flex-direction: column;
   gap: 28px;
   padding: 48px 96px 0;
 }
 
-.legal-page-brand {
+.legal-page__brand {
   display: flex;
   align-items: center;
   gap: 16px;
@@ -72,23 +72,23 @@ $text-dark: #2b3d4a;
   }
 }
 
-.legal-page-brand-text {
+.legal-page__brand__text {
   display: flex;
   flex-direction: column;
   line-height: 1.1;
 }
 
-.legal-page-brand-name {
+.legal-page__brand__name {
   font-size: 23px;
   font-weight: 600;
 }
 
-.legal-page-brand-role {
+.legal-page__brand__role {
   font-size: 16px;
   letter-spacing: 0.8px;
 }
 
-.legal-page-content {
+.legal-page__content {
   max-width: 960px;
   margin: 40px 0;
   padding: 64px;
@@ -97,7 +97,7 @@ $text-dark: #2b3d4a;
   box-shadow: 0 24px 50px rgba(0, 0, 0, 0.35);
 }
 
-.legal-page-eyebrow {
+.legal-page__eyebrow {
   text-transform: uppercase;
   letter-spacing: 6.4px;
   color: $accent;
@@ -105,7 +105,7 @@ $text-dark: #2b3d4a;
   font-size: 13.6px;
 }
 
-.legal-page-content h1 {
+.legal-page__content h1 {
   margin: 0 0 40px;
   font-size: 53px;
   font-weight: 400;
@@ -135,22 +135,22 @@ $text-dark: #2b3d4a;
   }
 }
 
-.legal-page-date {
+.legal-page__date {
   margin-top: 40px;
   color: rgba(#ffffff, 0.8);
 }
 
 @media (max-width: 768px) {
-  .legal-page-hero {
+  .legal-page__hero {
     align-items: flex-start;
   }
 
-  .legal-page-content {
+  .legal-page__content {
     margin-top: 20px;
     border-radius: 32px 32px 0 0;
   }
 
-  .legal-page-content {
+  .legal-page__content {
     background: #262E34;
     box-shadow: unset;
   }
@@ -160,18 +160,18 @@ $text-dark: #2b3d4a;
     padding: 8px 18px 0;
   }
 
-  .legal-page-content {
+  .legal-page__content {
     margin: 0;
   }
 
-  .footer-inner {
+  .footer__inner {
     gap: 22px;
     justify-content: unset;
   }
 }
 
 @media (max-width: 480px) {
-  .legal-page-content {
+  .legal-page__content {
     background: #262E34;
     box-shadow: unset;
   }
@@ -181,11 +181,11 @@ $text-dark: #2b3d4a;
     padding: 8px 18px 0;
   }
 
-  .legal-page-content {
+  .legal-page__content {
     margin: 0;
   }
 
-  .footer-inner {
+  .footer__inner {
     gap: 22px;
     justify-content: unset;
   }

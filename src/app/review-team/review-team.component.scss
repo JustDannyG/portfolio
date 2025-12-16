@@ -1,27 +1,25 @@
 .review-team {
   background-color: #262e34;
-  padding: 60px 24px;
+  padding: 0px 48px;
   color: #f5f7fb;
   font-family: 'Josefin Sans', sans-serif;
 }
 
-.review-team-inner {
-  max-width: 1300px;
+.review-team__inner {
   display: flex;
   flex-direction: column;
-  gap: 64px;
+  gap: 32px;
 }
 
-.review-team-title {
+.review-team__title {
   text-align: center;
   font-weight: 400;
   color: #89bcd9;
-  font-size: 40px;
   margin: 0;
   font-size: 32px;
 }
 
-.review-team-cards {
+.review-team__cards {
   display: flex;
   justify-content: space-between;
 }
@@ -31,18 +29,20 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 48px;
+  padding: 0 48px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background-image 0.3s ease, transform 0.3s ease;
+  height: 400px;
+  width: 400px;
 
   &:hover {
     background-image: url('/assets/img/team-review-section/Ellipse 02 (1).svg');
   }
 }
 
-.review-card-content {
+.review-card__content {
   text-align: center;
   max-width: 320px;
   display: flex;
@@ -50,13 +50,13 @@
   gap: 12px;
 }
 
-.review-card-name {
+.review-card__name {
   font-size: 26px;
-  font-weight: 600;
+  font-weight: 400;
   margin: 0;
 }
 
-.review-card-project {
+.review-card__project {
   margin: 0;
   font-size: 18px;
   color: #d2dae3;
@@ -66,14 +66,14 @@
   }
 }
 
-.review-card-quote {
+.review-card__quote {
   margin: 0;
   font-size: 16px;
   line-height: 1.5;
   color: rgba(245, 247, 251, 0.95);
 }
 
-.review-card-link {
+.review-card__link {
   margin-top: 12px;
   color: #89bcd9;
   text-decoration: none;
@@ -84,12 +84,12 @@
   }
 }
 
-.review-team-title-mobile {
+.review-team__title-mobile {
   display: none;
 }
 
 @media (max-width: 1024px) {
-  .review-team-title {
+  .review-team__title {
     font-size: 28px;
   }
 
@@ -99,7 +99,7 @@
     width: 260px;
   }
 
-  .review-card-name {
+  .review-card__name {
     font-size: 20px;
   }
 }
@@ -110,11 +110,11 @@
     padding: 44px 16px 12px 16px;
   }
 
-  .review-team-title {
+  .review-team__title {
     display: none;
   }
 
-  .review-team-cards {
+  .review-team__cards {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -128,7 +128,11 @@
     }
   }
 
-  .review-team-title-mobile {
+  .review-team__inner {
+    gap: 0;
+  }
+
+  .review-team__title-mobile {
     display: block;
 
     h2 {
@@ -144,7 +148,7 @@
   .review-card {
     width: 290px;
     height: 290px;
-    flex: 0 0 288px;
+    flex: 0 0 248px;
     scroll-snap-align: center;
 
     &:hover {
@@ -159,11 +163,11 @@
     padding: 44px 16px 12px 16px;
   }
 
-  .review-team-title {
+  .review-team__title {
     display: none;
   }
 
-  .review-team-cards {
+  .review-team__cards {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -177,7 +181,11 @@
     }
   }
 
-  .review-team-title-mobile {
+  .review-card {
+    padding: 12px 20px;
+  }
+
+  .review-team__title-mobile {
     h2 {
       color: #89bcd9;
       font-size: 32px;
@@ -187,24 +195,18 @@
       font-size: 18px;
     }
   }
-
-  .review-card {
-    width: 290px;
-    height: 290px;
-    flex: 0 0 288px;
-    scroll-snap-align: center;
-
-    &:hover {
-      background-image: url('/assets/img/team-review-section/Ellipse 02.svg');
-      transform: none;
-    }
-  }
 }
 
 @media (max-width: 375px) {
-  .review-team-title-mobile {
+  .review-team__title-mobile {
     h2 {
       font-size: 28px;
     }
+  }
+
+  .review-card {
+    width: 220px;
+    height: 210px;
+    flex: 0 0 208px;
   }
 }

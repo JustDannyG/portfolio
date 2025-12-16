@@ -26,17 +26,17 @@
     <div class="project-panel">
 
       <div class="project-summary">
-        <h3 class="project-summary-title">{{ project.name }}</h3>
+        <h3 class="project-summary__title">{{ project.name }}</h3>
 
         @if (project.technologies.length) {
-        <p class="project-summary-text">
+        <p class="project-summary__text">
           Technologies:
           {{ formatTechnologies(project) }}
         </p>
         }
 
         @if (project.duration && project.duration !== 'Coming soon...') {
-        <p class="project-summary-text">
+        <p class="project-summary__text">
           Duration:
           {{ project.duration }}
         </p>

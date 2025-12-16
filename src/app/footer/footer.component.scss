@@ -1,30 +1,28 @@
 :host {
   display: block;
-  width: 100%;
   box-sizing: unset;
 }
 
-$footer-bg: #8ebfdc;
-$footer-text: #2b3d4a;
+$footer__bg: #8ebfdc;
+$footer__text: #2b3d4a;
 
 .footer {
-  width: 100%;
-  background: $footer-bg;
-  color: $footer-text;
+  background: $footer__bg;
+  color: $footer__text;
   height: 214px;
   padding: 0 44px;
   display: flex;
 }
 
-.footer-inner {
-  width: min(100%, 1440px);
+.footer__inner {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 120px;
 }
 
-.footer-legal {
+.footer__legal {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -32,10 +30,10 @@ $footer-text: #2b3d4a;
   line-height: 1.4;
 }
 
-.footer-legal-link {
+.footer__legal-link {
   font-weight: 500;
   text-decoration: unset;
-  color: $footer-text;
+  color: $footer__text;
   transition: color 0.2s ease;
 
   &:hover {
@@ -43,7 +41,7 @@ $footer-text: #2b3d4a;
   }
 }
 
-.footer-brand {
+.footer__brand {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,12 +49,12 @@ $footer-text: #2b3d4a;
   text-align: center;
 }
 
-.footer-logo {
+.footer__logo {
   height: 72px;
   width: 58px;
 }
 
-.footer-brand-text {
+.footer__brand__text {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -64,23 +62,23 @@ $footer-text: #2b3d4a;
   letter-spacing: 0.5px;
 }
 
-.footer-name {
+.footer__name {
   font-size: 23px;
   font-weight: 600;
 }
 
-.footer-role {
+.footer__role {
   font-size: 17px;
-  color: rgba($footer-text, 0.8);
+  color: rgba($footer__text, 0.8);
 }
 
-.footer-socials {
+.footer__socials {
   display: flex;
   gap: 18px;
   align-items: center;
 }
 
-.footer-social-link {
+.footer__social-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -92,7 +90,7 @@ $footer-text: #2b3d4a;
   background-position: center;
 }
 
-.footer-social-link--github {
+.footer__social-link--github {
   background-image: url('/assets/img/footer/githib-dark.svg');
 
   &:hover {
@@ -100,7 +98,7 @@ $footer-text: #2b3d4a;
   }
 }
 
-.footer-social-link--mail {
+.footer__social-link--mail {
   background-image: url('/assets/img/footer/mail-dark.svg');
 
   &:hover {
@@ -108,7 +106,7 @@ $footer-text: #2b3d4a;
   }
 }
 
-.footer-social-link--linkedin {
+.footer__social-link--linkedin {
   background-image: url('/assets/img/footer/linkedin-dark.svg');
 
   &:hover {
@@ -116,24 +114,24 @@ $footer-text: #2b3d4a;
   }
 }
 
-.footer-legal-mobile {
+.footer__legal-mobile {
   display: none;
 }
 
 /* @media (max-width: 900px) {
-  .footer-inner {
+  .footer__inner {
     gap: 60px;
   }
 } */
 
 @media (max-width: 768px) {
-  .footer-inner {
+  .footer__inner {
     flex-direction: column;
     text-align: center;
     gap: 28px;
   }
 
-  .footer-legal {
+  .footer__legal {
     align-items: center;
   }
 
@@ -141,24 +139,24 @@ $footer-text: #2b3d4a;
     padding: 20px 44px;
   }
 
-  .footer-legal {
+  .footer__legal {
     display: none;
   }
 
-  .footer-legal-mobile {
+  .footer__legal-mobile {
     display: block;
     width: max-content;
   }
 
-  .footer-social-link--github {
+  .footer__social-link--github {
     background-image: url('/assets/img/mobile/Github button.svg');
   }
 
-  .footer-social-link--mail {
+  .footer__social-link--mail {
     background-image: url('/assets/img/mobile/Email button.svg');
   }
 
-  .footer-social-link--linkedin {
+  .footer__social-link--linkedin {
     background-image: url('/assets/img/mobile/Linkedin button.svg');
   }
 }
@@ -169,23 +167,23 @@ $footer-text: #2b3d4a;
     padding: 20px 44px;
   }
 
-  .footer-legal {
+  .footer__legal {
     display: none;
   }
 
-  .footer-legal-mobile {
+  .footer__legal-mobile {
     width: max-content;
   }
 
-  .footer-social-link--github {
+  .footer__social-link--github {
     background-image: url('/assets/img/mobile/Github button.svg');
   }
 
-  .footer-social-link--mail {
+  .footer__social-link--mail {
     background-image: url('/assets/img/mobile/Email button.svg');
   }
 
-  .footer-social-link--linkedin {
+  .footer__social-link--linkedin {
     background-image: url('/assets/img/mobile/Linkedin button.svg');
   }
 }

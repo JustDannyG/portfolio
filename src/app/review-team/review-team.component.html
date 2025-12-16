@@ -1,25 +1,25 @@
 <section class="review-team" id="reviews">
-  <div class="review-team-inner">
-    <h2 class="review-team-title">
+  <div class="review-team__inner">
+    <h2 class="review-team__title">
       Need a teamplayer? Here is what my colleagues said about me
     </h2>
-    <div class="review-team-title-mobile">
+    <div class="review-team__title-mobile">
       <h2>Need a teamplayer?</h2>
       <p>Here what my colleagues said about me</p>
     </div>
 
-    <div class="review-team-cards">
+    <div class="review-team__cards">
       @for (review of reviews; track review.name) {
         <article class="review-card">
-          <div class="review-card-content">
-            <p class="review-card-name">{{ review.name }}</p>
-            <p class="review-card-project">
+          <div class="review-card__content">
+            <p class="review-card__name">{{ review.name }}</p>
+            <p class="review-card__project">
               Project <span>{{ review.projectAccent }}</span>
             </p>
-            <p class="review-card-quote">
+            <p class="review-card__quote">
               {{ review.quote }}
             </p>
-            <a class="review-card-link" [href]="review.linkHref" target="_blank" rel="noreferrer">
+            <a class="review-card__link" [href]="review.linkHref" target="_blank" rel="noreferrer">
               {{ review.linkLabel }}
             </a>
           </div>

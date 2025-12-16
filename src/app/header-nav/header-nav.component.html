@@ -1,9 +1,9 @@
 <nav class="header-nav">
-  <a class="header-nav-logo" [routerLink]="['/']" aria-label="Back to landing page" (click)="scrollToTop()">
+  <a class="header-nav__logo" [routerLink]="['/']" aria-label="Back to landing page" (click)="scrollToTop()">
     <img src="assets/img/header-img/logo_d_gruchmann_dark.svg" alt="Danny Gruchmann logo" />
   </a>
 
-  <div class="header-nav-links" [class.interaction-started]="navInteractionStarted">
+  <div class="header-nav__links" [class.interaction-started]="navInteractionStarted">
     <a [routerLink]="['/']" fragment="why-me" [class.active]="activeNavLink === 'why'"
       (click)="setActiveNavLink('why')">Why me</a>
     <a [routerLink]="['/']" fragment="skills" [class.active]="activeNavLink === 'skills'"
@@ -14,7 +14,7 @@
       (click)="setActiveNavLink('contact')">Contact</a>
   </div>
 
-  <div class="header-nav-lang lang-toggle">
+  <div class="header-nav__lang lang-toggle">
     <button type="button" class="lang" [class.active]="activeLanguage === 'DE'" (click)="setLanguage('DE')">
       DE
     </button>

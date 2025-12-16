@@ -28,7 +28,6 @@ export class MobileMenuComponent {
     { id: 'projects', label: 'Projects', fragment: 'projects' },
     { id: 'contact', label: 'Contact', fragment: 'contact' }
   ];
-
   constructor(private mobileMenuService: MobileMenuService) {}
 
   @HostListener('document:keydown.escape')

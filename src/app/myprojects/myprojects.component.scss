@@ -16,7 +16,7 @@
   color: #89bcd9;
   text-align: center;
   font-weight: 400;
-  font-size: 51px;
+  font-size: 60px;
 }
 
 .projects-tabs {
@@ -79,6 +79,7 @@
     margin: 0;
     color: #dee5ec;
     font-size: 18px;
+    font-family: 'Josefin Sans', sans-serif;
   }
 }
 
@@ -102,7 +103,7 @@
   h3 {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 28px;
-    font-weight: 500;
+    font-weight: 400;
     margin: 0;
   }
 }
@@ -110,6 +111,7 @@
 .info-duration {
   font-size: 15.2px;
   color: #c5d9e8;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .project-media {
@@ -131,7 +133,7 @@
   display: none;
 }
 
-.project-summary-title {
+.project-summary__title {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 24px;
   font-weight: 400;
@@ -139,13 +141,15 @@
   margin: 0 0 8px;
 }
 
-.project-summary-text {
+.project-summary__text {
   margin: 2px 0;
+  width: max-content;
   color: #dfe6ed;
   font-size: 14px;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
-.project-summary-label {
+.project-summary__label {
   color: #ffffff;
   margin-right: 6px;
 }
@@ -201,6 +205,7 @@
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 16px;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .project-btn {
@@ -312,6 +317,10 @@
     padding: 0;
   }
 
+  .project-actions {
+    padding: 0;
+  }
+
   .info-duration {
     display: none;
   }
@@ -358,7 +367,7 @@
   }
 
   .project-btn {
-    padding: 12px 16px;
+    padding: 4px 12px;
     width: 116px;
     height: 43px;
   }
@@ -371,6 +380,7 @@
 
   .section-title {
     margin-block-start: 0;
+    font-size: 36px;
   }
 
   .tab-item {
@@ -416,8 +426,17 @@
   }
 
   .project-btn {
-    padding: 12px 16px;
     width: 116px;
     height: 43px;
+  }
+}
+
+@media (max-width: 375px) {
+  .project-panel {
+    padding: 48px 24px;
+  }
+
+  .section-title {
+    font-size: 32px;
   }
 }
