@@ -56,6 +56,8 @@
 }
 
 .project-panel {
+  display: flex;
+  justify-content: center;
   background-color: #2D3840;
   padding: 48px;
   display: flex;
@@ -169,7 +171,7 @@
 .tech-icons {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 4px;
 }
 
 .tech-icon {
@@ -180,8 +182,8 @@
   justify-content: center;
 
   img {
-    max-width: 40px;
-    height: auto;
+    width: 36px;
+    height: 36px;
     display: block;
   }
 }
@@ -211,7 +213,7 @@
 .project-btn {
   padding: 12px 34px;
   border-radius: 999px;
-  font-weight: 600;
+  font-weight: 400;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -241,6 +243,66 @@
       background-color: rgba(137, 188, 217, 0.22);
       filter: brightness(1.05);
     }
+  }
+}
+
+.project-pannel-align-container {
+  display: flex;
+  max-width: 1440px;
+}
+
+@media (min-width: 1921px) {
+  .section-title {
+    font-size: 72px;
+  }
+
+  .tab-item {
+    font-size: 36px;
+  }
+
+  .project-pannel-align-container {
+    max-width: 1920px;
+    gap: 108px;
+  }
+
+  .info-heading {
+    h3 {
+      font-size: 32px;
+    }
+  }
+
+  .info-duration {
+    font-size: 20px;
+  }
+
+  .info-item {
+    p {
+      font-size: 26px;
+    }
+  }
+
+  .tech-stack {
+    .tech-label {
+      font-size: 24px;
+    }
+  }
+
+  .tech-icon {
+    img {
+      max-width: 52px;
+      height: 52px;
+    }
+  }
+
+  .media-card {
+    img {
+      height: 432px;
+      width: 734px;
+    }
+  }
+
+  .project-btn {
+    font-size: 26px;
   }
 }
 

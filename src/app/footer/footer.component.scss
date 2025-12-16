@@ -118,11 +118,40 @@ $footer__text: #2b3d4a;
   display: none;
 }
 
-/* @media (max-width: 900px) {
-  .footer__inner {
-    gap: 60px;
+@media (min-width: 1921px) {
+  footer {
+    justify-content: center;
   }
-} */
+
+  .footer__inner {
+    max-width: 1920px;
+  }
+
+  .footer__legal {
+    font-size: 24px;
+  }
+
+  .footer__logo {
+    height: 84px;
+    width: auto;
+  }
+
+  .footer__social-link {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 1920px) {
+  .footer__inner {
+    max-width: 1440px;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+  }
+}
 
 @media (max-width: 768px) {
   .footer__inner {

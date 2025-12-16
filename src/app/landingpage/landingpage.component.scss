@@ -34,6 +34,8 @@ $text-dark: #1f2b32;
 .portrait__shape {
   transform: rotate(-45deg);
   transition: opacity 0.3s ease;
+  height: 670px;
+  width: 534px;
 }
 
 .portrait__shape--hover {
@@ -86,7 +88,7 @@ $text-dark: #1f2b32;
   text-align: center;
   gap: 12px;
   padding-bottom: 90px;
-  padding-top: 80px;
+  padding-top: 32px;
 
   h1 {
     margin: 0;
@@ -132,7 +134,12 @@ $text-dark: #1f2b32;
   }
 }
 
+.landing-right {
+  display: flex;
+}
+
 .landing__socials {
+  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -301,6 +308,60 @@ $text-dark: #1f2b32;
   background: #7aa9c7;
   color: $text-dark;
   font-weight: 700;
+}
+
+@media (min-width: 1921px) {
+  .landing__top {
+    max-width: 1920px;
+  }
+
+  .brand__logo {
+    height: 108px;
+    width: auto;
+  }
+
+  .social-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .intro__text {
+    h1 {
+      font-size: 104px;
+    }
+
+    p {
+      font-size: 40px;
+    }
+  }
+
+  .scroll-indicator {
+    height: 104px;
+    width: 52px;
+
+    img {
+      height: 104px;
+      width: 52px;
+    }
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 1920px) {
+  .landing__top {
+    max-width: 1440px;
+  }
+}
+
+@media (min-width: 1441px) {
+  .landing__top {
+    width: 100%;
+  }
+
+  .portrait__image {
+    height: 670px;
+    top: 1%;
+
+  }
 }
 
 @media (max-width: 1440px) {

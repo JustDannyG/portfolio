@@ -9,7 +9,7 @@ type ProjectButton = {
 };
 
 type ProjectInfo = {
-  title: string;
+  title?: string;
   description: string;
 };
 
@@ -108,16 +108,32 @@ export class MyprojectsComponent {
       id: 3,
       tabLabel: '3. DA Bubble',
       name: 'DA Bubble',
-      duration: 'Coming soon...',
       infoItems: [
         {
           title: 'About the project',
-          description: 'Coming soon...'
-        }
+          description: `I’m currently working on DA Bubble, a modern text messenger focused on a clean UI and a smooth chat experience. 
+          Right now I’m implementing features like user authentication, real-time messaging, 
+          and improving usability with details such as online status / typing indicators and better message handling.`,
+        },
+        {
+          description: `The key to success in my projects is a mix of good planning, clean, maintainable code,
+          and consistent execution—I break tasks into small steps, test early, and iterate quickly.
+          I’m also highly motivated to learn new technologies, improve my workflow, and continuously sharpen my development skills.`,
+        },
       ],
-      technologies: [],
-      image: '',
-      buttons: []
+      technologies: [
+        { name: 'Agular', icon: 'assets/img/my-projects/Frame 498.svg' },
+        { name: 'TypeScript', icon: 'assets/img/my-projects/Frame 499.svg' },
+        { name: 'HTML', icon: 'assets/img/my-projects/Frame 500.svg' },
+        { name: 'CSS', icon: 'assets/img/my-projects/Frame 501.svg' },
+        { name: 'Vue.js', icon: 'assets/img/my-projects/Vue Js.svg' },
+        { name: 'React', icon: 'assets/img/my-projects/React.svg' }
+      ],
+      image: 'assets/img/my-projects/coming-soon-project.svg',
+      buttons: [
+        { label: 'Live Test', href: '#', target: '_blank', variant: 'primary' },
+        { label: 'GitHub', href: 'https://github.com/JustDannyG/Join', target: '_blank', variant: 'secondary' }
+      ]
     }
   ];
 

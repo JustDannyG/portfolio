@@ -69,7 +69,10 @@ $accent: #89bcd9;
 }
 
 .learning-icons {
-    height: 54px;
+    display: flex;
+    justify-content: center;
+    gap: 44px;
+    padding-bottom: 24px;
 }
 
 .learning-bubble {
@@ -82,6 +85,7 @@ $accent: #89bcd9;
     background-size: 100%;
     width: 375px;
     height: 391px;
+    gap: 24px;
 
     &:hover {
         background-image: url('/assets/skill-sets/background-image/Property 1=hover.svg');
@@ -97,7 +101,7 @@ $accent: #89bcd9;
 
     .learning-text {
         font-family: 'Josefin Sans', sans-serif;
-        font-size: 15.2px;
+        font-size: 18px;
         color: #b0c4ce;
         text-align: center;
         max-width: 230px;
@@ -107,6 +111,51 @@ $accent: #89bcd9;
 
 .cta-button-mobile {
     display: none;
+}
+
+@media (min-width: 1921px) {
+    .section-title {
+        font-size: 72px;
+        margin-block-start: 40px;
+    }
+
+    .skills-container {
+        gap: 88px;
+    }
+
+    .skills-grid {
+        gap: 38px;
+    }
+
+    .skill-item {
+
+        img {
+            width: 98px;
+            height: 112px;
+        }
+    }
+
+    .heading-container {
+        h3 {
+            font-size: 24px;
+        }
+    }
+
+    .skill-item-lerning {
+        img {
+            width: 54px;
+            height: 72px;
+        }
+    }
+
+    .learning-bubble {
+        width: 392px;
+
+        .learning-text {
+            font-size: 24px;
+            max-width: 300px;
+        }
+    }
 }
 
 @media (max-width: 1024px) {

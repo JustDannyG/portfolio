@@ -1,4 +1,6 @@
 .review-team {
+  display: flex;
+  justify-content: center;
   background-color: #262e34;
   padding: 0px 48px;
   color: #f5f7fb;
@@ -9,6 +11,7 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  max-width: 1440px;
 }
 
 .review-team__title {
@@ -34,8 +37,8 @@
   align-items: center;
   justify-content: center;
   transition: background-image 0.3s ease, transform 0.3s ease;
-  height: 400px;
-  width: 400px;
+  height: 340px;
+  width: 290px;
 
   &:hover {
     background-image: url('/assets/img/team-review-section/Ellipse 02 (1).svg');
@@ -86,6 +89,42 @@
 
 .review-team__title-mobile {
   display: none;
+}
+
+@media (min-width: 1920px) {
+
+  .review-team__title {
+    font-size: 42px;
+  }
+
+  .review-card {
+    height: 460px;
+    width: 500px;
+  }
+
+  .review-team__cards {
+    gap: 48px;
+  }
+
+  .review-card__content {
+    gap: 20px;
+  }
+
+  .review-card__name {
+    font-size: 32px;
+  }
+
+  .review-card__project {
+    font-size: 24px;
+  }
+
+  .review-card__quote {
+    font-size: 20px;
+  }
+
+  .review-card__link {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 1024px) {

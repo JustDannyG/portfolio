@@ -59,7 +59,7 @@
 .contact-section__title {
   width: 100%;
   margin: 0;
-  font-size: 48px;
+  font-size: 60px;
   color: #89bcd9;
   text-align: center;
   font-weight: 400;
@@ -256,7 +256,7 @@
   display: flex;
   align-items: center;
   gap: 14px;
-  font-size: 15.2px;
+  font-size: 18px;
 
   .consent-checkbox {
     display: flex;
@@ -343,6 +343,59 @@
   display: flex;
   font-size: 18px;
   width: max-content;
+}
+
+@media (min-width: 1921px) {
+  .contact-section__inner {
+    max-width: 1920px;
+  }
+
+  .contact-section__scroll-top {
+    height: 104px;
+    width: 52px;
+    right: 22%;
+    top: 156px;
+
+    img {
+      height: 104px;
+      width: 52px;
+    }
+  }
+
+  .contact-section__title {
+    font-size: 72px;
+    margin-top: 28px;
+  }
+
+  .contact-section__intro {
+
+    p {
+      font-size: 26px;
+      max-width: 490px;
+    }
+  }
+
+  .detail-item__text {
+    font-size: 26px;
+  }
+
+  .field {
+    label {
+      font-size: 20px;
+    }
+
+    input {
+      font-size: 20px;
+    }
+  }
+
+  .consent-row {
+    font-size: 20px;
+  }
+
+  .send-btn {
+    font-size: 22px;
+  }
 }
 
 @media (max-width: 1240px) {
@@ -458,10 +511,6 @@
 
   .d-none {
     display: none;
-  }
-
-  .consent-row {
-    font-size: 16px;
   }
 
   .send-btn {
