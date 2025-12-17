@@ -26,7 +26,7 @@ import { TranslationService } from '../shared/services/translation.service';
     FooterComponent
   ],
   templateUrl: './landingpage.component.html',
-  styleUrl: './landingpage.component.scss'
+  styleUrls: ['./landingpage.component.scss', './landingpage-responsive.component.scss'] 
 })
 export class LandingpageComponent {
   private translationService = inject(TranslationService);

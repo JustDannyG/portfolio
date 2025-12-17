@@ -29,7 +29,7 @@
 @media (max-width: 1920px) {
   .why-me__text {
     p {
-      width: 450px;
+      max-width: 450px;
     }
   }
 }
@@ -68,6 +68,12 @@
   .why-me__content {
     gap: 32px;
     flex-direction: column;
+  }
+
+  .why-me__location {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .why-me__text {
@@ -127,5 +133,10 @@
 
   .why-me__headline {
     width: max-content;
+  }
+
+  .why-me__inner {
+    padding: 0;
+
   }
 }

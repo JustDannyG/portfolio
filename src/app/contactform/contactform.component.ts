@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { finalize } from 'rxjs';
 import { TranslationService } from '../shared/services/translation.service';
 
 @Component({
@@ -67,9 +68,12 @@ export class ContactformComponent {
   }
 
   private sendContactRequest(ngForm: NgForm): void {
+    if (!ngForm) {
+      return;
+    }
     this.http.post(this.post.endPoint, this.post.body(this.contactData))
+      .pipe(finalize(() => this.resetForm(ngForm)))
       .subscribe({
-        next: () => this.resetForm(ngForm),
         error: (err) => this.handleSubmitError(err),
         complete: () => this.logSubmitComplete(),
       });

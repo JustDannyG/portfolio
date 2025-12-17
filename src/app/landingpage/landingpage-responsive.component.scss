@@ -143,10 +143,6 @@
     justify-content: center;
   }
 
-  :host {
-    height: auto;
-  }
-
   .landing {
     padding: 16px 0px 32px 0;
     flex-direction: column;
@@ -162,7 +158,6 @@
   }
 
   .landing__mobile-bar {
-    display: flex;
     align-items: center;
     justify-content: space-between;
   }
@@ -315,10 +310,8 @@
   }
 
   .landing {
-    padding: 16px 0px 32px 0px;
     min-height: 0vh;
     justify-content: flex-start;
-    overflow: visible;
   }
 
   .brand__logo--mobile {
@@ -326,26 +319,8 @@
     width: 58px;
   }
 
-  .landing__burger {
-    padding: 0;
-
-    img {
-      width: 30px;
-      height: 32px;
-    }
-  }
-
   .landing__top {
     margin-top: 28px;
-  }
-
-  .landing__portrait {
-    aspect-ratio: 312 / 326;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    flex-shrink: 0;
   }
 
   .landing__portrait::before {
@@ -364,30 +339,12 @@
   }
 
   .portrait__image {
-    position: absolute;
     top: 54%;
     left: 50%;
     width: min(74vw, 232px);
-    width: auto;
     height: 400px;
     transform: translate(-50%, -54%);
-    z-index: 2;
-    filter: drop-shadow(0 12px 22px rgba(0, 0, 0, 0.28));
-    object-fit: cover;
     clip-path: ellipse(69% 52% at 45% 45%);
-  }
-
-  .landing__container-right {
-    width: 100%;
-    padding-bottom: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .landing__intro {
-    display: none !important;
   }
 
   .intro__text {
@@ -397,11 +354,6 @@
     h1 {
       font-size: 40px;
     }
-  }
-
-  .scroll-indicator-container {
-    padding: 0;
-    justify-content: center;
   }
 }
 
