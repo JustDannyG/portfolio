@@ -1,6 +1,7 @@
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { Language, TranslationService } from '../shared/services/translation.service';
 
 @Component({
   selector: 'app-header-nav',
@@ -11,12 +12,21 @@ import { RouterLink } from '@angular/router';
 })
 export class HeaderNavComponent {
   private document = inject(DOCUMENT);
-  activeLanguage: 'DE' | 'EN' = 'DE';
+  private translationService = inject(TranslationService);
+  readonly navigationTexts = this.translationService.selectSection('navigation');
   activeNavLink: 'why' | 'skills' | 'projects' | 'contact' | null = null;
   navInteractionStarted = false;
 
-  setLanguage(language: 'DE' | 'EN') {
-    this.activeLanguage = language;
+  get activeLanguage(): Language {
+    return this.translationService.currentLanguage;
+  }
+
+  get navigation() {
+    return this.navigationTexts();
+  }
+
+  setLanguage(language: Language) {
+    this.translationService.setLanguage(language);
   }
 
   setActiveNavLink(link: 'why' | 'skills' | 'projects' | 'contact') {

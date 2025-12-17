@@ -4,6 +4,7 @@ import { RouterLink } from '@angular/router';
 import { HeaderNavComponent } from '../header-nav/header-nav.component';
 import { FooterComponent } from '../footer/footer.component';
 import { MobileMenuService } from '../mobile-menu/mobile-menu.service';
+import { TranslationService } from '../shared/services/translation.service';
 
 @Component({
   selector: 'app-legal-notice',
@@ -14,7 +15,18 @@ import { MobileMenuService } from '../mobile-menu/mobile-menu.service';
 })
 export class LegalNoticeComponent implements OnInit {
   private document = inject(DOCUMENT);
+  private translationService = inject(TranslationService);
+  readonly navigationTexts = this.translationService.selectSection('navigation');
+  readonly legalTexts = this.translationService.selectSection('legalNotice');
   constructor(private mobileMenuService: MobileMenuService) {}
+
+  get navigationCopy() {
+    return this.navigationTexts();
+  }
+
+  get legalCopy() {
+    return this.legalTexts();
+  }
 
   ngOnInit(): void {
     const win = this.document.defaultView;

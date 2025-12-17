@@ -1,13 +1,13 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { MobileMenuService } from './mobile-menu.service';
+import { Language, TranslationService } from '../shared/services/translation.service';
 
 type NavLinkId = 'why' | 'skills' | 'projects' | 'contact';
 
 interface MobileNavLink {
   id: NavLinkId;
-  label: string;
   fragment: string;
 }
 
@@ -20,15 +20,24 @@ interface MobileNavLink {
 })
 export class MobileMenuComponent {
   readonly isOpen$ = this.mobileMenuService.isOpen$;
-  activeLanguage: 'DE' | 'EN' = 'DE';
+  private translationService = inject(TranslationService);
+  readonly navigationTexts = this.translationService.selectSection('navigation');
   activeNavLink: NavLinkId | null = null;
   readonly navLinks: MobileNavLink[] = [
-    { id: 'why', label: 'Why me', fragment: 'why-me' },
-    { id: 'skills', label: 'Skills', fragment: 'skills' },
-    { id: 'projects', label: 'Projects', fragment: 'projects' },
-    { id: 'contact', label: 'Contact', fragment: 'contact' }
+    { id: 'why', fragment: 'why-me' },
+    { id: 'skills', fragment: 'skills' },
+    { id: 'projects', fragment: 'projects' },
+    { id: 'contact', fragment: 'contact' }
   ];
   constructor(private mobileMenuService: MobileMenuService) {}
+
+  get activeLanguage(): Language {
+    return this.translationService.currentLanguage;
+  }
+
+  get navigation() {
+    return this.navigationTexts();
+  }
 
   @HostListener('document:keydown.escape')
   handleEscape() {
@@ -46,7 +55,7 @@ export class MobileMenuComponent {
     this.closeMenu();
   }
 
-  setLanguage(language: 'DE' | 'EN') {
-    this.activeLanguage = language;
+  setLanguage(language: Language) {
+    this.translationService.setLanguage(language);
   }
 }

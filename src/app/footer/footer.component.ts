@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { TranslationService } from '../shared/services/translation.service';
 
 @Component({
   selector: 'app-footer',
@@ -11,6 +12,9 @@ import { RouterLink } from '@angular/router';
 })
 export class FooterComponent {
   private document = inject(DOCUMENT);
+  private translationService = inject(TranslationService);
+  readonly footerTexts = this.translationService.selectSection('footer');
+  readonly navigationTexts = this.translationService.selectSection('navigation');
 
   scrollToTop() {
     const win = this.document.defaultView;

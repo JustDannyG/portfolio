@@ -1,5 +1,5 @@
 <section class="myskills-section" id="skills">
-    <h2 class="section-title">My Skills</h2>
+    <h2 class="section-title">{{ texts().title }}</h2>
 
     <div class="skills-container">
         <!-- Main Skills Grid -->
@@ -41,8 +41,8 @@
         <!-- Learning Section -->
         <div class="learning-bubble">
             <div class="heading-container">
-                <h3 class="learning-h3-mobile">What</h3>
-                <h3>I am currently learning</h3>
+                <h3 class="learning-h3-mobile">{{ texts().headingMobile }}</h3>
+                <h3>{{ texts().heading }}</h3>
             </div>
             <div class="learning-text-and-epileps">
                 <div class="learning-icons">
@@ -54,15 +54,14 @@
                     </div>
                 </div>
                 <p class="learning-text">
-                    I’m highly motivated to keep improving my skills, build practical solutions, and stay up to date
-                    with modern web technologies.
+                    {{ texts().learningText }}
                 </p>
                 <div class="learning-icons-mobile">
                     <img src="assets/img/mobile/Currently learning Mob. (1).svg" alt="">
                 </div>
             </div>
             <div>
-                <button class="cta-button-mobile" type="button" (click)="scrollToContact()">Let's talk</button>
+                <button class="cta-button-mobile" type="button" (click)="scrollToContact()">{{ texts().cta }}</button>
             </div>
         </div>
     </div>

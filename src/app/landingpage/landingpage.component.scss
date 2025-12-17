@@ -98,7 +98,7 @@ $text-dark: #1f2b32;
 
   p {
     margin: 0;
-    font-size: 26px;
+    font-size: 40px;
     font-weight: 400;
     color: $text-light;
     line-height: 1.25;
@@ -329,10 +329,6 @@ $text-dark: #1f2b32;
     h1 {
       font-size: 104px;
     }
-
-    p {
-      font-size: 40px;
-    }
   }
 
   .scroll-indicator {
@@ -371,13 +367,13 @@ $text-dark: #1f2b32;
   }
 
   .portrait__shape {
-    height: 670px;
-    width: 534px;
+    height: 616px;
+    width: 439px;
   }
 
   .portrait__image {
-    height: 683px;
-    left: 3%;
+    height: 623px;
+    left: 0%;
     top: 0%;
   }
 

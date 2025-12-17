@@ -37,8 +37,8 @@
   align-items: center;
   justify-content: center;
   transition: background-image 0.3s ease, transform 0.3s ease;
-  height: 340px;
-  width: 290px;
+  height: 320px;
+  width: 240px;
 
   &:hover {
     background-image: url('/assets/img/team-review-section/Ellipse 02 (1).svg');
@@ -134,12 +134,16 @@
 
   .review-card {
     padding: 36px 20px;
-    height: 260px;
-    width: 260px;
+    height: 180px;
+    width: 210px;
   }
 
   .review-card__name {
     font-size: 20px;
+  }
+
+  .review-team__cards {
+    gap: 4%;
   }
 }
 
@@ -157,10 +161,10 @@
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-    gap: 16px;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
+    gap: 16px;
 
     &::-webkit-scrollbar {
       display: none;
@@ -169,6 +173,12 @@
 
   .review-team__inner {
     gap: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
   }
 
   .review-team__title-mobile {
@@ -198,28 +208,6 @@
 }
 
 @media (max-width: 480px) {
-  .review-team {
-    padding: 44px 16px 12px 16px;
-  }
-
-  .review-team__title {
-    display: none;
-  }
-
-  .review-team__cards {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 16px;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
-
   .review-card {
     padding: 12px 20px;
   }
@@ -239,7 +227,7 @@
 @media (max-width: 375px) {
   .review-team__title-mobile {
     h2 {
-      font-size: 28px;
+      font-size: 26px;
     }
   }
 

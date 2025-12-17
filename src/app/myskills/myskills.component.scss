@@ -172,7 +172,7 @@ $accent: #89bcd9;
     .heading-container {
         display: flex;
         text-align: center;
-
+        
         h3 {
             margin: 0;
         }
@@ -244,6 +244,7 @@ $accent: #89bcd9;
         padding: 0px;
         background-image: none;
         gap: 24px;
+        width: unset;
 
         &:hover {
             background-image: none;
@@ -251,7 +252,7 @@ $accent: #89bcd9;
 
         h3 {
             color: #6db3c7;
-            font-size: 16px;
+            font-size: 18px;
         }
 
         .learning-icons {
@@ -366,10 +367,6 @@ $accent: #89bcd9;
 
         &:hover {
             background-image: none;
-        }
-
-        h3 {
-            color: #6db3c7;
         }
 
         .learning-text {

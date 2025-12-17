@@ -32,8 +32,13 @@ $text-muted: rgba(240, 233, 220, 0.86);
 
 .why-me__content {
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 48px;
+}
+
+.cta-btn-container {
+  display: flex;
+  justify-content: end;
 }
 
 .why-me__location {
@@ -63,11 +68,10 @@ $text-muted: rgba(240, 233, 220, 0.86);
 .why-me__text {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  text-align: start;
   gap: 26px;
   color: $text-muted;
   font-size: 20px;
-  /* max-width: 800px; */
 }
 
 .cta-button {
@@ -116,7 +120,6 @@ $text-muted: rgba(240, 233, 220, 0.86);
   }
 
   .why-me__content {
-    align-items: start;
     padding-top: 20px;
   }
 
@@ -124,6 +127,15 @@ $text-muted: rgba(240, 233, 220, 0.86);
     font-size: 26px;
   }
 }
+
+@media (max-width: 1920px) {
+  .why-me__text {
+    p {
+      width: 450px;
+    }
+  }
+}
+
 
 @media (max-width: 1024px) {
   .why-me__title {
@@ -138,11 +150,19 @@ $text-muted: rgba(240, 233, 220, 0.86);
   .why-me__text {
     font-size: 18px;
     max-width: 540px;
-    text-align: center;
   }
 
   .why-me__headline {
     font-size: 24px;
+    width: max-content;
+  }
+
+  .why-me__location {
+    gap: 16px;
+  }
+
+  .why-me__content {
+    gap: 28px;
   }
 }
 
@@ -152,8 +172,8 @@ $text-muted: rgba(240, 233, 220, 0.86);
     flex-direction: column;
   }
 
-  .why-me__location {
-    align-items: flex-start;
+  .why-me__text {
+    text-align: center;
   }
 
   .why-me__icon {
@@ -177,10 +197,6 @@ $text-muted: rgba(240, 233, 220, 0.86);
     font-size: 18px;
   }
 
-  .why-me__location {
-    align-items: center;
-  }
-
   .why-me__inner {
     padding: 24px 24px 0px 24px;
     gap: 32px;
@@ -191,10 +207,6 @@ $text-muted: rgba(240, 233, 220, 0.86);
   .why-me__title {
     margin-block-start: 0;
     font-size: 36px;
-  }
-
-  .why-me__location {
-    align-items: center;
   }
 
   .cta-button {
@@ -209,5 +221,13 @@ $text-muted: rgba(240, 233, 220, 0.86);
 @media (max-width: 375px) {
   .why-me__title {
     font-size: 32px;
+  }
+
+  .why-me__location {
+    gap: 12px;
+  }
+
+  .why-me__headline {
+    width: max-content;
   }
 }

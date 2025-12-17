@@ -1,7 +1,8 @@
 <ng-container *ngIf="isOpen$ | async">
-  <div class="mobile-menu-panel" role="dialog" aria-modal="true" aria-label="Mobile navigation" id="mobile-menu-panel">
+  <div class="mobile-menu-panel" role="dialog" aria-modal="true"
+    [attr.aria-label]="navigation.mobileHeaderAria" id="mobile-menu-panel">
     <div class="mobile-menu-panel__bubble">
-      <nav class="mobile-menu-panel__links" aria-label="Primary">
+      <nav class="mobile-menu-panel__links" [attr.aria-label]="navigation.primaryNavAria">
         <a
           *ngFor="let link of navLinks"
           [routerLink]="['/']"
@@ -9,11 +10,11 @@
           [class.active]="activeNavLink === link.id"
           (click)="handleNavClick(link.id)"
         >
-          {{ link.label }}
+          {{ navigation.links[link.id] }}
         </a>
       </nav>
 
-      <div class="mobile-menu-panel__lang lang-toggle" aria-label="Language selection">
+      <div class="mobile-menu-panel__lang lang-toggle" [attr.aria-label]="navigation.languageToggleAria">
         <button type="button" class="lang" [class.active]="activeLanguage === 'DE'" (click)="setLanguage('DE')">
           DE
         </button>

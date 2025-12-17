@@ -1,6 +1,6 @@
 <section class="myprojects-section" id="projects">
   <div class="myprojects-container">
-    <h2 class="section-title">My Projects</h2>
+    <h2 class="section-title">{{ copy.title }}</h2>
 
     <div class="projects-tabs">
       @for (project of projects; track project.id) {
@@ -15,7 +15,7 @@
       @for (project of projects; track project.id) {
       <button type="button" class="tab-item" [class.active]="activeProject === project.id"
         (click)="selectProject(project.id)">
-        Project {{ $index + 1 }}
+        {{ copy.mobileTabLabel }} {{ $index + 1 }}
       </button>
       }
     </div>
@@ -30,14 +30,14 @@
 
           @if (project.technologies.length) {
           <p class="project-summary__text">
-            Technologies:
+            {{ copy.labels.technologies }}:
             {{ formatTechnologies(project) }}
           </p>
           }
 
-          @if (project.duration && project.duration !== 'Coming soon...') {
+          @if (project.duration) {
           <p class="project-summary__text">
-            Duration:
+            {{ copy.labels.duration }}:
             {{ project.duration }}
           </p>
           }
@@ -68,7 +68,7 @@
 
           @if (project.technologies.length) {
           <div class="tech-stack">
-            <p class="tech-label">Technologies</p>
+            <p class="tech-label">{{ copy.labels.technologies }}</p>
             <div class="tech-icons">
               @for (tech of project.technologies; track tech.name) {
               <div class="tech-icon">

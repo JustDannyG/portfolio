@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { TranslationService } from '../shared/services/translation.service';
 
 @Component({
   selector: 'app-contactform',
@@ -12,6 +13,8 @@ import { FormsModule, NgForm } from '@angular/forms';
 export class ContactformComponent {
 
   http = inject(HttpClient);
+  private translationService = inject(TranslationService);
+  readonly texts = this.translationService.selectSection('contact');
 
   contactData = {
     name: '',

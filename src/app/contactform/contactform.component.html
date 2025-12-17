@@ -1,16 +1,16 @@
 <section class="contact-section" id="contact">
-  <button class="contact-section__scroll-top" type="button" aria-label="Back to top" (click)="scrollToTop()">
+  <button class="contact-section__scroll-top" type="button" [attr.aria-label]="texts().form.scrollTopLabel"
+    (click)="scrollToTop()">
     <img src="assets/img/contactform/Property 1=Default.svg" alt="Scroll to top" />
   </button>
 
   <div class="contact-section__inner">
-    <h2 class="contact-section__title">Contact me</h2>
+    <h2 class="contact-section__title">{{ texts().title }}</h2>
     <div class="contact-section__content">
 
       <div class="contact-section__intro">
         <p>
-          Tell me about the ideas you want to bring to life. Whether you need a frontend specialist, a design partner,
-          or simply want to explore what’s possible, I’m ready to collaborate and add value to your projects.
+          {{ texts().intro }}
         </p>
       </div>
 
@@ -26,7 +26,9 @@
                 : 'assets/img/contactform/🦆 icon _email_.svg'" alt="" aria-hidden="true"
             class="detail-icon detail-icon--email" />
           <div class="detail-item__text">
-            <p class="detail-label" [class.detail-label--active]="isEmailActive || isEmailSelected">E-mail:</p>
+            <p class="detail-label" [class.detail-label--active]="isEmailActive || isEmailSelected">
+              {{ texts().details.emailLabel }}
+            </p>
             <a href="mailto:danny.grmn&#64;icloud.com" (focus)="setEmailActive(true)" (blur)="setEmailActive(false)"
               (click)="setEmailSelected()"
               [class.detail-link--active]="isEmailActive || isEmailSelected">danny.grmn&#64;icloud.com</a>
@@ -39,7 +41,7 @@
               : 'assets/img/contactform/🦆 icon _phone_.svg'" alt="" aria-hidden="true"
             class="detail-icon detail-icon--phone" />
           <div class="detail-item__text">
-            <p class="detail-label">Tel:</p>
+            <p class="detail-label">{{ texts().details.phoneLabel }}</p>
             <a href="tel:+491738482211">+49 173 8482211</a>
           </div>
         </div>
@@ -49,33 +51,34 @@
     <form class="contact-form" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
       <div class="name-email-form">
         <div class="field">
-          <label class="d-none" for="first-name">Your name</label>
+          <label class="d-none" for="first-name">{{ texts().form.nameLabel }}</label>
           <input #firstName="ngModel" [(ngModel)]="contactData.name" id="first-name" name="firstName" type="text"
-            placeholder="Your name" ngModel required minlength="2"
+            [placeholder]="texts().form.namePlaceholder" ngModel required minlength="2"
             [class.field--invalid]="firstName.invalid && (firstName.touched || contactForm.submitted) && !firstName.disabled" />
           @if (firstName.invalid && (firstName.touched || contactForm.submitted) && !firstName.disabled) {
-          <span class="errorMsg">Please enter your name.</span>
+          <span class="errorMsg">{{ texts().form.nameError }}</span>
           }
         </div>
 
         <div class="field">
-          <label class="d-none" for="last-name">Your email</label>
+          <label class="d-none" for="last-name">{{ texts().form.emailLabel }}</label>
           <input #email="ngModel" [(ngModel)]="contactData.email" id="last-name" name="lastName" type="text"
-            placeholder="Your email" ngModel required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+            [placeholder]="texts().form.emailPlaceholder" ngModel required
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
             [class.field--invalid]="email.invalid && (email.touched || contactForm.submitted) && !email.disabled" />
           @if (email.invalid && (email.touched || contactForm.submitted) && !email.disabled) {
-          <span class="errorMsg">Please enter a valid email address.</span>
+          <span class="errorMsg">{{ texts().form.emailError }}</span>
           }
         </div>
       </div>
 
       <div class="field field--textarea">
-        <label class="d-none" for="subject">Your message</label>
+        <label class="d-none" for="subject">{{ texts().form.messageLabel }}</label>
         <textarea #message="ngModel" [(ngModel)]="contactData.message" id="subject" name="subject" rows="6"
-          placeholder="Write something..." ngModel required minlength="8"
+          [placeholder]="texts().form.messagePlaceholder" ngModel required minlength="8"
           [class.field--invalid]="!message.valid && (message.touched || contactForm.submitted) && !message.disabled"></textarea>
         @if (!message.valid && (message.touched || contactForm.submitted) && !message.disabled) {
-        <span class="errorMsg">Please enter a message.</span>
+        <span class="errorMsg">{{ texts().form.messageError }}</span>
         }
       </div>
 
@@ -92,18 +95,18 @@
             (mouseleave)="onConsentHover(false)" />
         </label>
         <p>
-          I’ve read the <a href="#" target="_blank" rel="noreferrer">privacy policy</a> and agree to the processing of
-          my
-          data as outlined.
+          {{ texts().form.consent.textBeforeLink }}<a href="#" target="_blank" rel="noreferrer">{{
+            texts().form.consent.linkLabel }}</a>{{ texts().form.consent.textAfterLink }}
         </p>
       </div>
       <div class="send-btn-container">
         <button class="send-btn" type="submit" [class.send-btn--active]="contactForm.valid && privacyAccepted">
-          Send
+          {{ texts().form.submitLabel }}
         </button>
       </div>
       <div class="arrow-top-container">
-        <button class="arrow-top" type="button" aria-label="Back to top" (click)="scrollToTop()">
+        <button class="arrow-top" type="button" [attr.aria-label]="texts().form.scrollTopLabel"
+          (click)="scrollToTop()">
           <img src="assets/img/langingpage-img/arrow-down.svg" alt="" aria-hidden="true" />
         </button>
       </div>

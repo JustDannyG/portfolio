@@ -340,6 +340,11 @@
     display: flex;
   }
 
+  .project-pannel-align-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
   .project-panel {
     flex-direction: column;
   }
@@ -432,6 +437,7 @@
     padding: 4px 12px;
     width: 116px;
     height: 43px;
+    font-size: 18px;
   }
 }
 

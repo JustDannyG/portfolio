@@ -1,11 +1,12 @@
 <footer class="footer">
   <div class="footer__inner">
     <div class="footer__legal">
-      <a [routerLink]="['/legal-notice']" class="footer__legal-link">Legal notice</a>
+      <a [routerLink]="['/legal-notice']" class="footer__legal-link">{{ footerTexts().legalNotice }}</a>
       <span class="footer__copyright">© Danny Gruchmann 2025</span>
     </div>
 
-    <a class="footer__brand" [routerLink]="['/']" aria-label="Back to landing page" (click)="scrollToTop()">
+    <a class="footer__brand" [routerLink]="['/']" [attr.aria-label]="navigationTexts().logoAria"
+      (click)="scrollToTop()">
       <img class="footer__logo" src="assets/img/header-img/logo_d_gruchmann_dark.svg" alt="Danny Gruchmann logo">
     </a>
 
@@ -16,7 +17,7 @@
     </div>
 
     <div class="footer__legal-mobile">
-      <a [routerLink]="['/legal-notice']" class="footer__legal-link">Legal notice</a>
+      <a [routerLink]="['/legal-notice']" class="footer__legal-link">{{ footerTexts().legalNotice }}</a>
       <span class="footer__copyright">© Danny Gruchmann 2025</span>
     </div>
   </div>

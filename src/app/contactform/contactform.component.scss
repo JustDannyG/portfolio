@@ -398,6 +398,18 @@
   }
 }
 
+@media (max-width: 1920px) {
+  .contact-section__scroll-top {
+    right: 13%;
+  }
+}
+
+@media (max-width: 1440px) {
+  .contact-section__scroll-top {
+    right: 15%;
+  }
+}
+
 @media (max-width: 1240px) {
   .contact-section {
     padding: 106px 128px 60px 128px;

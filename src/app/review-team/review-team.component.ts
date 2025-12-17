@@ -1,14 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-
-type Review = {
-  name: string;
-  project: string;
-  projectAccent: string;
-  quote: string;
-  linkLabel: string;
-  linkHref: string;
-};
+import { Component, inject } from '@angular/core';
+import { Review, TranslationService } from '../shared/services/translation.service';
 
 @Component({
   selector: 'app-review-team',
@@ -18,30 +10,14 @@ type Review = {
   styleUrl: './review-team.component.scss'
 })
 export class ReviewTeamComponent {
-  reviews: Review[] = [
-    {
-      name: 'Sahra Mueller',
-      project: 'Project DA Bubble',
-      projectAccent: 'DA Bubble',
-      quote: 'Coming soon...',
-      linkLabel: 'LinkedIn Profile',
-      linkHref: '#'
-    },
-    {
-      name: 'James Rugman',
-      project: 'Project Join',
-      projectAccent: 'Join',
-      quote: 'Coming soon...',
-      linkLabel: 'LinkedIn Profile',
-      linkHref: '#'
-    },
-    {
-      name: 'Evelyn Marx',
-      project: 'Project Join',
-      projectAccent: 'Join',
-      quote: 'Coming soon...',
-      linkLabel: 'LinkedIn Profile',
-      linkHref: '#'
-    }
-  ];
+  private translationService = inject(TranslationService);
+  readonly texts = this.translationService.selectSection('reviewTeam');
+
+  get copy() {
+    return this.texts();
+  }
+
+  get reviews(): ReadonlyArray<Review> {
+    return this.texts().reviews;
+  }
 }

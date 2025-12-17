@@ -1,21 +1,21 @@
 <nav class="header-nav">
   <div class="nav-container">
-    <a class="header-nav__logo" [routerLink]="['/']" aria-label="Back to landing page" (click)="scrollToTop()">
+    <a class="header-nav__logo" [routerLink]="['/']" [attr.aria-label]="navigation.logoAria" (click)="scrollToTop()">
       <img src="assets/img/header-img/logo_d_gruchmann_dark.svg" alt="Danny Gruchmann logo" />
     </a>
 
     <div class="header-nav__links" [class.interaction-started]="navInteractionStarted">
       <a [routerLink]="['/']" fragment="why-me" [class.active]="activeNavLink === 'why'"
-        (click)="setActiveNavLink('why')">Why me</a>
+        (click)="setActiveNavLink('why')">{{ navigation.links.why }}</a>
       <a [routerLink]="['/']" fragment="skills" [class.active]="activeNavLink === 'skills'"
-        (click)="setActiveNavLink('skills')">Skills</a>
+        (click)="setActiveNavLink('skills')">{{ navigation.links.skills }}</a>
       <a [routerLink]="['/']" fragment="projects" [class.active]="activeNavLink === 'projects'"
-        (click)="setActiveNavLink('projects')">Projects</a>
+        (click)="setActiveNavLink('projects')">{{ navigation.links.projects }}</a>
       <a [routerLink]="['/']" fragment="contact" [class.active]="activeNavLink === 'contact'"
-        (click)="setActiveNavLink('contact')">Contact</a>
+        (click)="setActiveNavLink('contact')">{{ navigation.links.contact }}</a>
     </div>
 
-    <div class="header-nav__lang lang-toggle">
+    <div class="header-nav__lang lang-toggle" [attr.aria-label]="navigation.languageToggleAria">
       <button type="button" class="lang" [class.active]="activeLanguage === 'DE'" (click)="setLanguage('DE')">
         DE
       </button>
