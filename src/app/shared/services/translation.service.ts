@@ -535,15 +535,18 @@ const TRANSLATIONS = {
   }
 } as const;
 
+const LANGUAGE_STORAGE_KEY = 'portfolio.language';
+
 @Injectable({ providedIn: 'root' })
 export class TranslationService {
-  private readonly language = signal<Language>('DE');
+  private readonly language = signal<Language>(loadLanguageFromStorage());
   private readonly translations = TRANSLATIONS;
 
   readonly languageSignal = this.language.asReadonly();
 
   setLanguage(language: Language) {
     this.language.set(language);
+    saveLanguageToStorage(language);
   }
 
   get currentLanguage(): Language {
@@ -552,5 +555,26 @@ export class TranslationService {
 
   selectSection<K extends keyof AppTranslations>(section: K) {
     return computed(() => this.translations[this.language()][section]);
+  }
+}
+
+function loadLanguageFromStorage(): Language {
+  if (typeof window === 'undefined' || !window.localStorage) {
+    return 'DE';
+  }
+
+  const storedLanguage = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
+  return storedLanguage === 'EN' ? 'EN' : 'DE';
+}
+
+function saveLanguageToStorage(language: Language) {
+  if (typeof window === 'undefined' || !window.localStorage) {
+    return;
+  }
+
+  try {
+    window.localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
+  } catch (error) {
+    console.warn('localStorage is unavailable.', error);
   }
 }

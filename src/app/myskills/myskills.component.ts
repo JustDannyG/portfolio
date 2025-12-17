@@ -7,7 +7,7 @@ import { TranslationService } from '../shared/services/translation.service';
   standalone: true,
   imports: [],
   templateUrl: './myskills.component.html',
-  styleUrl: './myskills.component.scss'
+  styleUrls: ['./myskills.component.scss', './myskills-responsive.component.scss'] 
 })
 export class MyskillsComponent {
   private document = inject(DOCUMENT);

@@ -7,7 +7,7 @@ import { Project, TranslationService } from '../shared/services/translation.serv
   standalone: true,
   imports: [CommonModule],
   templateUrl: './myprojects.component.html',
-  styleUrl: './myprojects.component.scss'
+  styleUrls: ['./myprojects.component.scss', './myprojects-responisve.component.scss'] 
 })
 export class MyprojectsComponent {
   private translationService = inject(TranslationService);

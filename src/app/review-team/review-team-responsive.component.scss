@@ -1,0 +1,146 @@
+@media (min-width: 1920px) {
+
+  .review-team__title {
+    font-size: 42px;
+  }
+
+  .review-card {
+    height: 460px;
+    width: 500px;
+  }
+
+  .review-team__cards {
+    gap: 48px;
+  }
+
+  .review-card__content {
+    gap: 20px;
+  }
+
+  .review-card__name {
+    font-size: 32px;
+  }
+
+  .review-card__project {
+    font-size: 24px;
+  }
+
+  .review-card__quote {
+    font-size: 20px;
+  }
+
+  .review-card__link {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .review-team__title {
+    font-size: 28px;
+  }
+
+  .review-card {
+    padding: 36px 20px;
+    height: 180px;
+    width: 210px;
+  }
+
+  .review-card__name {
+    font-size: 20px;
+  }
+
+  .review-team__cards {
+    gap: 4%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .review-team {
+    padding: 44px 16px 12px 16px;
+  }
+
+  .review-team__title {
+    display: none;
+  }
+
+  .review-team__cards {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 16px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .review-team__inner {
+    gap: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .review-team__title-mobile {
+    display: block;
+
+    h2 {
+      color: #89bcd9;
+      font-size: 32px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .review-card {
+    width: 290px;
+    height: 290px;
+    flex: 0 0 248px;
+    scroll-snap-align: center;
+
+    &:hover {
+      background-image: url('/assets/img/team-review-section/Ellipse 02.svg');
+      transform: none;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .review-card {
+    padding: 12px 20px;
+  }
+
+  .review-team__title-mobile {
+    h2 {
+      color: #89bcd9;
+      font-size: 32px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .review-team__title-mobile {
+    h2 {
+      font-size: 26px;
+    }
+  }
+
+  .review-card {
+    width: 220px;
+    height: 210px;
+    flex: 0 0 208px;
+  }
+}

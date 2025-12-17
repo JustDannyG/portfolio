@@ -7,7 +7,7 @@ import { TranslationService } from '../shared/services/translation.service';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './why-me.component.html',
-  styleUrls: ['./why-me.component.scss'],
+  styleUrls: ['./why-me.component.scss', './why-me-responisve.component.scss'],
 })
 export class WhyMeComponent {
   private document = inject(DOCUMENT);

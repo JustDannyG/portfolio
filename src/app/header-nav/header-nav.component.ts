@@ -8,7 +8,7 @@ import { Language, TranslationService } from '../shared/services/translation.ser
   standalone: true,
   imports: [CommonModule, RouterLink],
   templateUrl: './header-nav.component.html',
-  styleUrl: './header-nav.component.scss'
+  styleUrls: ['./header-nav.component.scss', './header-responsive.component.scss']
 })
 export class HeaderNavComponent {
   private document = inject(DOCUMENT);
@@ -36,7 +36,6 @@ export class HeaderNavComponent {
 
   scrollToTop() {
     const win = this.document.defaultView;
-
     if (win && typeof win.scrollTo === 'function') {
       win.scrollTo({ top: 0, behavior: 'smooth' });
     } else {

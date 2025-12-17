@@ -8,7 +8,7 @@ import { TranslationService } from '../shared/services/translation.service';
   standalone: true,
   imports: [RouterLink],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+  styleUrls: ['./footer.component.scss', './footer-responsive.component.scss']
 })
 export class FooterComponent {
   private document = inject(DOCUMENT);
@@ -18,7 +18,6 @@ export class FooterComponent {
 
   scrollToTop() {
     const win = this.document.defaultView;
-
     if (win && typeof win.scrollTo === 'function') {
       win.scrollTo({ top: 0, behavior: 'smooth' });
     } else {

@@ -8,7 +8,7 @@ import { TranslationService } from '../shared/services/translation.service';
   standalone: true,
   imports: [FormsModule],
   templateUrl: './contactform.component.html',
-  styleUrl: './contactform.component.scss'
+  styleUrls: ['./contactform.component.scss', './contactform.responive.component.scss'],
 })
 export class ContactformComponent {
 
@@ -63,23 +63,28 @@ export class ContactformComponent {
     if (!this.privacyAccepted) {
       return;
     }
+    this.sendContactRequest(ngForm);
+  }
 
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: (response) => {
+  private sendContactRequest(ngForm: NgForm): void {
+    this.http.post(this.post.endPoint, this.post.body(this.contactData))
+      .subscribe({
+        next: () => this.resetForm(ngForm),
+        error: (err) => this.handleSubmitError(err),
+        complete: () => this.logSubmitComplete(),
+      });
+  }
 
-            ngForm.resetForm();
-          },
-          error: (error) => {
-            console.error(error);
-          },
-          complete: () => console.info('send post complete'),
-        });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+  private resetForm(form: NgForm): void {
+    form.resetForm();
+  }
 
-      ngForm.resetForm();
-    }
+  private handleSubmitError(error: unknown): void {
+    console.error(error);
+  }
+
+  private logSubmitComplete(): void {
+    console.info('send post complete');
   }
 
   onConsentHover(state: boolean): void {

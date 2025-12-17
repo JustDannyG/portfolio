@@ -7,7 +7,7 @@ import { Review, TranslationService } from '../shared/services/translation.servi
   standalone: true,
   imports: [CommonModule],
   templateUrl: './review-team.component.html',
-  styleUrl: './review-team.component.scss'
+  styleUrls: ['./review-team.component.scss', './review-team-responsive.component.scss']
 })
 export class ReviewTeamComponent {
   private translationService = inject(TranslationService);

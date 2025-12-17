@@ -11,7 +11,7 @@ import { TranslationService } from '../shared/services/translation.service';
   standalone: true,
   imports: [CommonModule, RouterLink, HeaderNavComponent, FooterComponent],
   templateUrl: './legal-notice.component.html',
-  styleUrl: './legal-notice.component.scss'
+  styleUrls: ['./legal-notice.component.scss', './legal-notice-responisve.component.scss']
 })
 export class LegalNoticeComponent implements OnInit {
   private document = inject(DOCUMENT);

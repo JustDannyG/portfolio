@@ -1,0 +1,50 @@
+@media (max-width: 768px) {
+  .legal-page__hero {
+    align-items: flex-start;
+  }
+
+  .legal-page__content {
+    margin-top: 20px;
+    border-radius: 32px 32px 0 0;
+  }
+
+  .legal-page__content {
+    background: #262E34;
+    box-shadow: unset;
+  }
+
+  .legal-mobile-header {
+    display: flex;
+    padding: 8px 18px 0;
+  }
+
+  .legal-page__content {
+    margin: 0;
+  }
+
+  .footer__inner {
+    gap: 22px;
+    justify-content: unset;
+  }
+}
+
+@media (max-width: 480px) {
+  .legal-page__content {
+    background: #262E34;
+    box-shadow: unset;
+  }
+
+  .legal-mobile-header {
+    display: flex;
+    padding: 8px 18px 0;
+  }
+
+  .legal-page__content {
+    margin: 0;
+  }
+
+  .footer__inner {
+    gap: 22px;
+    justify-content: unset;
+  }
+}

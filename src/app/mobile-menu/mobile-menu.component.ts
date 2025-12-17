@@ -16,7 +16,7 @@ interface MobileNavLink {
   standalone: true,
   imports: [CommonModule, RouterLink],
   templateUrl: './mobile-menu.component.html',
-  styleUrl: './mobile-menu.component.scss'
+  styleUrls: ['./mobile-menu.component.scss', './mobile-menu-responisve.component.scss'] 
 })
 export class MobileMenuComponent {
   readonly isOpen$ = this.mobileMenuService.isOpen$;
