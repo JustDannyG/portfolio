@@ -1,17 +1,18 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, OnDestroy, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { finalize } from 'rxjs';
 import { TranslationService } from '../shared/services/translation.service';
+import { SuccsessfullySentComponent } from '../succsessfully-sent/succsessfully-sent.component';
 
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, SuccsessfullySentComponent],
   templateUrl: './contactform.component.html',
   styleUrls: ['./contactform.component.scss', './contactform.responive.component.scss'],
 })
-export class ContactformComponent {
+export class ContactformComponent implements OnDestroy {
 
   http = inject(HttpClient);
   private translationService = inject(TranslationService);
@@ -27,6 +28,10 @@ export class ContactformComponent {
   isEmailActive = false;
   isEmailSelected = false;
   isPhoneHover = false;
+  isSuccessOverlayVisible = false;
+  isSuccessOverlayClosing = false;
+  private overlayTimeoutId?: ReturnType<typeof setTimeout>;
+  private overlayRemovalTimeoutId?: ReturnType<typeof setTimeout>;
 
   mailTest = true;
 
@@ -89,6 +94,7 @@ export class ContactformComponent {
 
   private logSubmitComplete(): void {
     console.info('send post complete');
+    this.openSuccessOverlay();
   }
 
   onConsentHover(state: boolean): void {
@@ -97,5 +103,56 @@ export class ContactformComponent {
       return;
     }
     this.isHoveringConsent = state;
+  }
+
+  openSuccessOverlay(): void {
+    this.isSuccessOverlayClosing = false;
+    this.isSuccessOverlayVisible = true;
+    this.restartOverlayTimeout();
+  }
+
+  closeSuccessOverlay(): void {
+    if (!this.isSuccessOverlayVisible || this.isSuccessOverlayClosing) {
+      return;
+    }
+    this.isSuccessOverlayClosing = true;
+    this.clearOverlayTimeout();
+    this.overlayRemovalTimeoutId = setTimeout(() => {
+      this.isSuccessOverlayVisible = false;
+      this.isSuccessOverlayClosing = false;
+      this.clearOverlayRemovalTimeout();
+    }, 300);
+  }
+
+  handleSendButtonClick(form: NgForm): void {
+    if (!form?.valid || !this.privacyAccepted) {
+      return;
+    }
+    this.openSuccessOverlay();
+  }
+
+  ngOnDestroy(): void {
+    this.clearOverlayTimeout();
+    this.clearOverlayRemovalTimeout();
+  }
+
+  private restartOverlayTimeout(): void {
+    this.clearOverlayTimeout();
+    this.clearOverlayRemovalTimeout();
+    this.overlayTimeoutId = setTimeout(() => this.closeSuccessOverlay(), 1500);
+  }
+
+  private clearOverlayTimeout(): void {
+    if (this.overlayTimeoutId) {
+      clearTimeout(this.overlayTimeoutId);
+      this.overlayTimeoutId = undefined;
+    }
+  }
+
+  private clearOverlayRemovalTimeout(): void {
+    if (this.overlayRemovalTimeoutId) {
+      clearTimeout(this.overlayRemovalTimeoutId);
+      this.overlayRemovalTimeoutId = undefined;
+    }
   }
 }

@@ -1,15 +1,19 @@
 <header class="legal-mobile-header" [attr.aria-label]="navigationCopy.mobileHeaderAria">
-  <a class="legal-mobile-header__logo" [routerLink]="['/']" [attr.aria-label]="navigationCopy.logoAria">
-    <img src="assets/img/langingpage-img/logo_d_gruchmann_v2.svg" alt="Danny Gruchmann logo" />
-  </a>
-  <button class="legal-mobile-header__burger" type="button" [attr.aria-label]="navigationCopy.toggleMenuAria"
-    aria-controls="mobile-menu-panel" (click)="toggleMobileMenu()">
-    <img src="assets/img/mobile/burger menu.svg" alt="" aria-hidden="true" />
-  </button>
+  <div class="legal-mobile-header__bar">
+    <a class="legal-mobile-header__logo" [routerLink]="['/']" [attr.aria-label]="navigationCopy.logoAria">
+      <img src="assets/img/langingpage-img/logo_d_gruchmann_v2.svg" alt="Danny Gruchmann logo" />
+    </a>
+    <button class="legal-mobile-header__burger" type="button" [attr.aria-label]="navigationCopy.toggleMenuAria"
+      aria-controls="mobile-menu-panel" (click)="toggleMobileMenu()">
+      <img src="assets/img/mobile/burger menu.svg" alt="" aria-hidden="true" />
+    </button>
+  </div>
+  <div class="legal-mobile-menu-panel" *ngIf="isMobileMenuOpen$ | async">
+    <app-mobile-menu></app-mobile-menu>
+  </div>
 </header>
 
 <app-header-nav></app-header-nav>
-
 
 <section class="legal-page">
 

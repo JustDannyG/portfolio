@@ -240,7 +240,11 @@ const TRANSLATIONS = {
           textAfterLink: ' and agree to the processing of my data as outlined.'
         },
         submitLabel: 'Send',
-        scrollTopLabel: 'Back to top'
+        scrollTopLabel: 'Back to top',
+        success: {
+          title: 'Email successfully sent',
+          message: "Thanks! I'll get back to you shortly."
+        }
       }
     },
     footer: {
@@ -323,7 +327,7 @@ const TRANSLATIONS = {
     mySkills: {
       title: 'Meine Fähigkeiten',
       headingMobile: 'Was',
-      heading: 'ich gerade lerne',
+      heading: 'ich lerne gerade',
       learningText:
         'Ich will meine Fähigkeiten stetig ausbauen, praxisnahe Lösungen entwickeln und technisch immer auf dem neuesten Stand bleiben.',
       cta: 'Jetzt anfragen'
@@ -486,7 +490,11 @@ const TRANSLATIONS = {
           textAfterLink: ' gelesen und stimme der Verarbeitung meiner Daten zu.'
         },
         submitLabel: 'Senden',
-        scrollTopLabel: 'Zurück nach oben'
+        scrollTopLabel: 'Zurück nach oben',
+        success: {
+          title: 'E-Mail erfolgreich versendet',
+          message: 'Vielen Dank! Ich melde mich in Kürze bei dir.'
+        }
       }
     },
     footer: {

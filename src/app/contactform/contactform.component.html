@@ -100,7 +100,8 @@
         </p>
       </div>
       <div class="send-btn-container">
-        <button class="send-btn" type="submit" [class.send-btn--active]="contactForm.valid && privacyAccepted">
+        <button class="send-btn" type="submit" [class.send-btn--active]="contactForm.valid && privacyAccepted"
+          (click)="handleSendButtonClick(contactForm)">
           {{ texts().form.submitLabel }}
         </button>
       </div>
@@ -113,3 +114,7 @@
     </form>
   </div>
 </section>
+@if (isSuccessOverlayVisible) {
+<app-succsessfully-sent [headline]="texts().form.success.title" [subline]="texts().form.success.message"
+  [closing]="isSuccessOverlayClosing" (closed)="closeSuccessOverlay()"></app-succsessfully-sent>
+}

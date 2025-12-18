@@ -1,5 +1,3 @@
-@use 'sass:color';
-
 :host {
   display: block;
   width: 100%;
@@ -225,6 +223,14 @@
 
     &::placeholder {
       color: rgba(245, 247, 251, 0.7);
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0 1000px #262e34 inset;
+      -webkit-text-fill-color: #f5f7fb;
+      transition: background-color 9999s ease-out 0s;
     }
   }
 

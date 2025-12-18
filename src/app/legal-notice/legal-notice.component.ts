@@ -4,18 +4,20 @@ import { RouterLink } from '@angular/router';
 import { HeaderNavComponent } from '../header-nav/header-nav.component';
 import { FooterComponent } from '../footer/footer.component';
 import { MobileMenuService } from '../mobile-menu/mobile-menu.service';
+import { MobileMenuComponent } from '../mobile-menu/mobile-menu.component';
 import { TranslationService } from '../shared/services/translation.service';
 
 @Component({
   selector: 'app-legal-notice',
   standalone: true,
-  imports: [CommonModule, RouterLink, HeaderNavComponent, FooterComponent],
+  imports: [CommonModule, RouterLink, HeaderNavComponent, MobileMenuComponent, FooterComponent],
   templateUrl: './legal-notice.component.html',
   styleUrls: ['./legal-notice.component.scss', './legal-notice-responisve.component.scss']
 })
 export class LegalNoticeComponent implements OnInit {
   private document = inject(DOCUMENT);
   private translationService = inject(TranslationService);
+  readonly isMobileMenuOpen$ = this.mobileMenuService.isOpen$;
   readonly navigationTexts = this.translationService.selectSection('navigation');
   readonly legalTexts = this.translationService.selectSection('legalNotice');
   constructor(private mobileMenuService: MobileMenuService) {}

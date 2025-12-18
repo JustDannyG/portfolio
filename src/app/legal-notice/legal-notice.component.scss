@@ -18,14 +18,22 @@ $text-dark: #2b3d4a;
   box-sizing: border-box;
   background: #262e34;
   z-index: 40;
+  position: relative;
 
-  &-logo img {
+  &__bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__logo img {
     height: 72px;
     width: auto;
     display: block;
   }
 
-  &-burger {
+  &__burger {
     border: none;
     background: transparent;
     padding: 6px;
@@ -45,6 +53,16 @@ $text-dark: #2b3d4a;
       opacity: 0.8;
     }
   }
+}
+
+.legal-mobile-menu-panel {
+  display: none;
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  width: 100%;
+  z-index: 250;
+  pointer-events: none;
 }
 
 .legal-page {
@@ -92,9 +110,6 @@ $text-dark: #2b3d4a;
   max-width: 960px;
   margin: 40px 0;
   padding: 64px;
-  background-color: #1f2b32;
-  border-radius: 36px;
-  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.35);
 }
 
 .legal-page__eyebrow {
