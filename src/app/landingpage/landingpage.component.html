@@ -42,16 +42,19 @@
       </div>
 
       <div class="landing__socials" [attr.aria-label]="landingTexts().socialsAria">
-        <a class="social-icon social-icon--mail" href="#" [attr.aria-label]="landingTexts().socials.mail"></a>
-        <a class="social-icon social-icon--github" href="#" [attr.aria-label]="landingTexts().socials.github"></a>
-        <a class="social-icon social-icon--linkedin" href="#" [attr.aria-label]="landingTexts().socials.linkedin"></a>
+        <a class="social-icon social-icon--mail" href="mailto:danny.grmn@icloud.com"
+          [attr.aria-label]="landingTexts().socials.mail"></a>
+        <a class="social-icon social-icon--github" target="_blank" href="https://github.com/JustDannyG"
+          [attr.aria-label]="landingTexts().socials.github"></a>
+        <a class="social-icon social-icon--linkedin" target="_blank"
+          href="https://www.linkedin.com/in/danny-gruchmann-9975143a0/"
+          [attr.aria-label]="landingTexts().socials.linkedin"></a>
       </div>
     </div>
 
   </div>
+  <app-header-nav></app-header-nav>
 </section>
-
-<app-header-nav></app-header-nav>
 
 <app-why-me></app-why-me>
 

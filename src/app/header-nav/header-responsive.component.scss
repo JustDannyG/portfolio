@@ -5,8 +5,8 @@
 
   .header-nav__logo {
     img {
-      height: 84px;
-      width: auto;
+      height: auto;
+      width: 90px;
     }
   }
 
@@ -30,13 +30,6 @@
 @media (max-width: 1024px) {
   .header-nav {
     height: 92px;
-  }
-
-  .header-nav__logo {
-    img {
-      height: 60px;
-      width: 40px;
-    }
   }
 
   .header-nav__links {

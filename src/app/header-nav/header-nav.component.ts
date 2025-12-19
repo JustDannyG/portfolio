@@ -15,7 +15,6 @@ export class HeaderNavComponent {
   private translationService = inject(TranslationService);
   readonly navigationTexts = this.translationService.selectSection('navigation');
   activeNavLink: 'why' | 'skills' | 'projects' | 'contact' | null = null;
-  navInteractionStarted = false;
 
   get activeLanguage(): Language {
     return this.translationService.currentLanguage;
@@ -31,7 +30,6 @@ export class HeaderNavComponent {
 
   setActiveNavLink(link: 'why' | 'skills' | 'projects' | 'contact') {
     this.activeNavLink = link;
-    this.navInteractionStarted = true;
   }
 
   scrollToTop() {

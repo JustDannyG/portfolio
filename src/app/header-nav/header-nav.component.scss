@@ -19,7 +19,6 @@
   background: #89bcd9;
   color: #1f2b32;
   overflow: clip;
-  font-family: 'Josefin Sans', sans-serif;
 }
 
 .header-nav__logo {
@@ -27,8 +26,8 @@
   align-items: center;
 
   img {
-    height: 72px;
-    width: 58px;
+    height: auto;
+    width: 80px;
   }
 }
 
@@ -69,12 +68,12 @@
 
     &.active {
       color: #ffffff;
-      background-image: url("../../assets/img/langingpage-img/Ellipse 24.svg");
+      background-image: url("/assets/img/langingpage-img/Ellipse 24.svg");
       background-size: 72px;
     }
   }
 
-  &.interaction-started a:hover {
+  a:hover {
     color: #ffffff;
   }
 }
@@ -102,7 +101,7 @@
 
   &.active {
     color: #ffffff;
-    background-image: url("../../assets/img/langingpage-img/Ellipse 24.svg");
+    background-image: url("/assets/img/langingpage-img/Ellipse 24.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

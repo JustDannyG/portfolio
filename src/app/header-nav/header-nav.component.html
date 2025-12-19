@@ -4,7 +4,7 @@
       <img src="assets/img/header-img/logo_d_gruchmann_dark.svg" alt="Danny Gruchmann logo" />
     </a>
 
-    <div class="header-nav__links" [class.interaction-started]="navInteractionStarted">
+    <div class="header-nav__links">
       <a [routerLink]="['/']" fragment="why-me" [class.active]="activeNavLink === 'why'"
         (click)="setActiveNavLink('why')">{{ navigation.links.why }}</a>
       <a [routerLink]="['/']" fragment="skills" [class.active]="activeNavLink === 'skills'"

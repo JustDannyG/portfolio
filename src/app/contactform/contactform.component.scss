@@ -9,7 +9,6 @@
   justify-content: center;
   background-color: #262e34;
   color: #f5f7fb;
-  font-family: 'Josefin Sans', sans-serif;
   padding: 106px 248px 60px 248px;
 }
 
@@ -282,7 +281,7 @@
     }
 
     &:not(.consent-checkbox--checked) img:hover {
-      content: url('../../assets/img/contactform/Property 1=hover.svg');
+      content: url('/assets/img/contactform/Property 1=hover.svg');
     }
   }
 

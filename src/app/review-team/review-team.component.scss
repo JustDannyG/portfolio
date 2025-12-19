@@ -4,7 +4,6 @@
   background-color: #262e34;
   padding: 0px 48px;
   color: #f5f7fb;
-  font-family: 'Josefin Sans', sans-serif;
 }
 
 .review-team__inner {
@@ -28,7 +27,7 @@
 }
 
 .review-card {
-  background-image: url('../../assets/img/team-review-section/Ellipse 02.svg');
+  background-image: url('/assets/img/team-review-section/Ellipse 02.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -41,7 +40,7 @@
   width: 240px;
 
   &:hover {
-    background-image: url('../../assets/img/team-review-section/Ellipse 02 (1).svg');
+    background-image: url('/assets/img/team-review-section/Ellipse 02 (1).svg');
   }
 }
 

@@ -1,7 +1,44 @@
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('assets/fonts/Josefin_Sans/static/JosefinSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
+
+  h1 {
+    font-family: 'Josefin Sans';
+  }
+
+  h2 {
+    font-family: 'Josefin Sans';
+  }
+
+  h3 {
+    font-family: 'Josefin Sans';
+  }
+
+  p {
+    font-family: 'Josefin Sans';
+  }
+
+  a {
+    font-family: 'Josefin Sans';
+  }
+
+  li {
+    font-family: 'Josefin Sans';
+  }
+
+  span {
+    font-family: 'Josefin Sans';
+  }
+
 }

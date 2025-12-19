@@ -50,8 +50,8 @@ $footer__text: #2b3d4a;
 }
 
 .footer__logo {
-  height: 72px;
-  width: 58px;
+  height: auto;
+  width: 80px;
 }
 
 .footer__brand__text {
@@ -91,30 +91,29 @@ $footer__text: #2b3d4a;
 }
 
 .footer__social-link--github {
-  background-image: url('../../assets/img/footer/githib-dark.svg');
+  background-image: url('/assets/img/footer/githib-dark.svg');
 
   &:hover {
-    background-image: url('../../assets/img/footer/Property 1=White.svg');
+    background-image: url('/assets/img/footer/Property 1=White.svg');
   }
 }
 
 .footer__social-link--mail {
-  background-image: url('../../assets/img/footer/mail-dark.svg');
+  background-image: url('/assets/img/footer/mail-dark.svg');
 
   &:hover {
-    background-image: url('../../assets/img/footer/Property 1=white (1).svg');
+    background-image: url('/assets/img/footer/Property 1=white (1).svg');
   }
 }
 
 .footer__social-link--linkedin {
-  background-image: url('../../assets/img/footer/linkedin-dark.svg');
+  background-image: url('/assets/img/footer/linkedin-dark.svg');
 
   &:hover {
-    background-image: url('../../assets/img/footer/Property 1=white (2).svg');
+    background-image: url('/assets/img/footer/Property 1=white (2).svg');
   }
 }
 
 .footer__legal-mobile {
   display: none;
 }
-
