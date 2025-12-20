@@ -10,7 +10,6 @@ $footer__text: #2b3d4a;
   background: $footer__bg;
   color: $footer__text;
   height: 214px;
-  padding: 0 44px;
   display: flex;
 }
 
@@ -19,7 +18,7 @@ $footer__text: #2b3d4a;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 120px;
+  padding: 0 48px;
 }
 
 .footer__legal {
@@ -74,7 +73,7 @@ $footer__text: #2b3d4a;
 
 .footer__socials {
   display: flex;
-  gap: 18px;
+  gap: 24px;
   align-items: center;
 }
 

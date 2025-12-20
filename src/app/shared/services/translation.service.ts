@@ -158,8 +158,8 @@ const TRANSLATIONS = {
         },
         {
           id: 3,
-          tabLabel: '3. DA Bubble',
-          name: 'DA Bubble',
+          tabLabel: '3. Comming soon',
+          name: 'Comming soon',
           infoItems: [
             {
               title: 'About the project',
@@ -195,22 +195,22 @@ const TRANSLATIONS = {
       reviews: [
         {
           name: 'Sahra Mueller',
-          projectAccent: 'DA Bubble',
-          quote: 'Coming soon...',
+          projectAccent: 'Comming soon',
+          quote: 'Comming soon...',
           linkLabel: 'LinkedIn Profile',
           linkHref: 'https://www.linkedin.com/feed/'
         },
         {
           name: 'James Rugman',
           projectAccent: 'Join',
-          quote: 'Coming soon...',
+          quote: 'Comming soon...',
           linkLabel: 'LinkedIn Profile',
           linkHref: 'https://www.linkedin.com/feed/'
         },
         {
           name: 'Evelyn Marx',
           projectAccent: 'Join',
-          quote: 'Coming soon...',
+          quote: 'Comming soon...',
           linkLabel: 'LinkedIn Profile',
           linkHref: 'https://www.linkedin.com/feed/'
         }
@@ -408,8 +408,8 @@ const TRANSLATIONS = {
         },
         {
           id: 3,
-          tabLabel: '3. DA Bubble',
-          name: 'DA Bubble',
+          tabLabel: '3. Comming soon',
+          name: 'Comming soon',
           infoItems: [
             {
               title: 'Über das Projekt',
@@ -445,7 +445,7 @@ const TRANSLATIONS = {
       reviews: [
         {
           name: 'Sahra Mueller',
-          projectAccent: 'DA Bubble',
+          projectAccent: 'Comming soon',
           quote: 'Folgt in Kürze...',
           linkLabel: 'LinkedIn-Profil',
           linkHref: 'https://www.linkedin.com/feed/'

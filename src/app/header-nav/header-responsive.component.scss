@@ -21,19 +21,26 @@
   }
 }
 
-@media (min-width: 1441px) and (max-width: 1920px) {
+@media (max-width: 1440px) {
   .nav-container {
-    max-width: 1440px;
+    padding: 0 48px;
   }
 }
 
 @media (max-width: 1024px) {
-  .header-nav {
-    height: 92px;
+
+  .header-nav__logo {
+    width: 68px;
+  }
+
+  .nav-container {
+    padding: 0 24px;
   }
 
   .header-nav__links {
     gap: 0;
+    padding: 10px 20px;
+
 
     a {
       font-size: 20px;
@@ -59,11 +66,5 @@
   .header-nav__links {
     width: 100%;
     gap: 18px;
-  }
-}
-
-@media (max-width: 480px) {
-  :host {
-    display: none;
   }
 }

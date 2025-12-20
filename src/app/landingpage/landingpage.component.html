@@ -1,59 +1,62 @@
 <section class="landing">
-  <header class="landing__mobile-header" [attr.aria-label]="navigationTexts().mobileHeaderAria">
-    <div class="landing__mobile-bar">
-      <img class="brand__logo brand__logo--mobile" src="assets/img/langingpage-img/logo_d_gruchmann_v2.svg"
-        alt="Danny Gruchmann logo">
-      <button class="landing__burger" type="button" [attr.aria-label]="navigationTexts().toggleMenuAria"
-        aria-controls="mobile-menu-panel" (click)="toggleMobileMenu()">
-        <img src="assets/img/mobile/burger menu.svg" alt="" aria-hidden="true">
-      </button>
-    </div>
-    <div class="landing__mobile-menu-panel" *ngIf="isMobileMenuOpen$ | async">
-      <app-mobile-menu></app-mobile-menu>
-    </div>
-  </header>
+  <div class="landing__iner">
+    <header class="landing__mobile-header" [attr.aria-label]="navigationTexts().mobileHeaderAria">
+      <div class="landing__mobile-bar">
+        <img class="brand__logo brand__logo--mobile" src="assets/img/langingpage-img/logo_d_gruchmann_v2.svg"
+          alt="Danny Gruchmann logo">
+        <button class="landing__burger" type="button" [attr.aria-label]="navigationTexts().toggleMenuAria"
+          aria-controls="mobile-menu-panel" (click)="toggleMobileMenu()">
+          <img src="assets/img/mobile/burger menu.svg" alt="" aria-hidden="true">
+        </button>
+      </div>
+      <div class="landing__mobile-menu-panel" *ngIf="isMobileMenuOpen$ | async">
+        <app-mobile-menu></app-mobile-menu>
+      </div>
+    </header>
 
-  <div class="landing__top">
-    <div class="landing__portrait">
-      <img class="portrait__shape" src="assets/img/langingpage-img/selfie-background-1.svg" alt="" aria-hidden="true">
-      <img class="portrait__shape portrait__shape--hover" src="assets/img/langingpage-img/serlfie-background-2.svg"
-        alt="" aria-hidden="true">
-      <img class="portrait__image" src="assets/img-seflies/B437F87D-6C83-49B3-A3D4-1209EFADB793_1_201_a.png"
-        alt="Danny Gruchmann">
-    </div>
-    <div class="landing-right">
-      <div class="landing__container-right">
+    <div class="landing__top">
+      <div class="landing__portrait">
+        <img class="portrait__shape" src="assets/img/langingpage-img/selfie-background-1.svg" alt="" aria-hidden="true">
+        <img class="portrait__shape portrait__shape--hover" src="assets/img/langingpage-img/serlfie-background-2.svg"
+          alt="" aria-hidden="true">
+        <img class="portrait__image" src="assets/img-seflies/B437F87D-6C83-49B3-A3D4-1209EFADB793_1_201_a.png"
+          alt="Danny Gruchmann">
+      </div>
+      <div class="landing-right">
+        <div class="landing__container-right">
 
-        <div class="intro__meta">
-          <img class="brand__logo" src="assets/img/langingpage-img/logo_d_gruchmann_v2.svg" alt="Danny Gruchmann logo">
+          <div class="intro__meta">
+            <img class="brand__logo" src="assets/img/langingpage-img/logo_d_gruchmann_v2.svg"
+              alt="Danny Gruchmann logo">
+          </div>
+
+          <div class="intro__text">
+            <h1>Danny Gruchmann</h1>
+            <p>{{ landingTexts().role }}</p>
+          </div>
+
+          <div class="scroll-indicator-container">
+            <button class="scroll-indicator" type="button" [attr.aria-label]="landingTexts().scrollLabel"
+              (click)="scrollToWhyMe()">
+              <img src="assets/img/langingpage-img/arrow-down.svg" alt="" aria-hidden="true">
+            </button>
+          </div>
         </div>
 
-        <div class="intro__text">
-          <h1>Danny Gruchmann</h1>
-          <p>{{ landingTexts().role }}</p>
-        </div>
-
-        <div class="scroll-indicator-container">
-          <button class="scroll-indicator" type="button" [attr.aria-label]="landingTexts().scrollLabel"
-            (click)="scrollToWhyMe()">
-            <img src="assets/img/langingpage-img/arrow-down.svg" alt="" aria-hidden="true">
-          </button>
+        <div class="landing__socials" [attr.aria-label]="landingTexts().socialsAria">
+          <a class="social-icon social-icon--mail" href="mailto:danny.grmn@icloud.com"
+            [attr.aria-label]="landingTexts().socials.mail"></a>
+          <a class="social-icon social-icon--github" target="_blank" href="https://github.com/JustDannyG"
+            [attr.aria-label]="landingTexts().socials.github"></a>
+          <a class="social-icon social-icon--linkedin" target="_blank"
+            href="https://www.linkedin.com/in/danny-gruchmann-9975143a0/"
+            [attr.aria-label]="landingTexts().socials.linkedin"></a>
         </div>
       </div>
-
-      <div class="landing__socials" [attr.aria-label]="landingTexts().socialsAria">
-        <a class="social-icon social-icon--mail" href="mailto:danny.grmn@icloud.com"
-          [attr.aria-label]="landingTexts().socials.mail"></a>
-        <a class="social-icon social-icon--github" target="_blank" href="https://github.com/JustDannyG"
-          [attr.aria-label]="landingTexts().socials.github"></a>
-        <a class="social-icon social-icon--linkedin" target="_blank"
-          href="https://www.linkedin.com/in/danny-gruchmann-9975143a0/"
-          [attr.aria-label]="landingTexts().socials.linkedin"></a>
-      </div>
     </div>
-
   </div>
-  <app-header-nav></app-header-nav>
+  <div #navSentinel class="landing__nav-sentinel" aria-hidden="true"></div>
+  <app-header-nav class="landing__nav-host" [class.is-fixed]="isNavbarFixed"></app-header-nav>
 </section>
 
 <app-why-me></app-why-me>

@@ -1,10 +1,4 @@
 :host {
-  display: block;
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 30;
   width: 100%;
   overflow: clip;
 }
@@ -59,7 +53,7 @@
     font-weight: 400;
     color: inherit;
     text-decoration: none;
-    padding: 10px 32px;
+    padding: 10px 20px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -123,5 +117,5 @@
   width: 100%;
   max-width: 1920px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }

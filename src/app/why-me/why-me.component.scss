@@ -15,18 +15,15 @@ $text-muted: rgba(240, 233, 220, 0.86);
 .why-me__inner {
   display: flex;
   flex-direction: column;
-  padding: 88px 128px 0 128px;
-  max-width: 1440px;
+  padding: 88px 48px 8px 48px;
 }
 
 .why-me__title {
-  margin: 0;
   font-size: 60px;
   font-weight: 400;
   letter-spacing: 1px;
   color: $accent;
   text-align: center;
-  margin-block-start: 18.08px;
 }
 
 .why-me__content {

@@ -57,7 +57,7 @@
   display: flex;
   justify-content: center;
   background-color: #2D3840;
-  padding: 48px;
+  padding: 48px 48px;
   display: flex;
   gap: 56px;
   color: #f5f7fb;
@@ -141,7 +141,7 @@
   margin: 2px 0;
   width: max-content;
   color: #dfe6ed;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .project-summary__label {
@@ -240,5 +240,4 @@
 
 .project-pannel-align-container {
   display: flex;
-  max-width: 1440px;
 }

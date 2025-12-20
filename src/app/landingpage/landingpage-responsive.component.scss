@@ -1,5 +1,7 @@
 @media (min-width: 1921px) {
-  .landing__top {
+
+  .landing__iner {
+    width: 100%;
     max-width: 1920px;
   }
 
@@ -31,44 +33,56 @@
 }
 
 @media (min-width: 1441px) {
+  .landing {
+    justify-content: center;
+    align-items: center;
+  }
+
   .portrait__shape {
     height: 670px;
     width: 534px;
   }
 
-  .landing__top {
-    width: 100%;
-    max-width: 1440px;
-  }
-
   .portrait__image {
     height: 670px;
     top: 1%;
+  }
 
+  .landing__top {
+    padding: 0 96px;
   }
 }
 
 @media (max-width: 1440px) {
+
+  .landing {
+    justify-content: center;
+    align-items: center;
+  }
+
   .landing__top {
-    padding: 32px 24px 0px 24px;
+    padding: 0 48px;
     gap: 1%;
+    margin-bottom: -191px;
   }
 
   .portrait__shape {
-    height: 616px;
-    width: 439px;
+    height: 710px;
+    width: 594px;
   }
 
   .portrait__image {
-    height: 623px;
-    left: 0%;
-    top: 0%;
+    height: 683px;
+    left: 4%;
+    top: -5%;
   }
 
   .landing__intro {
     gap: 42%;
     margin-right: 1%;
   }
+
+  .intro__text {}
 }
 
 @media (max-width: 1024px) {
@@ -79,8 +93,6 @@
 
   .portrait__image {
     height: 414px;
-    left: 5%;
-    top: -4%;
   }
 
   .landing__top {
@@ -137,6 +149,10 @@
 
 @media (max-width: 768px) {
 
+  .landing__nav-host {
+    display: none;
+  }
+
   .landing__nav {
     flex-direction: column;
     align-items: center;
@@ -149,8 +165,9 @@
   }
 
   .landing {
-    padding: 16px 0px 32px 0;
+    padding: 24px 24px 24px 24px;
     flex-direction: column;
+    height: unset;
   }
 
   .landing__mobile-header {
@@ -158,8 +175,11 @@
     flex-direction: column;
     gap: 12px;
     align-items: stretch;
-    padding: 4px 32px 0 32px;
     position: relative;
+  }
+
+  .landing-right {
+    padding: 0;
   }
 
   .landing__mobile-bar {
@@ -174,8 +194,8 @@
   }
 
   .brand__logo--mobile {
-    height: 72px;
-    width: 58px;
+    height: auto;
+    width: 76px;
   }
 
   .landing__burger {
@@ -191,6 +211,7 @@
     width: 100%;
     padding: 0;
     margin-top: 78px;
+    margin-bottom: 0;
     display: flex;
     flex-direction: column;
     gap: 44px;
@@ -310,18 +331,19 @@
     height: 370px;
   }
 
-  .landing__mobile-header {
-    padding: 0px 20px 0 20px;
+  .landing {
+    height: unset;
+    justify-content: flex-start;
+    padding: 0 0 24px 0;
   }
 
-  .landing {
-    min-height: 0vh;
-    justify-content: flex-start;
+  .landing__mobile-bar {
+    padding: 24px 24px 0 24px;
   }
 
   .brand__logo--mobile {
-    height: 72px;
-    width: 58px;
+    height: auto;
+    width: 68px;
   }
 
   .landing__top {
@@ -349,7 +371,7 @@
     width: min(74vw, 232px);
     height: 400px;
     transform: translate(-50%, -54%);
-    clip-path: ellipse(69% 52% at 45% 45%);
+    clip-path: ellipse(90% 51% at 43% 46%);
   }
 
   .intro__text {
@@ -382,5 +404,11 @@
 
   .portrait__shape {
     height: 307px;
+  }
+
+  .intro__text {
+    p {
+      font-size: 20px;
+    }
   }
 }

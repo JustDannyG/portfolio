@@ -2,7 +2,7 @@ $accent: #89bcd9;
 
 .myskills-section {
     background-color: #262E34;
-    padding: 88px 128px 40px 128px;
+    padding: 88px 48px 8px 48px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,7 +14,6 @@ $accent: #89bcd9;
     margin-bottom: 60px;
     font-weight: 400;
     font-size: 60px;
-    margin-block-start: 18.08px;
 }
 
 .learning-icons-mobile {
@@ -27,7 +26,8 @@ $accent: #89bcd9;
 
 .skills-container {
     display: flex;
-    justify-content: center;
+    width: 100%;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -45,24 +45,19 @@ $accent: #89bcd9;
     align-items: center;
     gap: 12px;
     transition: transform 0.3s ease;
-    width: 72px;
-    height: 80px;
 
     &:hover {
         transform: translateY(-5px);
     }
 
     img {
-        width: 85px;
-        height: 100px;
         object-fit: contain;
         filter: brightness(0) saturate(100%) invert(70%) sepia(30%) saturate(500%) hue-rotate(160deg) brightness(95%) contrast(90%);
     }
 
-    span {
-        font-size: 16px;
-        color: #6db3c7;
-        text-align: center;
+    p {
+        color: $accent;
+        margin: 0;
     }
 }
 

@@ -53,6 +53,12 @@
   }
 }
 
+@media (min-width: 1441px) {
+  .project-panel {
+    padding: 48px 96px;
+  }
+}
+
 @media (max-width: 1024px) {
   .media-card {
     img {
@@ -78,7 +84,6 @@
 
   .section-title {
     font-size: 44px;
-    margin-block-start: 16px;
   }
 }
 
@@ -94,6 +99,7 @@
 
   .project-panel {
     flex-direction: column;
+    padding: 48px 24px;
   }
 
   .project-media {
@@ -128,7 +134,7 @@
   }
 
   .myprojects-container {
-    padding: 0;
+    padding: 24px 0 0 0;
   }
 
   .project-actions {
@@ -194,7 +200,6 @@
   }
 
   .section-title {
-    margin-block-start: 0;
     font-size: 36px;
   }
 
@@ -206,10 +211,6 @@
     &.active {
       color: #6db3c7;
     }
-  }
-
-  .myprojects-container {
-    padding: 0;
   }
 
   .info-duration {
@@ -243,6 +244,10 @@
   .project-btn {
     width: 116px;
     height: 43px;
+  }
+
+  .project-summary__text {
+    width: unset;
   }
 }
 

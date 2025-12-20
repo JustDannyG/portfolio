@@ -9,7 +9,7 @@
   justify-content: center;
   background-color: #262e34;
   color: #f5f7fb;
-  padding: 106px 248px 60px 248px;
+  padding: 88px 48px 8px 48px;
 }
 
 .contact-section__scroll-top {
@@ -54,7 +54,6 @@
 
 .contact-section__title {
   width: 100%;
-  margin: 0;
   font-size: 60px;
   color: #89bcd9;
   text-align: center;
@@ -211,7 +210,6 @@
     border-radius: 999px;
     padding: 16px 22px;
     font-size: 16px;
-    font-family: inherit;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
     &:focus {

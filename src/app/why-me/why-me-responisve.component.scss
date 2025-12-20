@@ -1,7 +1,6 @@
 @media (min-width: 1921px) {
   .why-me__title {
     font-size: 72px;
-    margin-block-start: 32px;
   }
 
   .why-me__text {
@@ -38,7 +37,6 @@
 @media (max-width: 1024px) {
   .why-me__title {
     font-size: 44px;
-    margin-block-start: 98px;
   }
 
   .why-me__inner {
@@ -102,23 +100,18 @@
   }
 
   .why-me__inner {
-    padding: 24px 24px 0px 24px;
+    padding: 24px 24px 24px 24px;
     gap: 32px;
   }
 }
 
 @media (max-width: 480px) {
   .why-me__title {
-    margin-block-start: 0;
     font-size: 36px;
   }
 
   .cta-button {
     display: none;
-  }
-
-  .why-me__inner {
-    padding: 24px 24px 0px 24px;
   }
 }
 
@@ -136,7 +129,7 @@
   }
 
   .why-me__inner {
-    padding: 0;
+    padding: 24px;
 
   }
 }

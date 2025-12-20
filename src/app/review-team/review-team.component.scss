@@ -4,13 +4,13 @@
   background-color: #262e34;
   padding: 0px 48px;
   color: #f5f7fb;
+  display: none;
 }
 
 .review-team__inner {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  max-width: 1440px;
 }
 
 .review-team__title {
