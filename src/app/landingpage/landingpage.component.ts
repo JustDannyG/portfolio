@@ -36,6 +36,7 @@ export class LandingpageComponent implements AfterViewInit, OnDestroy {
   @ViewChild('navSentinel') navSentinel?: ElementRef<HTMLDivElement>;
   isNavbarFixed = false;
   private navObserver?: IntersectionObserver;
+  private readonly handleResize = () => this.updateNavObserver();
 
   constructor(private mobileMenuService: MobileMenuService) {}
 
@@ -44,7 +45,38 @@ export class LandingpageComponent implements AfterViewInit, OnDestroy {
       return;
     }
 
-    const rootMarginTop = window.innerWidth >= 1921 ? 140 : 104;
+    this.updateNavObserver();
+    window.addEventListener('resize', this.handleResize);
+  }
+
+  ngOnDestroy() {
+    this.navObserver?.disconnect();
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('resize', this.handleResize);
+    }
+  }
+
+  private getNavbarHeight(): number {
+    const navElement = this.navSentinel?.nativeElement.nextElementSibling as HTMLElement | null;
+    const measuredHeight = navElement?.offsetHeight ?? 0;
+    if (measuredHeight > 0) {
+      return measuredHeight;
+    }
+
+    if (typeof window === 'undefined') {
+      return 104;
+    }
+
+    return window.innerWidth >= 1921 ? 140 : 104;
+  }
+
+  private updateNavObserver() {
+    if (!this.navSentinel || typeof window === 'undefined' || !('IntersectionObserver' in window)) {
+      return;
+    }
+
+    this.navObserver?.disconnect();
+    const rootMarginTop = this.getNavbarHeight();
 
     this.navObserver = new IntersectionObserver(
       (entries) => {
@@ -58,10 +90,6 @@ export class LandingpageComponent implements AfterViewInit, OnDestroy {
     );
 
     this.navObserver.observe(this.navSentinel.nativeElement);
-  }
-
-  ngOnDestroy() {
-    this.navObserver?.disconnect();
   }
 
   scrollToWhyMe() {
