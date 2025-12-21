@@ -11,7 +11,7 @@
 .mobile-menu-panel__bubble {
   width: 100%;
   max-width: 460px;
-  background-image: url('/assets/img/langingpage-img/selfie-background-1.svg');
+  background-image: url('../../assets/img/langingpage-img/selfie-background-1.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -46,7 +46,7 @@
 
     &.active {
       color: #ffffff;
-      background-image: url('/assets/img/langingpage-img/Ellipse 24.svg');
+      background-image: url('../../assets/img/langingpage-img/Ellipse 24.svg');
     }
   }
 }
@@ -73,7 +73,7 @@
 
   &.active {
     color: #ffffff;
-    background-image: url('/assets/img/langingpage-img/Ellipse 24.svg');
+    background-image: url('../../assets/img/langingpage-img/Ellipse 24.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

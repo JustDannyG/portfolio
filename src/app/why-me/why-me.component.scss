@@ -80,6 +80,7 @@ $text-muted: rgba(240, 233, 220, 0.86);
   cursor: pointer;
   transition: background-color 0.2s ease, filter 0.2s ease, transform 0.2s ease;
   align-self: flex-end;
+  z-index: 100;
 
   &:hover {
     background-color: rgba($accent, 0.22);

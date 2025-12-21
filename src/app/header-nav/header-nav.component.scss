@@ -13,6 +13,7 @@
   background: #89bcd9;
   color: #1f2b32;
   overflow: clip;
+  z-index: 101;
 }
 
 .header-nav__logo {
@@ -28,7 +29,6 @@
 .logo-text {
   display: flex;
   flex-direction: column;
-  line-height: 1.1;
 }
 
 .logo-name {
