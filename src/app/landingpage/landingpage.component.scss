@@ -13,7 +13,6 @@ $text-dark: #1f2b32;
 .landing {
   display: flex;
   flex-direction: column;
-  height: 100vh;
   position: relative;
   background: $dark;
   color: $text-light;
@@ -23,7 +22,8 @@ $text-dark: #1f2b32;
 .landing__top {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
+  padding: 104px 48px 0 48px;
 }
 
 .landing__portrait {
@@ -335,7 +335,7 @@ $text-dark: #1f2b32;
   }
 }
 
-.landing__iner {
+.landing__inner {
   display: flex;
   align-items: start;
   height: 100vh;

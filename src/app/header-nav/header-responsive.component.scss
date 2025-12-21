@@ -21,6 +21,12 @@
   }
 }
 
+@media (min-width: 1441px) {
+  .header-nav {
+    padding: 0 96px;
+  }
+}
+
 @media (max-width: 1440px) {
   .nav-container {
     padding: 0 48px;

@@ -44,6 +44,8 @@ export class LandingpageComponent implements AfterViewInit, OnDestroy {
       return;
     }
 
+    const rootMarginTop = window.innerWidth >= 1921 ? 140 : 104;
+
     this.navObserver = new IntersectionObserver(
       (entries) => {
         const [entry] = entries;
@@ -51,7 +53,7 @@ export class LandingpageComponent implements AfterViewInit, OnDestroy {
       },
       {
         threshold: 0,
-        rootMargin: '-104px 0px 0px 0px'
+        rootMargin: `-${rootMarginTop}px 0px 0px 0px`
       }
     );
 
