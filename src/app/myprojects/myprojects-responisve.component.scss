@@ -145,14 +145,6 @@
     display: none;
   }
 
-  .info-text {
-    flex-direction: row;
-  }
-
-  .info-item {
-    flex-direction: column;
-  }
-
   .info-heading {
     align-items: center;
 
@@ -211,18 +203,6 @@
     &.active {
       color: #6db3c7;
     }
-  }
-
-  .info-duration {
-    display: none;
-  }
-
-  .info-text {
-    flex-direction: row;
-  }
-
-  .info-item {
-    flex-direction: column;
   }
 
   .info-heading {

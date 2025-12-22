@@ -65,13 +65,6 @@ $text-dark: #1f2b32;
   filter: drop-shadow(0 18px 26px rgba(0, 0, 0, 0.18));
 }
 
-.landing__intro {
-  display: flex;
-  justify-content: end;
-  color: $text-light;
-  align-items: end;
-}
-
 .intro__meta {
   display: flex;
   justify-content: center;
@@ -97,7 +90,6 @@ $text-dark: #1f2b32;
     font-size: 40px;
     font-weight: 400;
     color: $text-light;
-    line-height: 1.25;
   }
 }
 
@@ -145,8 +137,6 @@ $text-dark: #1f2b32;
 
 .landing__mobile-header {
   display: none;
-  position: relative;
-  z-index: 60;
 }
 
 .landing__mobile-bar {
@@ -212,26 +202,26 @@ $text-dark: #1f2b32;
 }
 
 .social-icon--mail {
-  background-image: url('/assets/img/langingpage-img/Mail def..svg');
+  background-image: url('../../assets/img/langingpage-img/Mail def..svg');
 
   &:hover {
-    background-image: url('/assets/img/langingpage-img/Mail-hover.svg');
+    background-image: url('../../assets/img/langingpage-img/Mail-hover.svg');
   }
 }
 
 .social-icon--github {
-  background-image: url('/assets/img/langingpage-img/github.svg');
+  background-image: url('../../assets/img/langingpage-img/github.svg');
 
   &:hover {
-    background-image: url('/assets/img/langingpage-img/github-hover.svg');
+    background-image: url('../../assets/img/langingpage-img/github-hover.svg');
   }
 }
 
 .social-icon--linkedin {
-  background-image: url('/assets/img/langingpage-img/in.svg');
+  background-image: url('../../assets/img/langingpage-img/in.svg');
 
   &:hover {
-    background-image: url('/assets/img/langingpage-img/in-hover.svg');
+    background-image: url('../../assets/img/langingpage-img/in-hover.svg');
   }
 }
 
@@ -252,7 +242,7 @@ $text-dark: #1f2b32;
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
 
   img {
@@ -294,10 +284,6 @@ $text-dark: #1f2b32;
 .lang {
   padding: 6px 12px;
   border-radius: 999px;
-}
-
-.lang--muted {
-  color: rgba($text-dark, 0.7);
 }
 
 .lang--active {

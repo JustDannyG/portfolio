@@ -26,22 +26,6 @@
   }
 }
 
-.logo-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.logo-name {
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.logo-role {
-  font-size: 13.6px;
-  opacity: 0.9;
-  font-weight: 500;
-}
-
 .header-nav__links {
   display: flex;
   align-items: center;
@@ -60,9 +44,9 @@
     white-space: nowrap;
     transition: color 0.2s ease, background-image 0.2s ease;
 
-    &.active {
-      color: #ffffff;
-      background-image: url("/assets/img/langingpage-img/Ellipse 24.svg");
+      &.active {
+        color: #ffffff;
+        background-image: url("../../assets/img/langingpage-img/Ellipse 24.svg");
       background-size: 72px;
     }
   }
@@ -93,9 +77,9 @@
     color: #ffffff;
   }
 
-  &.active {
-    color: #ffffff;
-    background-image: url("/assets/img/langingpage-img/Ellipse 24.svg");
+    &.active {
+      color: #ffffff;
+      background-image: url("../../assets/img/langingpage-img/Ellipse 24.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

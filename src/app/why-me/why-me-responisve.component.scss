@@ -70,17 +70,11 @@
 
   .why-me__location {
     width: 100%;
-    display: flex;
     justify-content: center;
   }
 
   .why-me__text {
     text-align: center;
-  }
-
-  .why-me__icon {
-    width: 78px;
-    height: 78px;
   }
 
   .why-me__title {
@@ -122,10 +116,6 @@
 
   .why-me__location {
     gap: 12px;
-  }
-
-  .why-me__headline {
-    width: max-content;
   }
 
   .why-me__inner {

@@ -61,7 +61,6 @@
   }
 
   .review-team__cards {
-    display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -103,8 +102,8 @@
     flex: 0 0 248px;
     scroll-snap-align: center;
 
-    &:hover {
-      background-image: url('/assets/img/team-review-section/Ellipse 02.svg');
+      &:hover {
+        background-image: url('../../assets/img/team-review-section/Ellipse 02.svg');
       transform: none;
     }
   }

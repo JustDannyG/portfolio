@@ -70,53 +70,10 @@ $text-dark: #2b3d4a;
   justify-content: center;
 }
 
-.legal-page__hero {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-  padding: 48px 96px 0;
-}
-
-.legal-page__brand {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  color: $text-dark;
-
-  img {
-    width: 72px;
-    height: auto;
-  }
-}
-
-.legal-page__brand__text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-}
-
-.legal-page__brand__name {
-  font-size: 23px;
-  font-weight: 600;
-}
-
-.legal-page__brand__role {
-  font-size: 16px;
-  letter-spacing: 0.8px;
-}
-
 .legal-page__content {
   max-width: 960px;
   margin: 40px 0;
   padding: 64px;
-}
-
-.legal-page__eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 6.4px;
-  color: $accent;
-  margin: 0 0 12px;
-  font-size: 13.6px;
 }
 
 .legal-page__content h1 {

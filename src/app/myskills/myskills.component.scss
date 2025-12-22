@@ -74,7 +74,7 @@ $accent: #89bcd9;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url('/assets/skill-sets/background-image/Property 1=Default.svg');
+    background-image: url('../../assets/skill-sets/background-image/learning-bubble-default.svg');
     background-repeat: no-repeat;
     background-size: 100%;
     width: 375px;
@@ -83,7 +83,7 @@ $accent: #89bcd9;
     z-index: 100;
 
     &:hover {
-        background-image: url('/assets/skill-sets/background-image/Property 1=hover.svg');
+        background-image: url('../../assets/skill-sets/background-image/learning-bubble-hover.svg');
     }
 
     h3 {

@@ -34,11 +34,12 @@
             ],
             "scripts": []
           },
-          "configurations": {
-            "production": {
-              "budgets": [
-                {
-                  "type": "initial",
+        "configurations": {
+          "production": {
+            "baseHref": "/angular-projects/danny-gruchmann/",
+            "budgets": [
+              {
+                "type": "initial",
                   "maximumWarning": "500kb",
                   "maximumError": "1mb"
                 },

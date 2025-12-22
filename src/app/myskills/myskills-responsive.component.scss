@@ -99,7 +99,6 @@ $accent: #89bcd9;
     }
 
     .heading-container {
-        display: flex;
         text-align: center;
 
         h3 {
@@ -130,9 +129,7 @@ $accent: #89bcd9;
 
 @media (max-width: 768px) {
     .section-title {
-        font-size: 44px;
-        margin-block-end: 0;
-        margin-block-start: 0;
+        margin: 0;
     }
 
     .myskills-section {
@@ -143,7 +140,6 @@ $accent: #89bcd9;
     .skills-grid {
         justify-content: center;
         height: unset;
-        gap: 22px;
     }
 
     .skill-item {
@@ -254,10 +250,6 @@ $accent: #89bcd9;
             width: 45px;
             height: 45px;
         }
-
-        span {
-            font-size: 14.4px;
-        }
     }
 
     .learning-bubble {
@@ -290,11 +282,6 @@ $accent: #89bcd9;
     .learning-icons {
         display: none;
         gap: 0;
-    }
-
-    .heading-container {
-        display: flex;
-        gap: 4px;
     }
 }
 

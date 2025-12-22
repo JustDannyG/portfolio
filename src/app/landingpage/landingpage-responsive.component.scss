@@ -87,11 +87,6 @@
     left: 4%;
     top: -3%;
   }
-
-  .landing__intro {
-    gap: 42%;
-    margin-right: 1%;
-  }
 }
 
 @media (max-width: 1260px) {
@@ -158,10 +153,6 @@
     height: 20px;
   }
 
-  .landing__intro {
-    gap: 40%;
-  }
-
   .scroll-indicator {
     height: 80px;
     width: 32px;
@@ -173,12 +164,6 @@
   }
 }
 
-@media (max-width: 854px) {
-  .landing__intro {
-    gap: 38%;
-  }
-}
-
 @media (max-width: 768px) {
 
   .landing__nav-host {
@@ -187,7 +172,6 @@
 
   .landing__nav {
     flex-direction: column;
-    align-items: center;
     gap: 12px;
   }
 
@@ -208,6 +192,7 @@
     gap: 12px;
     align-items: stretch;
     position: relative;
+    z-index: 60;
   }
 
   .landing-right {
@@ -244,7 +229,6 @@
     padding: 0;
     margin-top: 78px;
     margin-bottom: 0;
-    display: flex;
     flex-direction: column;
     gap: 44px;
   }
@@ -254,7 +238,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
     flex-shrink: 0;
   }
 
@@ -294,7 +277,6 @@
     top: 52%;
     left: 50%;
     width: min(68vw, 272px);
-    width: auto;
     height: 480px;
     transform: translate(-50%, -56%);
     z-index: 2;
@@ -312,13 +294,9 @@
     gap: 8px;
   }
 
-  .landing__intro {
-    display: none !important;
-  }
-
   .landing__socials,
   .intro__meta,
-  .landing__intro .brand__logo {
+  .brand__logo {
     display: none !important;
   }
 
@@ -330,16 +308,10 @@
       font-size: 48px;
       font-weight: 600;
     }
-
-    p {
-      font-size: 24px;
-      font-weight: 500;
-    }
   }
 
   .scroll-indicator-container {
     padding: 0;
-    justify-content: center;
   }
 
   .scroll-indicator {
@@ -364,7 +336,6 @@
   }
 
   .landing {
-    height: unset;
     justify-content: flex-start;
     padding: 0 0 24px 0;
   }
@@ -400,7 +371,6 @@
   .portrait__image {
     top: 54%;
     left: 50%;
-    width: min(74vw, 232px);
     height: 400px;
     transform: translate(-50%, -54%);
     clip-path: ellipse(90% 51% at 43% 46%);
@@ -424,7 +394,6 @@
 
   .portrait__image {
     top: 47%;
-    width: auto;
     height: 326px;
     transform: translate(-50%, -50%);
     clip-path: ellipse(68% 54% at 45% 47%);
