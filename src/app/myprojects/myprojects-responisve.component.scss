@@ -59,6 +59,12 @@
   }
 }
 
+@media (max-width: 1440px) {
+  .project-pannel-align-container {
+    gap: 7%;
+  }
+}
+
 @media (max-width: 1024px) {
   .media-card {
     img {
