@@ -1,7 +1,6 @@
 @media (min-width: 1921px) {
 
   .landing__inner {
-    width: 100%;
     max-width: 1920px;
   }
 
@@ -48,15 +47,10 @@
     top: -6%;
   }
 
-  .landing__inner {
-    width: 100%;
-  }
-
   .landing__top {
     padding: 104px 96px 0 96px;
     width: 100%;
     height: 100%;
-    justify-content: space-around;
   }
 
   .landing-right {
@@ -74,7 +68,7 @@
 
   .landing__top {
     gap: 1%;
-    margin-bottom: -191px;
+    margin-bottom: -164px;
   }
 
   .portrait__shape {
@@ -96,7 +90,7 @@
   }
 
   .portrait__shape {
-    height: 510px;
+    height: 500px;
     width: 422px;
   }
 
@@ -114,7 +108,7 @@
 
 @media (max-width: 1024px) {
   .portrait__shape {
-    height: 380px;
+    height: 378px;
     width: 362px;
   }
 
@@ -124,6 +118,7 @@
 
   .landing__top {
     padding: 32px 24px 0px 24px;
+    margin-bottom: -315px;
   }
 
   .landing__socials {
@@ -170,6 +165,11 @@
     display: none;
   }
 
+  .landing__inner {
+    height: unset;
+    flex-direction: column;
+  }
+
   .landing__nav {
     flex-direction: column;
     gap: 12px;
@@ -193,6 +193,7 @@
     align-items: stretch;
     position: relative;
     z-index: 60;
+    width: 100%;
   }
 
   .landing-right {
@@ -225,11 +226,11 @@
   }
 
   .landing__top {
-    width: 100%;
     padding: 0;
-    margin-top: 78px;
+    margin-top: 68px;
     margin-bottom: 0;
     flex-direction: column;
+    align-items: center;
     gap: 44px;
   }
 
@@ -274,15 +275,14 @@
 
   .portrait__image {
     position: absolute;
-    top: 52%;
+    top: 55%;
     left: 50%;
-    width: min(68vw, 272px);
-    height: 480px;
+    height: 455px;
     transform: translate(-50%, -56%);
     z-index: 2;
     filter: drop-shadow(0 12px 22px rgba(0, 0, 0, 0.28));
     object-fit: cover;
-    clip-path: ellipse(61% 49% at 46% 48%);
+    clip-path: ellipse(65% 48% at 45% 48%);
   }
 
   .landing__container-right {
@@ -295,8 +295,7 @@
   }
 
   .landing__socials,
-  .intro__meta,
-  .brand__logo {
+  .intro__meta {
     display: none !important;
   }
 
@@ -332,7 +331,7 @@
   }
 
   .portrait__shape {
-    height: 370px;
+    height: 342px;
   }
 
   .landing {
@@ -350,7 +349,7 @@
   }
 
   .landing__top {
-    margin-top: 28px;
+    margin-top: 56px;
   }
 
   .landing__portrait::before {
@@ -369,11 +368,10 @@
   }
 
   .portrait__image {
-    top: 54%;
-    left: 50%;
-    height: 400px;
+    top: 53%;
+    height: 365px;
     transform: translate(-50%, -54%);
-    clip-path: ellipse(90% 51% at 43% 46%);
+    clip-path: ellipse(67% 51% at 45% 48%);
   }
 
   .intro__text {
@@ -394,13 +392,13 @@
 
   .portrait__image {
     top: 47%;
-    height: 326px;
+    height: 333px;
     transform: translate(-50%, -50%);
-    clip-path: ellipse(68% 54% at 45% 47%);
+    clip-path: ellipse(69% 54% at 45% 46%);
   }
 
   .landing__top {
-    margin-top: 30px;
+    margin-top: 34px;
   }
 
   .portrait__shape {

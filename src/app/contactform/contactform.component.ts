@@ -36,13 +36,13 @@ export class ContactformComponent implements OnDestroy {
   mailTest = true;
 
   post = {
-    endPoint: 'https://danny-gruchmann.developerakademie.net/abschluss-projekt/sendMail.php',
+    endPoint: 'https://danny-gruchmann.developerakademie.net/angular-projects/danny-gruchmann/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
         'Content-Type': 'text/plain',
-        responseType: 'text',
       },
+      responseType: 'text' as 'json',
     },
   };
 
@@ -76,7 +76,7 @@ export class ContactformComponent implements OnDestroy {
     if (!ngForm) {
       return;
     }
-    this.http.post(this.post.endPoint, this.post.body(this.contactData))
+    this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
       .pipe(finalize(() => this.resetForm(ngForm)))
       .subscribe({
         error: (err) => this.handleSubmitError(err),

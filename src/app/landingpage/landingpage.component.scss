@@ -16,7 +16,7 @@ $text-dark: #1f2b32;
   position: relative;
   background: $dark;
   color: $text-light;
-
+  height: 100vh;
 }
 
 .landing__top {
@@ -24,6 +24,7 @@ $text-dark: #1f2b32;
   justify-content: space-between;
   align-items: start;
   padding: 104px 48px 0 48px;
+  width: 100%;
 }
 
 .landing__portrait {
@@ -324,5 +325,5 @@ $text-dark: #1f2b32;
 .landing__inner {
   display: flex;
   align-items: start;
-  height: 100vh;
+  width: 100%;
 }

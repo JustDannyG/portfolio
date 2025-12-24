@@ -152,7 +152,7 @@ const TRANSLATIONS = {
           ],
           image: 'assets/img/my-projects/Bildschirmfoto 2025-12-07 um 12.46.22.png',
           buttons: [
-            { label: 'Live Test', href: 'https://danny-gruchmann.developerakademie.net/join_projekt_abschlussversion/index.html', target: '_blank', variant: 'primary' },
+            { label: 'Live Test', href: 'https://danny-gruchmann.developerakademie.net/join/index.html', target: '_blank', variant: 'primary' },
             { label: 'GitHub', href: 'https://github.com/JustDannyG/Join', target: '_blank', variant: 'secondary' }
           ]
         },
@@ -402,7 +402,7 @@ const TRANSLATIONS = {
           ],
           image: 'assets/img/my-projects/Bildschirmfoto 2025-12-07 um 12.46.22.png',
           buttons: [
-            { label: 'Live-Demo', href: 'https://danny-gruchmann.developerakademie.net/join_projekt_abschlussversion/index.html', target: '_blank', variant: 'primary' },
+            { label: 'Live-Demo', href: 'https://danny-gruchmann.developerakademie.net/join/index.html', target: '_blank', variant: 'primary' },
             { label: 'GitHub', href: 'https://github.com/JustDannyG/Join', target: '_blank', variant: 'secondary' }
           ]
         },
