@@ -34,14 +34,16 @@ export class LandingpageComponent implements AfterViewInit, OnDestroy {
   readonly landingTexts = this.translationService.selectSection('landing');
   readonly navigationTexts = this.translationService.selectSection('navigation');
   @ViewChild('navSentinel') navSentinel?: ElementRef<HTMLDivElement>;
+  @ViewChild('navHost', { read: ElementRef }) navHost?: ElementRef<HTMLElement>;
   isNavbarFixed = false;
   private navObserver?: IntersectionObserver;
   private readonly handleResize = () => this.updateNavObserver();
+  private readonly hostElement = inject(ElementRef<HTMLElement>);
 
   constructor(private mobileMenuService: MobileMenuService) {}
 
   ngAfterViewInit() {
-    if (!this.navSentinel || typeof window === 'undefined' || !('IntersectionObserver' in window)) {
+    if (!this.navSentinel || !this.navHost || typeof window === 'undefined' || !('IntersectionObserver' in window)) {
       return;
     }
 
@@ -57,7 +59,7 @@ export class LandingpageComponent implements AfterViewInit, OnDestroy {
   }
 
   private getNavbarHeight(): number {
-    const navElement = this.navSentinel?.nativeElement.nextElementSibling as HTMLElement | null;
+    const navElement = this.navHost?.nativeElement ?? null;
     const measuredHeight = navElement?.offsetHeight ?? 0;
     if (measuredHeight > 0) {
       return measuredHeight;
@@ -71,25 +73,31 @@ export class LandingpageComponent implements AfterViewInit, OnDestroy {
   }
 
   private updateNavObserver() {
-    if (!this.navSentinel || typeof window === 'undefined' || !('IntersectionObserver' in window)) {
+    if (!this.navSentinel || !this.navHost || typeof window === 'undefined' || !('IntersectionObserver' in window)) {
       return;
     }
 
     this.navObserver?.disconnect();
-    const rootMarginTop = this.getNavbarHeight();
+    const navHeight = this.getNavbarHeight();
+    this.setNavHeightVariable(navHeight);
 
-    this.navObserver = new IntersectionObserver(
-      (entries) => {
-        const [entry] = entries;
-        this.isNavbarFixed = entry ? !entry.isIntersecting : false;
-      },
-      {
-        threshold: 0,
-        rootMargin: `-${rootMarginTop}px 0px 0px 0px`
+    this.navObserver = new IntersectionObserver((entries) => {
+      const [entry] = entries;
+      if (!entry) {
+        this.isNavbarFixed = false;
+        return;
       }
-    );
+
+      this.isNavbarFixed = !entry.isIntersecting;
+    }, { threshold: 0 });
 
     this.navObserver.observe(this.navSentinel.nativeElement);
+  }
+
+  private setNavHeightVariable(height: number) {
+    const host = this.hostElement.nativeElement;
+    const resolvedHeight = height > 0 ? height : 104;
+    host.style.setProperty('--nav-height', `${resolvedHeight}px`);
   }
 
   scrollToWhyMe() {
