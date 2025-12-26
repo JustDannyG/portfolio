@@ -119,7 +119,7 @@ const TRANSLATIONS = {
           ],
           image: 'assets/img/my-projects/Bildschirmfoto 2025-12-07 um 11.18.25.png',
           buttons: [
-            { label: 'Live Test', href: 'https://danny-gruchmann.developerakademie.net/el-pollo-loco/index.html', target: '_blank', variant: 'primary' },
+            { label: 'Live Test', href: 'http://danny-gruchmann.de/el-pollo-loco/index.html', target: '_blank', variant: 'primary' },
             { label: 'GitHub', href: 'https://github.com/JustDannyG/El-Pollo-Loco', target: '_blank', variant: 'secondary' }
           ]
         },
@@ -152,7 +152,7 @@ const TRANSLATIONS = {
           ],
           image: 'assets/img/my-projects/Bildschirmfoto 2025-12-07 um 12.46.22.png',
           buttons: [
-            { label: 'Live Test', href: 'https://danny-gruchmann.developerakademie.net/join/index.html', target: '_blank', variant: 'primary' },
+            { label: 'Live Test', href: 'http://danny-gruchmann.de/join/index.html', target: '_blank', variant: 'primary' },
             { label: 'GitHub', href: 'https://github.com/JustDannyG/Join', target: '_blank', variant: 'secondary' }
           ]
         },
@@ -483,7 +483,7 @@ const TRANSLATIONS = {
           ],
           image: 'assets/img/my-projects/Bildschirmfoto 2025-12-07 um 11.18.25.png',
           buttons: [
-            { label: 'Live-Demo', href: 'https://danny-gruchmann.developerakademie.net/el-pollo-loco/index.html', target: '_blank', variant: 'primary' },
+            { label: 'Live-Demo', href: 'http://danny-gruchmann.de/el-pollo-loco/index.html', target: '_blank', variant: 'primary' },
             { label: 'GitHub', href: 'https://github.com/JustDannyG/El-Pollo-Loco', target: '_blank', variant: 'secondary' }
           ]
         },
@@ -516,7 +516,7 @@ const TRANSLATIONS = {
           ],
           image: 'assets/img/my-projects/Bildschirmfoto 2025-12-07 um 12.46.22.png',
           buttons: [
-            { label: 'Live-Demo', href: 'https://danny-gruchmann.developerakademie.net/join/index.html', target: '_blank', variant: 'primary' },
+            { label: 'Live-Demo', href: 'http://danny-gruchmann.de/join/index.html', target: '_blank', variant: 'primary' },
             { label: 'GitHub', href: 'https://github.com/JustDannyG/Join', target: '_blank', variant: 'secondary' }
           ]
         },

@@ -132,6 +132,16 @@
   .contact-section__title {
     margin: 0;
   }
+
+  .field {
+
+    input,
+    textarea {
+      &::placeholder {
+        color: rgba(245, 247, 251, 0.7);
+      }
+    }
+  }
 }
 
 @media (max-width: 480px) {

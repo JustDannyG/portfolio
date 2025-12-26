@@ -53,21 +53,26 @@
         <div class="field">
           <label class="d-none" for="first-name">{{ texts().form.nameLabel }}</label>
           <input #firstName="ngModel" [(ngModel)]="contactData.name" id="first-name" name="firstName" type="text"
-            ngModel required minlength="2" pattern="^(?!\s+$).+"
+            placeholder="Name" ngModel required minlength="2" pattern="^(?!\s+$).+"
             [class.field--invalid]="firstName.invalid && (firstName.touched || contactForm.submitted) && !firstName.disabled" />
-          @if (firstName.invalid && (firstName.touched || contactForm.submitted) && !firstName.disabled) {
-          <span class="errorMsg">{{ texts().form.nameError }}</span>
-          }
+          <div class="field__error">
+            @if (firstName.invalid && (firstName.touched || contactForm.submitted) && !firstName.disabled) {
+            <span class="errorMsg">{{ texts().form.nameError }}</span>
+            }
+          </div>
         </div>
 
         <div class="field">
           <label class="d-none" for="last-name">{{ texts().form.emailLabel }}</label>
           <input #email="ngModel" [(ngModel)]="contactData.email" id="last-name" name="lastName" type="text" ngModel
+            placeholder="Email"
             required pattern="^(?!.*\.\.)[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
             [class.field--invalid]="email.invalid && (email.touched || contactForm.submitted) && !email.disabled" />
-          @if (email.invalid && (email.touched || contactForm.submitted) && !email.disabled) {
-          <span class="errorMsg">{{ texts().form.emailError }}</span>
-          }
+          <div class="field__error">
+            @if (email.invalid && (email.touched || contactForm.submitted) && !email.disabled) {
+            <span class="errorMsg">{{ texts().form.emailError }}</span>
+            }
+          </div>
         </div>
       </div>
 
@@ -76,9 +81,11 @@
         <textarea #message="ngModel" [(ngModel)]="contactData.message" id="subject" name="subject" rows="6"
           [placeholder]="texts().form.messagePlaceholder" ngModel required minlength="8" pattern="^(?!\s+$).+"
           [class.field--invalid]="!message.valid && (message.touched || contactForm.submitted) && !message.disabled"></textarea>
-        @if (!message.valid && (message.touched || contactForm.submitted) && !message.disabled) {
-        <span class="errorMsg">{{ texts().form.messageError }}</span>
-        }
+        <div class="field__error">
+          @if (!message.valid && (message.touched || contactForm.submitted) && !message.disabled) {
+          <span class="errorMsg">{{ texts().form.messageError }}</span>
+          }
+        </div>
       </div>
 
       <div class="consent-row">
