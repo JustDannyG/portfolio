@@ -18,9 +18,9 @@
 <section class="legal-page">
 
   <div class="legal-page__content">
-    <h1>{{ legalCopy.title }}</h1>
+    <h1>{{ privacyCopy.title }}</h1>
 
-    @for (section of legalCopy.sections; track section.heading) {
+    @for (section of privacyCopy.sections; track section.heading) {
     <section class="legal-block">
       <h2>{{ section.heading }}</h2>
       @for (paragraph of bodyParagraphs(section); track $index) {
@@ -43,7 +43,7 @@
     </section>
     }
 
-    <p class="legal-page__date">{{ legalCopy.dateLabel }}</p>
+    <p class="legal-page__date">{{ privacyCopy.dateLabel }}</p>
   </div>
 </section>
 

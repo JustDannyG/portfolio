@@ -156,7 +156,7 @@ const TRANSLATIONS = {
             { label: 'GitHub', href: 'https://github.com/JustDannyG/Join', target: '_blank', variant: 'secondary' }
           ]
         },
-        {
+        /* {
           id: 3,
           tabLabel: '3. Comming soon',
           name: 'Comming soon',
@@ -184,7 +184,7 @@ const TRANSLATIONS = {
             { label: 'Live Test', href: '#', target: '_blank', variant: 'primary' },
             { label: 'GitHub', href: '#', target: '_blank', variant: 'secondary' }
           ]
-        }
+        } */
       ]
     },
     reviewTeam: {
@@ -226,10 +226,8 @@ const TRANSLATIONS = {
       },
       form: {
         nameLabel: 'Your name',
-        namePlaceholder: 'Your name',
         nameError: 'Please enter your name.',
         emailLabel: 'Your email',
-        emailPlaceholder: 'Your email',
         emailError: 'Please enter a valid email address.',
         messageLabel: 'Your message',
         messagePlaceholder: 'Write something...',
@@ -289,6 +287,122 @@ const TRANSLATIONS = {
         }
       ],
       dateLabel: 'Date: December 10, 2025'
+    },
+    privacyPolicy: {
+      title: 'Privacy Policy',
+      sections: [
+        {
+          heading: '1. Controller',
+          body: 'The controller within the meaning of the General Data Protection Regulation (GDPR) is:',
+          list: ['Danny Gruchmann', 'Pleißenweg 7', '04600 Altenburg', 'E-mail: danny.grmn@icloud.com']
+        },
+        {
+          heading: '2. General information on data processing',
+          body: [
+            'I only process personal data insofar as this is necessary to provide a functional website as well as my content and services, or when you actively share this data with me (e.g. via the contact form).',
+            'This website currently uses:'
+          ],
+          list: [
+            'no tracking / reach measurement (e.g. Google Analytics)',
+            'no tag manager',
+            'no advertising or affiliate programs',
+            'no cookies that require consent (according to the current state)'
+          ]
+        },
+        {
+          heading: '3. Hosting',
+          body: [
+            'This website is hosted by: ALL-INKL.COM – Neue Medien Münnich, Hauptstraße 68, 02742 Friedersdorf, Germany.',
+            'When the website is accessed, the hosting provider processes the technical data required to deliver the site (see server log files). The legal basis is Art. 6(1)(f) GDPR (legitimate interest in the secure and stable operation of the website).'
+          ]
+        },
+        {
+          heading: '4. Server log files',
+          body: ['When you visit this website, the hosting provider usually processes the following data in so-called server log files:'],
+          list: [
+            'IP address (possibly shortened/truncated depending on the hosting setup)',
+            'Date and time of access',
+            'Page/file accessed',
+            'Transferred data volume',
+            'Referrer URL (previously visited page)',
+            'Browser type/version and operating system',
+            'Host name of the accessing computer'
+          ],
+          afterList: [
+            'Processing is carried out to ensure technical operation, error analysis, and to ward off attacks. Legal basis: Art. 6(1)(f) GDPR.',
+            "Retention: Log files are usually stored for a limited period of time and are then deleted. The exact duration depends on the hoster's settings/standards."
+          ]
+        },
+        {
+          heading: '5. Contact (email and contact form)',
+          body: [
+            'If you contact me (e.g. by email or via the contact form), the data you provide (e.g. name, email address, message text) are processed in order to handle your request.',
+            'Submissions from the contact form are sent to my email address: danny.grmn@icloud.com.',
+            'There is no additional external storage (e.g. CRM/newsletter tool/database) through this website—the data remains in my email inbox as part of the communication.'
+          ],
+          list: [
+            'Art. 6(1)(b) GDPR, if the request relates to pre-contractual measures or an existing contract,',
+            'otherwise Art. 6(1)(f) GDPR (legitimate interest in processing inquiries).'
+          ],
+          afterList: [
+            'Retention: I store inquiry content for as long as necessary to process it and/or for as long as legal retention requirements apply.'
+          ]
+        },
+        {
+          heading: '6. Integration of GitHub and LinkedIn (third-party content)',
+          body: [
+            'This website embeds content from GitHub and LinkedIn (e.g. profiles, widgets, badges, or embedded content).',
+            'When these contents load, your browser may technically connect to the servers of the respective providers. This can involve processing the IP address, technical device/browser data, and potentially additional information.'
+          ],
+          list: [
+            'GitHub: GitHub, Inc., USA (for EU users sometimes GitHub B.V., Netherlands, depending on the service/processing)',
+            'LinkedIn: LinkedIn Ireland Unlimited Company, Ireland (processing can also take place in third countries depending on the service)'
+          ],
+          afterList: [
+            'Legal basis: The integration is carried out on the basis of Art. 6(1)(f) GDPR (legitimate interest in an appealing presentation of my portfolio and projects/profiles).',
+            'If a provider requires consent (e.g. due to extensive tracking), embedding would only make sense after consent (e.g. via a two-click solution/consent banner).',
+            'Note: If you do not want third-party providers to receive data, use the website without activating/clicking the embedded content or block third-party content through browser settings/plugins.'
+          ]
+        },
+        {
+          heading: '7. Cookies',
+          body: [
+            'According to the current state, this website does not use cookies for analytics, marketing, or tracking purposes.',
+            'If this changes in the future (e.g. through analytics, YouTube, Maps, consent tools), this privacy policy will be updated accordingly and any required consent will be obtained.'
+          ]
+        },
+        {
+          heading: '8. SSL/TLS encryption (HTTPS)',
+          body: [
+            'I recommend using the website only via an encrypted connection (HTTPS) as this protects data transfers.',
+            'Current note: HTTPS is still being set up. As long as the website (partially) runs unencrypted via HTTP, transmitted data could theoretically be read by third parties. Please do not send sensitive information via the contact form in that case.'
+          ]
+        },
+        {
+          heading: '9. Your rights as a data subject',
+          body: ['Under the GDPR you have the following rights:'],
+          list: [
+            'Access (Art. 15 GDPR) to your processed data',
+            'Rectification (Art. 16 GDPR) of inaccurate data',
+            'Erasure (Art. 17 GDPR) (“right to be forgotten”)',
+            'Restriction of processing (Art. 18 GDPR)',
+            'Data portability (Art. 20 GDPR)',
+            'Objecting to processing based on legitimate interests (Art. 21 GDPR)'
+          ],
+          afterList: ['To exercise your rights, simply send an email to: danny.grmn@icloud.com.']
+        },
+        {
+          heading: '10. Right to lodge a complaint with the supervisory authority',
+          body: [
+            'You also have the right to lodge a complaint with a data protection supervisory authority (Art. 77 GDPR), in particular in the EU member state of your habitual residence, place of work, or the place of the alleged infringement.'
+          ]
+        },
+        {
+          heading: '11. Updates and changes',
+          body: ['I may adapt this privacy policy if the website, the tools used, or legal requirements change.']
+        }
+      ],
+      dateLabel: 'Last updated: December 26, 2025'
     }
   },
   DE: {
@@ -476,10 +590,8 @@ const TRANSLATIONS = {
       },
       form: {
         nameLabel: 'Dein Name',
-        namePlaceholder: 'Dein Name',
         nameError: 'Bitte gib deinen Namen ein.',
         emailLabel: 'Deine E-Mail',
-        emailPlaceholder: 'Deine E-Mail',
         emailError: 'Bitte gib eine gültige E-Mail-Adresse ein.',
         messageLabel: 'Deine Nachricht',
         messagePlaceholder: 'Schreib mir etwas...',
@@ -539,6 +651,122 @@ const TRANSLATIONS = {
         }
       ],
       dateLabel: 'Stand: 10. Dezember 2025'
+    },
+    privacyPolicy: {
+      title: 'Datenschutzerklärung',
+      sections: [
+        {
+          heading: '1. Verantwortlicher',
+          body: 'Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:',
+          list: ['Danny Gruchmann', 'Pleißenweg 7', '04600 Altenburg', 'E-Mail: danny.grmn@icloud.com']
+        },
+        {
+          heading: '2. Allgemeine Hinweise zur Datenverarbeitung',
+          body: [
+            'Ich verarbeite personenbezogene Daten nur, soweit dies zur Bereitstellung einer funktionsfähigen Website sowie meiner Inhalte und Leistungen erforderlich ist oder du mir diese Daten aktiv mitteilst (z. B. über das Kontaktformular).',
+            'Diese Website nutzt derzeit:'
+          ],
+          list: [
+            'kein Tracking / keine Reichweitenmessung (z. B. Google Analytics)',
+            'keinen Tag Manager',
+            'keine Werbe- oder Affiliate-Programme',
+            'nach aktuellem Stand keine Cookies, die eine Einwilligung erfordern'
+          ]
+        },
+        {
+          heading: '3. Hosting',
+          body: [
+            'Diese Website wird bei folgendem Anbieter gehostet: ALL-INKL.COM – Neue Medien Münnich, Hauptstraße 68, 02742 Friedersdorf, Deutschland.',
+            'Beim Aufruf der Website verarbeitet der Hosting-Anbieter technisch notwendige Daten, um die Website auszuliefern (siehe Server-Logfiles). Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an sicherem und stabilem Betrieb der Website).'
+          ]
+        },
+        {
+          heading: '4. Server-Logfiles',
+          body: ['Beim Besuch dieser Website werden durch den Hosting-Anbieter in der Regel folgende Daten in sogenannten Server-Logfiles verarbeitet:'],
+          list: [
+            'IP-Adresse (ggf. in gekürzter/gekappter Form – abhängig vom Hosting-Setup)',
+            'Datum und Uhrzeit des Zugriffs',
+            'aufgerufene Seite/Datei',
+            'übertragene Datenmenge',
+            'Referrer-URL (zuvor besuchte Seite)',
+            'Browsertyp/-version und Betriebssystem',
+            'Hostname des zugreifenden Rechners'
+          ],
+          afterList: [
+            'Die Verarbeitung erfolgt zur Sicherstellung des technischen Betriebs, zur Fehleranalyse sowie zur Abwehr von Angriffen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.',
+            'Speicherdauer: Logfiles werden in der Regel für einen begrenzten Zeitraum gespeichert und anschließend gelöscht. Die konkrete Dauer hängt von den Einstellungen/Standards des Hosters ab.'
+          ]
+        },
+        {
+          heading: '5. Kontaktaufnahme (E-Mail und Kontaktformular)',
+          body: [
+            'Wenn du mich kontaktierst (z. B. per E-Mail oder über das Kontaktformular), werden die von dir übermittelten Daten verarbeitet (z. B. Name, E-Mail-Adresse, Nachrichtentext), um deine Anfrage zu bearbeiten.',
+            'Die Übermittlung aus dem Kontaktformular erfolgt an meine E-Mail-Adresse: danny.grmn@icloud.com',
+            'Es erfolgt keine zusätzliche externe Speicherung (z. B. CRM/Newsletter-Tool/Datenbank) durch diese Website – die Daten liegen in meinem E-Mail-Postfach im Rahmen der Kommunikation.'
+          ],
+          list: [
+            'Art. 6 Abs. 1 lit. b DSGVO, sofern die Anfrage der Durchführung vorvertraglicher Maßnahmen dient oder einen Vertrag betrifft,',
+            'ansonsten Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Bearbeitung von Anfragen).'
+          ],
+          afterList: [
+            'Speicherdauer: Ich speichere die Inhalte der Anfragen so lange, wie es zur Bearbeitung erforderlich ist und/oder gesetzliche Aufbewahrungspflichten bestehen.'
+          ]
+        },
+        {
+          heading: '6. Einbindung von GitHub und LinkedIn (Drittanbieter-Inhalte)',
+          body: [
+            'Auf dieser Website sind Inhalte von GitHub und LinkedIn eingebunden (z. B. Profile, Widgets, Badges oder eingebettete Inhalte).',
+            'Beim Laden dieser Inhalte kann es technisch bedingt dazu kommen, dass dein Browser eine Verbindung zu Servern der jeweiligen Anbieter herstellt. Dabei können insbesondere IP-Adresse, technische Geräte-/Browserdaten sowie ggf. weitere Daten verarbeitet werden.'
+          ],
+          list: [
+            'GitHub: GitHub, Inc., USA (bei EU-Nutzern teils auch GitHub B.V., Niederlande, je nach Dienst/Verarbeitung)',
+            'LinkedIn: LinkedIn Ireland Unlimited Company, Irland (Datenverarbeitung kann auch in Drittländern stattfinden, abhängig vom Dienst)'
+          ],
+          afterList: [
+            'Rechtsgrundlage: Die Einbindung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer ansprechenden Darstellung meines Portfolios und meiner Projekte/Profiles).',
+            'Sofern ein Anbieter eine Einwilligung erfordern würde (z. B. bei umfangreichem Tracking durch eingebettete Inhalte), wäre eine Einbindung erst nach Einwilligung sinnvoll (z. B. über eine „2-Klick-Lösung“/Consent-Banner).',
+            'Hinweis: Wenn du nicht möchtest, dass Drittanbieter Daten erhalten, nutze die Website ohne das Aktivieren/Anklicken der eingebetteten Inhalte oder blockiere Drittanbieter-Inhalte über Browser-Einstellungen/Plugins.'
+          ]
+        },
+        {
+          heading: '7. Cookies',
+          body: [
+            'Nach aktuellem Stand setzt diese Website keine Cookies zu Analyse-, Marketing- oder Trackingzwecken ein.',
+            'Sollte sich das in Zukunft ändern (z. B. durch Analytics, YouTube, Maps, Consent-Tool), wird diese Datenschutzerklärung entsprechend angepasst und ggf. eine Einwilligung eingeholt.'
+          ]
+        },
+        {
+          heading: '8. SSL-/TLS-Verschlüsselung (HTTPS)',
+          body: [
+            'Ich empfehle, die Website nur über eine verschlüsselte Verbindung (HTTPS) zu nutzen, da dadurch Datenübertragungen geschützt werden.',
+            'Aktueller Hinweis: HTTPS ist noch in Einrichtung. Solange die Website (teilweise) unverschlüsselt über HTTP erreichbar ist, können übermittelte Daten theoretisch von Dritten mitgelesen werden. Bitte sende in diesem Fall keine sensiblen Informationen über das Kontaktformular.'
+          ]
+        },
+        {
+          heading: '9. Deine Rechte als betroffene Person',
+          body: ['Du hast nach DSGVO folgende Rechte:'],
+          list: [
+            'Auskunft (Art. 15 DSGVO) über deine verarbeiteten Daten',
+            'Berichtigung (Art. 16 DSGVO) unrichtiger Daten',
+            'Löschung (Art. 17 DSGVO) („Recht auf Vergessenwerden“)',
+            'Einschränkung der Verarbeitung (Art. 18 DSGVO)',
+            'Datenübertragbarkeit (Art. 20 DSGVO)',
+            'Widerspruch gegen Verarbeitung auf Grundlage berechtigter Interessen (Art. 21 DSGVO)'
+          ],
+          afterList: ['Zur Ausübung deiner Rechte genügt eine E-Mail an: danny.grmn@icloud.com']
+        },
+        {
+          heading: '10. Beschwerderecht bei der Aufsichtsbehörde',
+          body: [
+            'Du hast zudem das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren (Art. 77 DSGVO), insbesondere in dem EU-Mitgliedstaat deines gewöhnlichen Aufenthaltsorts, Arbeitsplatzes oder des mutmaßlichen Verstoßes.'
+          ]
+        },
+        {
+          heading: '11. Aktualität und Änderungen',
+          body: ['Ich kann diese Datenschutzerklärung anpassen, wenn sich die Website, eingesetzte Tools oder rechtliche Anforderungen ändern.']
+        }
+      ],
+      dateLabel: 'Stand: 26.12.2025'
     }
   }
 } as const;

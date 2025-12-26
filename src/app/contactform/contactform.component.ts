@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnDestroy, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 import { finalize } from 'rxjs';
 import { TranslationService } from '../shared/services/translation.service';
 import { SuccsessfullySentComponent } from '../succsessfully-sent/succsessfully-sent.component';
@@ -8,7 +9,7 @@ import { SuccsessfullySentComponent } from '../succsessfully-sent/succsessfully-
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [FormsModule, SuccsessfullySentComponent],
+  imports: [FormsModule, SuccsessfullySentComponent, RouterLink],
   templateUrl: './contactform.component.html',
   styleUrls: ['./contactform.component.scss', './contactform.responive.component.scss'],
 })

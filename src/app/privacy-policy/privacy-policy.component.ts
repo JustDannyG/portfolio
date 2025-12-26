@@ -8,26 +8,26 @@ import { MobileMenuComponent } from '../mobile-menu/mobile-menu.component';
 import { TranslationService } from '../shared/services/translation.service';
 
 @Component({
-  selector: 'app-legal-notice',
+  selector: 'app-privacy-policy',
   standalone: true,
   imports: [CommonModule, RouterLink, HeaderNavComponent, MobileMenuComponent, FooterComponent],
-  templateUrl: './legal-notice.component.html',
-  styleUrls: ['./legal-notice.component.scss', './legal-notice-responisve.component.scss']
+  templateUrl: './privacy-policy.component.html',
+  styleUrls: ['../legal-notice/legal-notice.component.scss', '../legal-notice/legal-notice-responisve.component.scss']
 })
-export class LegalNoticeComponent implements OnInit {
+export class PrivacyPolicyComponent implements OnInit {
   private document = inject(DOCUMENT);
   private translationService = inject(TranslationService);
   readonly isMobileMenuOpen$ = this.mobileMenuService.isOpen$;
   readonly navigationTexts = this.translationService.selectSection('navigation');
-  readonly legalTexts = this.translationService.selectSection('legalNotice');
+  readonly privacyTexts = this.translationService.selectSection('privacyPolicy');
   constructor(private mobileMenuService: MobileMenuService) {}
 
   get navigationCopy() {
     return this.navigationTexts();
   }
 
-  get legalCopy() {
-    return this.legalTexts();
+  get privacyCopy() {
+    return this.privacyTexts();
   }
 
   bodyParagraphs(section: unknown): ReadonlyArray<string> {
