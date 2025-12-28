@@ -105,3 +105,23 @@ $accent: #89bcd9;
 .cta-button-mobile {
     display: none;
 }
+
+.skills-grid.reveal .skill-item {
+    opacity: 0;
+    transform: translateX(-140px);
+}
+
+.skills-grid.reveal.reveal--visible .skill-item {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+    transition-delay: calc(var(--reveal-order, 0) * 180ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .skills-grid.reveal .skill-item {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}

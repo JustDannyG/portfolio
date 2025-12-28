@@ -50,3 +50,40 @@ body {
   }
 
 }
+
+.reveal {
+  opacity: 0;
+  transform: translate3d(var(--reveal-translate-x, 0), var(--reveal-translate-y, 0), 0) scale(var(--reveal-scale, 1));
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition-delay: var(--reveal-delay, 0s);
+  will-change: transform, opacity;
+}
+
+.reveal--from-left {
+  --reveal-translate-x: -120px;
+}
+
+.reveal--from-right {
+  --reveal-translate-x: 120px;
+}
+
+.reveal--from-up {
+  --reveal-translate-y: 120px;
+}
+
+.reveal--from-down {
+  --reveal-translate-y: -120px;
+}
+
+.reveal--visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none !important;
+    transition: none;
+  }
+}

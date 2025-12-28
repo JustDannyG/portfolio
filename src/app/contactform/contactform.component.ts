@@ -5,11 +5,12 @@ import { RouterLink } from '@angular/router';
 import { finalize } from 'rxjs';
 import { TranslationService } from '../shared/services/translation.service';
 import { SuccsessfullySentComponent } from '../succsessfully-sent/succsessfully-sent.component';
+import { ScrollRevealDirective } from '../shared/directives/scroll-reveal.directive';
 
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [FormsModule, SuccsessfullySentComponent, RouterLink],
+  imports: [FormsModule, SuccsessfullySentComponent, RouterLink, ScrollRevealDirective],
   templateUrl: './contactform.component.html',
   styleUrls: ['./contactform.component.scss', './contactform.responive.component.scss'],
 })
@@ -156,4 +157,5 @@ export class ContactformComponent implements OnDestroy {
       this.overlayRemovalTimeoutId = undefined;
     }
   }
+
 }

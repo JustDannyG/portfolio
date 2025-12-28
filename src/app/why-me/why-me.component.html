@@ -1,8 +1,8 @@
 <section class="why-me" id="why-me">
   <div class="why-me__inner">
-    <h2 class="why-me__title">{{ texts().title }}</h2>
+    <h2 class="why-me__title" appScrollReveal="right">{{ texts().title }}</h2>
 
-    <div class="why-me__content">
+    <div class="why-me__content" appScrollReveal="left">
       <div class="why-me__location">
         <img src="assets/img/why-me/Icon Remote.svg" alt="">
         <p class="why-me__headline"><span class="accent">{{ texts().headlineAccent }}</span>
@@ -15,7 +15,7 @@
         </p>
       </div>
     </div>
-    <div class="cta-btn-container">
+    <div class="cta-btn-container" appScrollReveal="left">
       <button class="cta-button" type="button" (click)="scrollToContact()">{{ texts().cta }}</button>
     </div>
   </div>

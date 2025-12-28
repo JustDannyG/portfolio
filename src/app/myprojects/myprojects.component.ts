@@ -1,13 +1,14 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Project, TranslationService } from '../shared/services/translation.service';
+import { ScrollRevealDirective } from '../shared/directives/scroll-reveal.directive';
 
 @Component({
   selector: 'app-myprojects',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ScrollRevealDirective],
   templateUrl: './myprojects.component.html',
-  styleUrls: ['./myprojects.component.scss', './myprojects-responisve.component.scss'] 
+  styleUrls: ['./myprojects.component.scss', './myprojects-responisve.component.scss'],
 })
 export class MyprojectsComponent {
   private translationService = inject(TranslationService);

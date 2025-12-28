@@ -1,13 +1,14 @@
 import { Component, inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { TranslationService } from '../shared/services/translation.service';
+import { ScrollRevealDirective } from '../shared/directives/scroll-reveal.directive';
 
 @Component({
   selector: 'app-myskills',
   standalone: true,
-  imports: [],
+  imports: [ScrollRevealDirective],
   templateUrl: './myskills.component.html',
-  styleUrls: ['./myskills.component.scss', './myskills-responsive.component.scss'] 
+  styleUrls: ['./myskills.component.scss', './myskills-responsive.component.scss'],
 })
 export class MyskillsComponent {
   private document = inject(DOCUMENT);
@@ -21,4 +22,5 @@ export class MyskillsComponent {
       contactSection.scrollIntoView({ behavior: 'smooth' });
     }
   }
+
 }

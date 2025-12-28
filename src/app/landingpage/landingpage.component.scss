@@ -317,6 +317,7 @@ $text-dark: #1f2b32;
   bottom: 0;
   width: 100%;
   transition: box-shadow 0.2s ease, transform 0.2s ease;
+  transform-origin: center bottom;
 
   &.is-fixed {
     position: fixed;
