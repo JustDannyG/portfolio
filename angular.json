@@ -36,7 +36,7 @@
           },
         "configurations": {
           "production": {
-            "baseHref": "/angular-projects/danny-gruchmann/",
+            "baseHref": "/dg/",
             "budgets": [
               {
                 "type": "initial",
@@ -52,6 +52,7 @@
               "outputHashing": "all"
             },
             "development": {
+              "baseHref": "/",
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true

@@ -12,6 +12,8 @@ html {
 
 body {
   margin: 0;
+  scrollbar-width: thin;
+  scrollbar-color: #89bcd9 transparent;
 
   h1 {
     font-family: 'Josefin Sans';
@@ -49,6 +51,16 @@ body {
     font-family: 'Josefin Sans';
   }
 
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #2C2C2C;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #89bcd9;
+  border-radius: 999px;
 }
 
 .reveal {
