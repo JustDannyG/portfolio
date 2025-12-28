@@ -37,7 +37,7 @@ export class ContactformComponent implements OnDestroy {
   mailTest = true;
 
   post = {
-    endPoint: 'http://danny-gruchmann.de/angular-projects/danny-gruchmann/sendMail.php',
+    endPoint: 'https://danny-gruchmann.de/angular-projects/danny-gruchmann/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
