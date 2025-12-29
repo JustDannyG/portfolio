@@ -3,6 +3,8 @@
   width: 100%;
 }
 
+$accent: #89bcd9;
+
 .contact-section {
   position: relative;
   display: flex;
@@ -16,31 +18,35 @@
   position: absolute;
   top: 112px;
   right: 5%;
-  width: 38px;
-  height: 89px;
-  border: none;
-  background: none;
-  padding: 0;
-  cursor: pointer;
   transition:
     opacity 0.8s ease,
     transform 0.8s ease,
     background-color 0.2s ease,
     filter 0.2s ease;
+  cursor: pointer;
+  background: transparent;
+  width: 38px;
+  height: 89px;
+  border: #89BCD9;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 274px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 18px;
   z-index: 100;
 
 
   &:hover {
-    background-color: rgba(137, 188, 217, 0.22);
+    background-color: rgba($accent, 0.22);
     filter: brightness(1.05);
   }
 
   img {
-    width: 100%;
-    height: 100%;
+    width: 22px;
+    height: 50px;
     object-fit: contain;
-    transform: rotateX(180deg);
   }
 }
 
@@ -259,14 +265,15 @@
 }
 
 .errorMsg {
-  color: #e44c36;
+  color: #ff4d3d;
   font-size: 16px;
 }
 
 
 .consent-row {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: start;
   gap: 14px;
   font-size: 18px;
 
@@ -283,9 +290,6 @@
     img {
       width: 22px;
       height: 22px;
-      display: block;
-      transition: none;
-      transform: none;
     }
 
     &:not(.consent-checkbox--checked) img:hover {
@@ -327,27 +331,35 @@
 }
 
 .arrow-top {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease,
+    background-color 0.2s ease,
+    filter 0.2s ease;
+  cursor: pointer;
+  background: transparent;
   width: 38px;
   height: 89px;
-  padding: 0;
-  border: none;
+  border: $accent;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 274px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 18px;
-  background: transparent;
-  cursor: pointer;
-  transition: background-color 0.2s ease, filter 0.2s ease;
+  z-index: 100;
 
-  img {
-    display: block;
-    width: 38px;
-    height: 89px;
-  }
 
   &:hover {
-    background-color: rgba(137, 188, 217, 0.22);
+    background-color: rgba($accent, 0.22);
     filter: brightness(1.05);
+  }
+
+  img {
+    width: 22px;
+    height: 50px;
+    object-fit: contain;
   }
 }
 
@@ -355,4 +367,10 @@
   display: flex;
   font-size: 18px;
   width: max-content;
+}
+
+.privacy-policy-text {
+  display: flex;
+  width: 100%;
+  gap: 2%;
 }

@@ -156,35 +156,6 @@ const TRANSLATIONS = {
             { label: 'GitHub', href: 'https://github.com/JustDannyG/Join', target: '_blank', variant: 'secondary' }
           ]
         },
-        /* {
-          id: 3,
-          tabLabel: '3. Comming soon',
-          name: 'Comming soon',
-          infoItems: [
-            {
-              title: 'About the project',
-              description:
-                'I’m currently working on DA Bubble, a modern text messenger focused on a clean UI and a smooth chat experience. I’m implementing features like user authentication, real-time messaging, and better usability with online status, typing indicators, and improved message handling.'
-            },
-            {
-              description:
-                'The key to success in my projects is a mix of good planning, clean maintainable code, and consistent execution. I break tasks into small steps, test early, and iterate quickly to sharpen both my workflow and technical skills.'
-            }
-          ],
-          technologies: [
-            { name: 'Angular', icon: 'assets/img/my-projects/Frame 498.svg' },
-            { name: 'TypeScript', icon: 'assets/img/my-projects/Frame 499.svg' },
-            { name: 'HTML', icon: 'assets/img/my-projects/Frame 500.svg' },
-            { name: 'CSS', icon: 'assets/img/my-projects/Frame 501.svg' },
-            { name: 'Vue.js', icon: 'assets/img/my-projects/Vue Js.svg' },
-            { name: 'React', icon: 'assets/img/my-projects/React.svg' }
-          ],
-          image: 'assets/img/my-projects/coming-soon-project.svg',
-          buttons: [
-            { label: 'Live Test', href: '#', target: '_blank', variant: 'primary' },
-            { label: 'GitHub', href: '#', target: '_blank', variant: 'secondary' }
-          ]
-        } */
       ]
     },
     reviewTeam: {
@@ -237,6 +208,7 @@ const TRANSLATIONS = {
           linkLabel: 'privacy policy',
           textAfterLink: ' and agree to the processing of my data as outlined.'
         },
+        privacyPoliceError: 'Please confirm the privacy policy',
         submitLabel: 'Send',
         scrollTopLabel: 'Back to top',
         success: {
@@ -601,6 +573,7 @@ const TRANSLATIONS = {
           linkLabel: 'Datenschutzerklärung',
           textAfterLink: ' gelesen und stimme der Verarbeitung meiner Daten zu.'
         },
+        privacyPoliceError: 'Bitte bestätige die Datenschutzerklärung',
         submitLabel: 'Senden',
         scrollTopLabel: 'Zurück nach oben',
         success: {

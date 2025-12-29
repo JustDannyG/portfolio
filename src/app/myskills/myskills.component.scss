@@ -24,6 +24,14 @@ $accent: #89bcd9;
     display: none;
 }
 
+.skill-item-lerning  {
+    text-align: center;
+    p {
+        color: white;
+        font-size: 18px;
+    }
+}
+
 .skills-container {
     display: flex;
     width: 100%;

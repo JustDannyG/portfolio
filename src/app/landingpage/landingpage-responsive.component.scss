@@ -19,16 +19,6 @@
       font-size: 104px;
     }
   }
-
-  .scroll-indicator {
-    height: 128px;
-    width: 64px;
-
-    img {
-      height: 128px;
-      width: 64px;
-    }
-  }
 }
 
 @media (min-width: 1441px) {
@@ -161,16 +151,6 @@
   .social-icon {
     width: 20px;
     height: 20px;
-  }
-
-  .scroll-indicator {
-    height: 80px;
-    width: 32px;
-
-    img {
-      height: 80px;
-      width: 32px;
-    }
   }
 }
 
@@ -324,19 +304,8 @@
     }
   }
 
-  .scroll-indicator-container {
-    padding: 0;
-  }
-
   .scroll-indicator {
     margin-top: 12px;
-    width: 38px;
-    height: 89px;
-
-    img {
-      width: 38px;
-      height: 89px;
-    }
   }
 }
 

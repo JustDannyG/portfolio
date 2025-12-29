@@ -1,7 +1,6 @@
 <section class="contact-section" id="contact">
   <button class="contact-section__scroll-top" appScrollReveal="right" type="button"
-    [attr.aria-label]="texts().form.scrollTopLabel"
-    (click)="scrollToTop()">
+    [attr.aria-label]="texts().form.scrollTopLabel" (click)="scrollToTop()">
     <img src="assets/img/contactform/Property 1=Default.svg" alt="Scroll to top" />
   </button>
 
@@ -50,7 +49,7 @@
     </div>
 
     <form class="contact-form" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
-      <div class="name-email-form" appScrollReveal="right">
+      <div class="name-email-form" appScrollReveal="left">
         <div class="field">
           <label class="d-none" for="first-name">{{ texts().form.nameLabel }}</label>
           <input #firstName="ngModel" [(ngModel)]="contactData.name" id="first-name" name="firstName" type="text"
@@ -66,8 +65,7 @@
         <div class="field">
           <label class="d-none" for="last-name">{{ texts().form.emailLabel }}</label>
           <input #email="ngModel" [(ngModel)]="contactData.email" id="last-name" name="lastName" type="text" ngModel
-            placeholder="Email"
-            required pattern="^(?!.*\.\.)[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
+            placeholder="Email" required pattern="^(?!.*\.\.)[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
             [class.field--invalid]="email.invalid && (email.touched || contactForm.submitted) && !email.disabled" />
           <div class="field__error">
             @if (email.invalid && (email.touched || contactForm.submitted) && !email.disabled) {
@@ -77,7 +75,7 @@
         </div>
       </div>
 
-      <div class="field field--textarea" appScrollReveal="right">
+      <div class="field field--textarea" appScrollReveal="left">
         <label class="d-none" for="subject">{{ texts().form.messageLabel }}</label>
         <textarea #message="ngModel" [(ngModel)]="contactData.message" id="subject" name="subject" rows="6"
           [placeholder]="texts().form.messagePlaceholder" ngModel required minlength="8" pattern="^(?!\s+$).+"
@@ -90,21 +88,29 @@
       </div>
 
       <div class="consent-row" appScrollReveal="left">
-        <label class="consent-checkbox" [class.consent-checkbox--checked]="privacyAccepted">
-          <input type="checkbox" [(ngModel)]="privacyAccepted" name="privacyConsent" />
-          <img [src]="!privacyAccepted && contactForm.submitted
+        <div class="privacy-policy-text">
+          <label class="consent-checkbox" [class.consent-checkbox--checked]="privacyAccepted">
+            <input type="checkbox" name="privacyConsent" [(ngModel)]="privacyAccepted" required
+              #privacyConsent="ngModel" />
+            <img [src]="!privacyAccepted && contactForm.submitted
               ? 'assets/img/contactform/Property 1=error.svg'
               : privacyAccepted
                 ? 'assets/img/contactform/Check box (1).svg'
                 : isHoveringConsent
                   ? 'assets/img/contactform/Property 1=hover.svg'
                   : 'assets/img/contactform/Check box.svg'" alt="Privacy consent" (mouseenter)="onConsentHover(true)"
-            (mouseleave)="onConsentHover(false)" />
-        </label>
-        <p>
-          {{ texts().form.consent.textBeforeLink }}<a [routerLink]="['/privacy-policy']">{{
-            texts().form.consent.linkLabel }}</a>{{ texts().form.consent.textAfterLink }}
-        </p>
+              (mouseleave)="onConsentHover(false)" />
+          </label>
+          <p>
+            {{ texts().form.consent.textBeforeLink }}<a [routerLink]="['/privacy-policy']">{{
+              texts().form.consent.linkLabel }}</a>{{ texts().form.consent.textAfterLink }}
+          </p>
+        </div>
+        <div class="field__error">
+          @if (privacyConsent.invalid && (privacyConsent.touched || contactForm.submitted)) {
+          <span class="errorMsg">{{ texts().form.privacyPoliceError }}</span>
+          }
+        </div>
       </div>
       <div class="send-btn-container" appScrollReveal="left">
         <button class="send-btn" type="submit" [class.send-btn--active]="contactForm.valid && privacyAccepted"
@@ -114,7 +120,7 @@
       </div>
       <div class="arrow-top-container">
         <button class="arrow-top" type="button" [attr.aria-label]="texts().form.scrollTopLabel" (click)="scrollToTop()">
-          <img src="assets/img/langingpage-img/arrow-down.svg" alt="" aria-hidden="true" />
+          <img src="assets/img/contactform/Property 1=Default.svg" alt="" aria-hidden="true" />
         </button>
       </div>
     </form>
