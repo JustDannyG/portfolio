@@ -492,35 +492,6 @@ const TRANSLATIONS = {
             { label: 'GitHub', href: 'https://github.com/JustDannyG/Join', target: '_blank', variant: 'secondary' }
           ]
         },
-        {
-          id: 3,
-          tabLabel: '3. Comming soon',
-          name: 'Comming soon',
-          infoItems: [
-            {
-              title: 'Über das Projekt',
-              description:
-                'Ich arbeite aktuell an DA Bubble, einem modernen Messenger mit klarer Oberfläche und flüssigem Chat-Erlebnis. Gerade entstehen Login, Echtzeit-Nachrichten sowie Komfortfunktionen wie Online-Status, Tipp-Indikatoren und optimiertes Message-Handling.'
-            },
-            {
-              description:
-                'Erfolg bedeutet für mich: gute Planung, sauberer Code und konsequente Umsetzung. Ich teile Aufgaben in kleine Schritte, teste früh und verbessere stetig – so bleiben Workflow und Skills in Bewegung.'
-            }
-          ],
-          technologies: [
-            { name: 'Angular', icon: 'assets/img/my-projects/Frame 498.svg' },
-            { name: 'TypeScript', icon: 'assets/img/my-projects/Frame 499.svg' },
-            { name: 'HTML', icon: 'assets/img/my-projects/Frame 500.svg' },
-            { name: 'CSS', icon: 'assets/img/my-projects/Frame 501.svg' },
-                { name: 'Vue.js', icon: 'assets/img/my-projects/Vue Js.svg' },
-            { name: 'React', icon: 'assets/img/my-projects/React.svg' }
-          ],
-          image: 'assets/img/my-projects/coming-soon-project.svg',
-          buttons: [
-            { label: 'Live-Demo', href: '#', target: '_blank', variant: 'primary' },
-            { label: 'GitHub', href: 'https://github.com/JustDannyG/Join', target: '_blank', variant: 'secondary' }
-          ]
-        }
       ]
     },
     reviewTeam: {

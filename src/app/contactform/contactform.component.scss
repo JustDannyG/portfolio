@@ -12,6 +12,7 @@ $accent: #89bcd9;
   background-color: #262e34;
   color: #f5f7fb;
   padding: 88px 48px 88px 48px;
+  overflow: hidden;
 }
 
 .contact-section__scroll-top {
@@ -214,7 +215,7 @@ $accent: #89bcd9;
   }
 
   label {
-    font-size: 16px;
+    font-size: 18px;
     color: #8fbdd7;
   }
 
@@ -225,7 +226,7 @@ $accent: #89bcd9;
     color: #f5f7fb;
     border-radius: 999px;
     padding: 16px 22px;
-    font-size: 16px;
+    font-size: 18px;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
     &:focus {
