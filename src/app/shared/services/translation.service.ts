@@ -156,6 +156,42 @@ const TRANSLATIONS = {
             { label: 'GitHub', href: 'https://github.com/JustDannyG/Join', target: '_blank', variant: 'secondary' }
           ]
         },
+        {
+          id: 3,
+          tabLabel: '3. Cuisine',
+          name: 'Cuisine',
+          duration: 'duration: 3 weeks',
+          infoItems: [
+            {
+              title: 'About the project',
+              description:
+                'Cuisine lets users enter ingredients and uses an AI backend to generate recipes tailored to regional flavors such as German, Italian, or Indian cuisine.'
+            },
+            {
+              title: 'How I have organised my work process',
+              description:
+                'Built end-to-end as a solo project, I mapped the user flow first and then iterated on the UI while wiring up the AI pipeline, keeping the data flow predictable and the UX fast.'
+            },
+            {
+              title: 'What I have learnt',
+              description:
+                'I improved my Firebase skills around data handling and learned how to connect apps with n8n automations, plus better structuring async flows for AI responses.'
+            }
+          ],
+          technologies: [
+            { name: 'HTML', icon: 'assets/img/my-projects/Html.svg' },
+            { name: 'CSS', icon: 'assets/img/my-projects/CSS.svg' },
+            { name: 'TypeScript', icon: 'assets/img/my-projects/Typescript.svg' },
+            { name: 'Angular', icon: 'assets/img/my-projects/angular.svg' },
+            { name: 'Firebase', icon: 'assets/img/my-projects/firebase-icon.svg' },
+            { name: 'n8n', icon: 'assets/img/my-projects/n8n_icon_89BCD9.svg' }
+          ],
+          image: 'assets/img/my-projects/Bildschirmfoto 2026-01-20 um 16.10.40.png',
+          buttons: [
+            { label: 'Live Test', href: 'https://danny-gruchmann.de/code-a-cuisine/', target: '_blank', variant: 'primary' },
+            { label: 'GitHub', href: 'https://github.com/JustDannyG/code-a-cuisine', target: '_blank', variant: 'secondary' }
+          ]
+        },
       ]
     },
     reviewTeam: {
@@ -490,6 +526,42 @@ const TRANSLATIONS = {
           buttons: [
             { label: 'Live-Demo', href: 'https://danny-gruchmann.de/join/index.html', target: '_blank', variant: 'primary' },
             { label: 'GitHub', href: 'https://github.com/JustDannyG/Join', target: '_blank', variant: 'secondary' }
+          ]
+        },
+        {
+          id: 3,
+          tabLabel: '3. Cuisine',
+          name: 'Cuisine',
+          duration: 'duration: 3 weeks',
+          infoItems: [
+            {
+              title: 'About the project',
+              description:
+                'Cuisine lets users enter ingredients and uses an AI backend to generate recipes tailored to regional flavors such as German, Italian, or Indian cuisine.'
+            },
+            {
+              title: 'How I have organised my work process',
+              description:
+                'Built end-to-end as a solo project, I mapped the user flow first and then iterated on the UI while wiring up the AI pipeline, keeping the data flow predictable and the UX fast.'
+            },
+            {
+              title: 'What I have learnt',
+              description:
+                'I improved my Firebase skills around data handling and learned how to connect apps with n8n automations, plus better structuring async flows for AI responses.'
+            }
+          ],
+          technologies: [
+            { name: 'HTML', icon: 'assets/img/my-projects/Html.svg' },
+            { name: 'CSS', icon: 'assets/img/my-projects/CSS.svg' },
+            { name: 'TypeScript', icon: 'assets/img/my-projects/Typescript.svg' },
+            { name: 'Angular', icon: 'assets/img/my-projects/angular.svg' },
+            { name: 'Firebase', icon: 'assets/img/my-projects/firebase-icon.svg' },
+            { name: 'n8n', icon: 'assets/img/my-projects/n8n_icon_89BCD9.svg' }
+          ],
+          image: 'assets/img/my-projects/Bildschirmfoto 2026-01-20 um 16.10.40.png',
+          buttons: [
+            { label: 'Live-Demo', href: 'https://danny-gruchmann.de/code-a-cuisine/', target: '_blank', variant: 'primary' },
+            { label: 'GitHub', href: 'https://github.com/JustDannyG/code-a-cuisine', target: '_blank', variant: 'secondary' }
           ]
         },
       ]
